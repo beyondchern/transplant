@@ -1,0 +1,21 @@
+*, *::before, *::after {
+    box-sizing: content-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+:root {
+    --clr-primary: #DCD0C0;
+    --clr-light: #E0E0E0;
+    --clr-dark: #7B3016;
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fw-black: 900;
+  }
+
+  a {
+    text-decoration: none;
+  }

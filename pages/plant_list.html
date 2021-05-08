@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link type='text/css' rel='stylesheet' href='../css/main.css'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+    <title>plant list</title>
+  </head>
+
+  <body>
+
+    <header class="header">
+      <h1>Codex Kentmanus plants</h1>
+    </header>
+
+
+    <div class="mode_switch">
+      <button class="button btn__gallery-view" onclick="galleryView()">gallery view</button>
+      <button class="button btn__map-view" onclick="map_view()">map view</button>
+    </div>
+
+    <div class="plant_list" id="plant_list">
+
+      <a href="gallery_single_plant.html">
+        <figure class="tumbnail_card" id="tumbnail_card">
+          <img src="../img/Johannes_A_001.png" alt="001">
+          <figcaption>Date Palm</figcaption>
+        </figure>
+      </a>
+
+      <figure class="tumbnail_card" id="tumbnail_card">
+        <img src="../img/Johannes_A_002.png" alt="002">
+        <figcaption>Mandrake</figcaption>
+      </figure>
+
+      <figure class="tumbnail_card" id="tumbnail_card">
+        <img src="../img/Johannes_A_003.png" alt="003">
+        <figcaption>Larch</figcaption>
+      </figure>
+
+      <figure class="tumbnail_card" id="tumbnail_card">
+        <img src="../img/Johannes_A_004.png" alt="004">
+        <figcaption>Laserwort</figcaption>
+      </figure>
+
+      <figure class="tumbnail_card" id="tumbnail_card">
+        <img src="../img/Johannes_A_006.png" alt="006">
+        <figcaption>Alexandrian senna</figcaption>
+      </figure>
+
+      <figure class="tumbnail_card" id="tumbnail_card">
+        <img src="../img/Johannes_A_007.png" alt="007">
+        <figcaption>Hemionitis</figcaption>
+      </figure>
+
+    </div>
+
+    <div class="map map_plant_list" id="map_plant_list"></div>
+
+    <script type="text/javascript" src="../script/map_plant_list.js"></script>
+    <script type="text/javascript" src="../script/map_marker.js"></script>
+    <script type="text/javascript" src="../script/modeSwitch_plant_list.js"></script>
+  </body>
