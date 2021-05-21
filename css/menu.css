@@ -1,0 +1,68 @@
+.nav__menu {
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav__link {
+  font-weight: var(--fw-normal);
+}
+
+.nav__main {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+}
+
+.nav__menu {
+  display: none;
+  /*top: 5rem;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+*/
+}
+
+.nav__menu.active {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+.nav__link {
+  margin: 1.5rem 0;
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

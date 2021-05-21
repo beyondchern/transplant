@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Theophil Kentmann's prints</title>
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper"></div>
+
+    <script src="../script/plant_data_theophil.js"></script>
+    <script>
+      for (item of theophilData) {
+        const card = document.createElement("div");
+        const plantImage = document.createElement("img");
+        const commonNameEn = document.createElement("h1");
+        const commonNameDe = document.createElement("h1");
+        const scientificName = document.createElement("i");
+        const wikiEn = document.createElement("a");
+        const wikiDe = document.createElement("a");
+
+        plantImage.src = `../img/theophil/${item.file_name}.jpg`;
+        plantImage.setAttribute("class", "plantImage");
+        commonNameEn.textContent = item.english[0];
+        commonNameEn.setAttribute("class", "commonName");
+        scientificName.textContent = item.scientific_name;
+        scientificName.setAttribute("class", "scientificName");
+        wikiEn.textContent = "wikipedia";
+        wikiEn.href = item.wiki_en;
+
+        card.setAttribute("class", "card");
+
+        card.append(plantImage, commonNameEn, scientificName, wikiEn);
+        document.getElementById("wrapper").append(card);
+      }
+    </script>
+  </body>
+</html>

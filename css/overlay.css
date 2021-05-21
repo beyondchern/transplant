@@ -1,0 +1,91 @@
+.adding_button {
+  position: fixed;
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  cursor: pointer; /* Add a pointer on hover */
+  overflow: scroll;
+}
+
+/*contribution overlay*/
+.wrapper_contribution {
+  background-color: #ede5d8;
+  width: 80%;
+  max-width: 30rem;
+  min-width: 20rem;
+  margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+  padding: 5%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.contribution__image {
+  width: 80%;
+  padding: 5%;
+}
+.contribution_info {
+  list-style-type: none;
+  padding-left: 0;
+}
+.contribution_info li {
+  line-height: 1.25rem;
+  margin-top: 0.5rem;
+}
+.contribution_info li:nth-child(3) {
+  text-align: justify;
+}
+
+/*input overlay*/
+.adding__form {
+  background-color: #ede5d8;
+  position: fixed;
+  margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+  left: 0;
+  right: 0;
+  max-width: 80%;
+  min-width: 20rem;
+  padding: 5%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.adding__form_text_input_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.adding__button_wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0.7rem;
+}
+.input {
+  border: 1px solid var(--clr-dark);
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  width: 15rem;
+}
+.adding__form__img_input {
+  height: 15rem;
+  margin: 0.7rem 0.7rem;
+}
+.adding__form_text_input_name {
+  height: 2.5rem;
+}
+.adding__form_text_input_text {
+  margin-top: 0.7rem;
+  height: 7.5rem;
+}
