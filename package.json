@@ -1,0 +1,33 @@
+{
+  "name": "transplant",
+  "version": "1.0.0",
+  "description": "Botanical Encounter is a collaborative mapping project inspired by Codex Kentmanus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beyondchern/transplant.git"
+  },
+  "keywords": [
+    "plants",
+    "botanical",
+    "encounter",
+    "art",
+    "botanical",
+    "art",
+    "participatory",
+    "art"
+  ],
+  "author": "I-Chen Lai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beyondchern/transplant/issues"
+  },
+  "homepage": "https://github.com/beyondchern/transplant#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  }
+}

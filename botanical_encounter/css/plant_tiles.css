@@ -1,0 +1,21 @@
+h1 {
+  margin: 0px;
+}
+
+.plantImage {
+  width: 300px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}

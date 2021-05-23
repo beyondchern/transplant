@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap");
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--clr-dark);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+a,
+a:visited {
+  color: var(--clr-dark);
+}
+
+.button {
+  font-family: "Source Sans Pro";
+  color: var(--clr-dark);
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+}
+
+input {
+  font-family: "Source Sans Pro";
+  color: var(--clr-dark);
+}

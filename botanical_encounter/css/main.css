@@ -1,0 +1,10 @@
+@import url("reset.css");
+@import url("font.css");
+@import url("index.css");
+@import url("plant_tiles.css");
+@import url("menu.css");
+@import url("overlay.css");
+
+.button:disabled {
+  opacity: 0.3;
+}

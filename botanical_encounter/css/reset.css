@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+}
+
+:root {
+  --clr-primary: #dcd0c0;
+  --clr-light: #e0e0e0;
+  --clr-dark: #7b3016;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
