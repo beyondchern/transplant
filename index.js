@@ -3,7 +3,10 @@ const Datastore = require("nedb");
 const fs = require("fs");
 
 const app = express();
-app.listen(3000, () => console.log("listening at 3000"));
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`starting server at ${port}`);
+});
 app.use(express.static("botanical_encounter"));
 app.use(express.json({ limit: "1mb" }));
 
