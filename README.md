@@ -1,2 +1,2 @@
-# transplant
-mapping the plants in Codex Kentmanus back onto the world
+# Botanical Encounter
+Botanical Encounter is a collaborative mapping project inspired by the German naturalist book Codex Kentmanus.
