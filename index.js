@@ -1,6 +1,6 @@
-const { request } = require("express");
 const express = require("express");
 const Datastore = require("nedb");
+const fs = require("fs");
 
 const app = express();
 app.listen(3000, () => console.log("listening at 3000"));
@@ -12,7 +12,6 @@ database.loadDatabase();
 
 app.post("/location", (request, response) => {
   const location = request.body;
-  database.insert(location);
   response.json({
     status: "success",
     latitude: location.lat,
@@ -20,8 +19,35 @@ app.post("/location", (request, response) => {
   });
 });
 
-app.post("/submition", (request, response) => {
-  const submition = request.body;
-  database.insert(submition);
-  response.json({});
+app.post("/submission", (request, response) => {
+  const submission = request.body;
+  const timestamp = Date.now();
+  submission.timestamp = timestamp;
+  submission.filename = timestamp + ".png";
+  submission.filepath = "botanical_encounter/img_contribution/";
+  database.insert(submission);
+  response.json({ status: "successfully submitted" });
+
+  //Jerome Richalot https://github.com/CodingTrain/Intro-to-Data-APIs-JS/issues/35
+  const base64Data = submission.image.replace(/^data:image\/\w+;base64,/, "");
+  fs.writeFile(
+    submission.filepath + submission.filename,
+    base64Data,
+    "base64",
+    (error) => {
+      console.log(error);
+    },
+    delete submission.image
+  );
+});
+
+app.get("/getdata", (request, response) => {
+  database.find({}, (err, contributions) => {
+    if (err) {
+      response.end();
+      return;
+    } else {
+      response.json(contributions);
+    }
+  });
 });

@@ -7,17 +7,10 @@ let map = L.map("map", {
   zoomControl: false,
 }).setView([lat, lon], 12);
 
-let previewMap = L.map("previewMap", {
-  zIndex: 2,
-  minZoom: 2,
-  zoomControl: false,
-});
-
 let attribution = "OpenStreetMap";
 let tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 let tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(map);
-tiles.addTo(previewMap);
 
 if (navigator.geolocation) {
   console.log("geolocation available");

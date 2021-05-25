@@ -58,7 +58,7 @@
           <li class="contribution__plant_name">
             Date Palm <i class="contribution__scietific_name">()</i>
           </li>
-          <li class="contribution__author">some body</li>
+          <li class="contribution__author">somebody</li>
           <li class="contribution__story">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             id erat justo. Pellentesque blandit tempus dui at vulputate.
@@ -72,14 +72,21 @@
       </div>
     </div>
 
+    <div class="overlay addImg__overlay" id="addImgOverlay">
+      <div class="camera">
+        <video id="video">Video stream not available.</video>
+      </div>
+      <button class="button" id="button_take_photo">Take photo</button>
+
+      <canvas id="canvas" style="display: none"></canvas>
+    </div>
+
     <div class="overlay adding__overlay" id="addFormOverlay">
       <div class="adding__form" id="addingForm">
-        <input
-          type="img"
-          class="input adding__form__img_input"
-          placeholder="Your art here"
+        <img
+          id="inputPhoto"
+          alt="The screen capture will appear in this box."
         />
-
         <div class="adding__form_text_input_wrapper" id="addingFormWrapper">
           <input
             type="text"
@@ -127,7 +134,7 @@
 
     <div class="overlay preview__overlay" id="previewOverlay">
       <div class="preview__wrapper">
-        <img class="preview__image" id="previewImage" src="" />
+        <img class="preview__image" id="previewImage" />
         <ul class="preview__info">
           <li class="preview__plant_name">
             <span id="previewPlantName"></span>
@@ -157,8 +164,10 @@
     <script src="../script/menu.js"></script>
     <script src="../script/map_setup.js"></script>
     <script src="../script/overlay_switch.js"></script>
+    <script src="../script/contribution_overlay.js"></script>
     <script src="../script/map_marker.js"></script>
     <script src="../script/map_contribution_pins.js"></script>
+    <script src="../script/contribution_take_photo.js"></script>
     <script src="../script/contribution_get_preview.js"></script>
     <script src="../script/submit.js"></script>
   </body>

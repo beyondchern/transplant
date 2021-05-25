@@ -10,9 +10,6 @@ var drawControl = new L.Control.Draw({
     rectangle: false,
     circlemarker: false,
   },
-  edit: {
-    featureGroup: contributionPins,
-  },
 }).addTo(map);
 
 // Initialise the draw control and pass it the FeatureGroup of editable layers
@@ -35,5 +32,5 @@ map.on("draw:created", (e) => {
       console.log(location);
     });
 
-  adding_form_on();
+  //adding_form_on();
 });

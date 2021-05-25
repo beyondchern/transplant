@@ -13,8 +13,8 @@ function adding_form_on() {
 }
 function adding_form_preview() {
   preview();
-  document.getElementById("previewOverlay").style.display = "block";
-  document.getElementById("addingForm").style.visibility = "hidden";
+  //document.getElementById("previewOverlay").style.display = "block";
+  //document.getElementById("addingForm").style.visibility = "hidden";
   //document.getElementById("body_list_contribution").style.overflow = "hidden";
 }
 

@@ -1,19 +1,49 @@
-let submition = {};
+let submission = {};
 
 function preview() {
-  submition.plantName = document.getElementById("inputPlantName").value;
-  submition.scientificName = document.getElementById(
+  submission.image = photoData;
+  submission.plantName = document.getElementById("inputPlantName").value;
+  submission.scientificName = document.getElementById(
     "inputScientificName"
   ).value;
-  submition.author = document.getElementById("inputAuthor").value;
-  submition.story = document.getElementById("inputStory").value;
+  submission.author = document.getElementById("inputAuthor").value;
+  submission.story = document.getElementById("inputStory").value;
 
-  document.getElementById("previewPlantName").innerHTML = submition.plantName;
+  document.getElementById("previewImage").setAttribute("src", photoData);
+  document.getElementById("previewPlantName").innerHTML = submission.plantName;
   document.getElementById("PreviewScientificName").innerHTML =
-    submition.scientificName;
-  document.getElementById("previewAuthor").innerHTML = submition.author;
-  document.getElementById("previewStory").innerHTML = submition.story;
+    submission.scientificName;
+  document.getElementById("previewAuthor").innerHTML = submission.author;
+  document.getElementById("previewStory").innerHTML = submission.story;
 
-  previewMap.setView([coords.lat, coords.lng]);
+  let previewMap = L.map("previewMap", {
+    zIndex: 2,
+    zoom: 12,
+    zoomControl: false,
+  }).setView([coords.lat, coords.lng]);
+
+  submission.locaion = coords;
+
+  let attribution = "OpenStreetMap";
+  let tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+  let tiles = L.tileLayer(tileUrl, { attribution });
+  tiles.addTo(previewMap);
+
+  var ediblePin = new L.FeatureGroup();
+  map.addLayer(ediblePin);
+
+  let previewDrawControl = new L.Control.Draw({
+    draw: {
+      circle: false,
+      marker: false,
+      polyline: false,
+      polygon: false,
+      rectangle: false,
+      circlemarker: false,
+    },
+    edit: {
+      featureGroup: previewPin,
+    },
+  }).addTo(previewMap);
 }
 // input location: coords;

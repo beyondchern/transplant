@@ -1,7 +1,8 @@
 function submit() {
-  fetch("/submition", {
+  fetch("/submission", {
     method: "POST",
-    header: { "Content-type": "application/json" },
-    body: JSON.stringify(submition),
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify(submission),
   });
+  console.log(submission);
 }
