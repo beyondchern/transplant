@@ -18,8 +18,7 @@ map.addControl(drawControl);
 let coords = {};
 map.on("draw:created", (e) => {
   coords = e.layer._latlng;
-  console.log(coords);
-  let tempMarker = contributionPins.addLayer(e.layer);
+  contributionPins.addLayer(e.layer);
   fetch("/location", {
     method: "POST",
     headers: { "Content-type": "application/json" },
@@ -32,5 +31,6 @@ map.on("draw:created", (e) => {
       console.log(location);
     });
 
-  //adding_form_on();
+  adding_image_on();
+  startup();
 });

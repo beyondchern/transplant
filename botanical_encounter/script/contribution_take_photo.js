@@ -78,6 +78,5 @@ function takepicture() {
   } else {
     clearphoto();
   }
+  adding_form_on();
 }
-
-window.addEventListener("load", startup, false);

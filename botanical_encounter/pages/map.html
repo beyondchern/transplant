@@ -45,33 +45,15 @@
       </div>
     </nav>
 
-    <div id="map" style="width: 90%; height: 600px"></div>
+    <div id="map" style="width: 100%; height: 100%"></div>
 
     <div
       class="overlay cotribution__overlay"
       id="contributionOverlay"
       onclick="contribution_off()"
     >
-      <div class="contribution__wrapper">
-        <img class="contribution__image" src="../img_contribution/date.jpg" />
-        <ul class="contribution__info">
-          <li class="contribution__plant_name">
-            Date Palm <i class="contribution__scietific_name">()</i>
-          </li>
-          <li class="contribution__author">somebody</li>
-          <li class="contribution__story">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            id erat justo. Pellentesque blandit tempus dui at vulputate.
-            Praesent viverra, ligula ac congue luctus, ligula nibh rhoncus
-            libero, eget semper purus est a eros. Quisque pretium libero ipsum,
-            sit amet vestibulum arcu hendrerit ac. Aliquam erat volutpat.
-            Curabitur condimentum lacus sed ante lobortis, convallis pulvinar
-            urna faucibus.
-          </li>
-        </ul>
-      </div>
+      <div class="contribution__wrapper" id="contributionWrapper"></div>
     </div>
-
     <div class="overlay addImg__overlay" id="addImgOverlay">
       <div class="camera">
         <video id="video">Video stream not available.</video>
@@ -163,9 +145,8 @@
 
     <script src="../script/menu.js"></script>
     <script src="../script/map_setup.js"></script>
-    <script src="../script/overlay_switch.js"></script>
     <script src="../script/contribution_overlay.js"></script>
-    <script src="../script/map_marker.js"></script>
+    <script src="../script/overlay_switch.js"></script>
     <script src="../script/map_contribution_pins.js"></script>
     <script src="../script/contribution_take_photo.js"></script>
     <script src="../script/contribution_get_preview.js"></script>

@@ -16,34 +16,22 @@ function preview() {
   document.getElementById("previewAuthor").innerHTML = submission.author;
   document.getElementById("previewStory").innerHTML = submission.story;
 
-  let previewMap = L.map("previewMap", {
-    zIndex: 2,
-    zoom: 12,
-    zoomControl: false,
-  }).setView([coords.lat, coords.lng]);
+  submission.location = coords;
 
-  submission.locaion = coords;
+  let previewMap;
+  if (previewMap == null) {
+    previewMap = new L.map("previewMap", {
+      zIndex: 2,
+      minZoom: 2,
+      zoomControl: false,
+    }).setView([coords.lat, coords.lng], 12);
+  }
 
   let attribution = "OpenStreetMap";
   let tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
   let tiles = L.tileLayer(tileUrl, { attribution });
   tiles.addTo(previewMap);
 
-  var ediblePin = new L.FeatureGroup();
-  map.addLayer(ediblePin);
-
-  let previewDrawControl = new L.Control.Draw({
-    draw: {
-      circle: false,
-      marker: false,
-      polyline: false,
-      polygon: false,
-      rectangle: false,
-      circlemarker: false,
-    },
-    edit: {
-      featureGroup: previewPin,
-    },
-  }).addTo(previewMap);
+  L.marker([coords.lat, coords.lng]).addTo(previewMap);
 }
 // input location: coords;
