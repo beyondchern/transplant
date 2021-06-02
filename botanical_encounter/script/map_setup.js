@@ -3,7 +3,7 @@ let lon = 11.3313;
 
 let map = L.map("map", {
   zIndex: 2,
-  minZoom: 2,
+  minZoom: 3,
   zoomControl: false,
 }).setView([lat, lon], 12);
 

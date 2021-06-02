@@ -17,21 +17,5 @@ function preview() {
   document.getElementById("previewStory").innerHTML = submission.story;
 
   submission.location = coords;
-
-  let previewMap;
-  if (previewMap == null) {
-    previewMap = new L.map("previewMap", {
-      zIndex: 2,
-      minZoom: 2,
-      zoomControl: false,
-    }).setView([coords.lat, coords.lng], 12);
-  }
-
-  let attribution = "OpenStreetMap";
-  let tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-  let tiles = L.tileLayer(tileUrl, { attribution });
-  tiles.addTo(previewMap);
-
-  L.marker([coords.lat, coords.lng]).addTo(previewMap);
 }
 // input location: coords;

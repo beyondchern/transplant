@@ -1,3 +1,4 @@
+/*
 function contribution_on() {
   document.getElementById("contributionOverlay").style.display = "block";
   //document.getElementById("body_list_contribution").style.overflow = "hidden";
@@ -6,29 +7,48 @@ function contribution_off() {
   document.getElementById("contributionOverlay").style.display = "none";
   //document.getElementById("body_list_contribution").style.overflow = "scroll";
 }
+*/
 
-function adding_image_on() {
-  document.getElementById("addImgOverlay").style.display = "block";
+function takePhotoOverlay_on() {
+  document.getElementById("takePhotoOverlay").style.display = "block";
+}
+
+function takePhotoOverlay_off() {
+  document.getElementById("takePhotoOverlay").style.display = "none";
+}
+
+function uploadPhoto_on() {
+  document.getElementById("fileInput").style.display = "block";
+}
+
+function retakePhotoButton_on() {
+  document.getElementById("retakePhotoButton").style.display = "block";
+}
+
+function retakePhotoButton_off() {
+  document.getElementById("retakePhotoButton").style.display = "none";
+}
+
+function cropImgOverlay_on() {
+  document.getElementById("cropImgOverlay").style.display = "block";
+}
+
+function cropImgOverlay_off() {
+  document.getElementById("cropImgOverlay").style.display = "none";
 }
 
 function adding_form_on() {
   document.getElementById("addFormOverlay").style.display = "block";
-  document.getElementById("addImgOverlay").style.display = "none";
   //document.getElementById("body_list_contribution").style.overflow = "hidden";
 }
-function adding_form_preview() {
-  preview();
-  document.getElementById("previewOverlay").style.display = "block";
-  document.getElementById("addingForm").style.visibility = "hidden";
-  //document.getElementById("body_list_contribution").style.overflow = "hidden";
-}
-
 function adding_form_off() {
-  document.getElementById("addFormOverlay").style.visibility = "hidden";
+  document.getElementById("addFormOverlay").style.display = "none";
   //document.getElementById("body_list_contribution").style.overflow = "hidden";
 }
-
+function previewOn() {
+  document.getElementById("previewOverlay").style.display = "flex";
+  //document.getElementById("body_list_contribution").style.overflow = "hidden";
+}
 function previewOff() {
-  document.getElementById("previewOverlay").style.visibility = "hidden";
-  document.getElementById("addingForm").style.visibility = "visible";
+  document.getElementById("previewOverlay").style.display = "none";
 }

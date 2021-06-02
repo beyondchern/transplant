@@ -11,13 +11,29 @@ async function getData() {
       let item_ = item;
       let plantIcon = L.icon({
         iconUrl: `../img_contribution/${item.filename}`,
-        iconSize: [95, 95],
+        iconSize: [90, 120],
       });
+
+      let popupContent = `<img src=../img_contribution/${item_.filename}>
+      <ul class="contribution__info">
+      <li class="contribution__plant_name">${item_.plantName}<i class="contribution__scientific_name">${item_.scientificName}</i></li>
+      <li class="contribution__author">${item_.author}</li>
+      <li class="contribution__story">${item_.story}</li>
+      </ul>`;
+
+      let popupOptions = {
+        className: "contribution__popup",
+        maxWidth: "90%",
+      };
+
       L.marker([item.location.lat, item.location.lng], {
         icon: plantIcon,
       })
         .addTo(map)
-        .on("click", onClick);
+        .bindPopup(popupContent, popupOptions);
+
+      /*
+        .on("click", onClick)
       function onClick() {
         const contributionImage = document.createElement("img");
         const contributionInfo = document.createElement("ul");
@@ -53,7 +69,7 @@ async function getData() {
           .append(contributionImage, contributionInfo);
 
         contribution_on();
-      }
+      }*/
     }
   }
 }

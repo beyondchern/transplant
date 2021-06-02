@@ -1,11 +1,19 @@
 .bar {
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 20px;
+  height: 2px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: var(--clr-dark);
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background: var(--clr-light);
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 }
 
 .nav__link {
@@ -13,23 +21,21 @@
 }
 
 .nav__main {
-  z-index: 1200;
-  padding-top: 2rem;
+  width: 100%;
+  display: block;
   text-align: center;
-  font-size: 2rem;
-  font-weight: var(--fw-bold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.nav__title {
+  width: 79%;
 }
 
 .nav__menu {
   display: none;
-  /*top: 5rem;
-  background-color: #fff;
-  width: 100%;
-  border-radius: 10px;
-  text-align: center;
-  transition: 0.3s;
-  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-*/
 }
 
 .nav__menu.active {
@@ -38,11 +44,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  position: fixed;
-  top: 3rem;
 
   background-color: var(--clr-light);
-  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  /*box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);*/
 }
 
 .nav__link {
@@ -51,9 +55,9 @@
 
 .hamburger {
   display: block;
-  position: absolute;
-  right: 2rem;
+  position: fixed;
   top: 1rem;
+  right: 1rem;
   cursor: pointer;
 }
 

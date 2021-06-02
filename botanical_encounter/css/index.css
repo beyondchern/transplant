@@ -16,18 +16,7 @@
   height: max-content;
 }
 
-.button {
-  border: none;
-  padding: 15px 32px;
-  background-color: #d8b896;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 1rem 0.5rem;
-  cursor: pointer;
-}
-
-.intro_title {
+.button .intro_title {
   margin: 0;
   padding: 1rem;
 }

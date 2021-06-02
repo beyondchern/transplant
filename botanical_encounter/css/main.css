@@ -4,7 +4,5 @@
 @import url("plant_tiles.css");
 @import url("menu.css");
 @import url("overlay.css");
-
-.button:disabled {
-  opacity: 0.3;
-}
+@import url("buttons.css");
+@import url("../library/leaflet/leaflet.css");

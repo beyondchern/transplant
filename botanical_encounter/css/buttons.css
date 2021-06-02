@@ -1,0 +1,10 @@
+.button {
+  border: none;
+  padding: 15px 32px;
+  background-color: var(--clr-light);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}

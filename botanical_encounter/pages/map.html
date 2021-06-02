@@ -6,20 +6,15 @@
     <link type="text/css" rel="stylesheet" href="../css/main.css" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css"
     />
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
+    <script src="../library/leaflet/leaflet-src.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
 
     <title>Map of Botanical Encounters</title>
   </head>
@@ -27,6 +22,12 @@
   <body>
     <nav class="navbar">
       <a href="#" class="nav__main"><h1>Map of Botanical Encounters</h1></a>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
       <div class="nav__menu" id="navMenu">
         <a href="../index.html" class="nav__link">Botanical Encounter</a>
         <a href="./johannes_drawings.html" class="nav__link"
@@ -37,32 +38,60 @@
         >
         <a href="./contact.html" class="nav__link">Contact</a>
       </div>
-
-      <div class="hamburger" id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
     </nav>
 
-    <div id="map" style="width: 100%; height: 100%"></div>
-
+    <!--Contribution PopUps on the Map-->
     <div
-      class="overlay cotribution__overlay"
-      id="contributionOverlay"
-      onclick="contribution_off()"
-    >
+      class="contribution__popup"
+      id="map"
+      style="width: 100%; height: 100%"
+    ></div>
+
+    <!--Contribution Overlay-
+    <div class="overlay cotribution__overlay" id="contributionOverlay">
       <div class="contribution__wrapper" id="contributionWrapper"></div>
-    </div>
-    <div class="overlay addImg__overlay" id="addImgOverlay">
-      <div class="camera">
-        <video id="video">Video stream not available.</video>
+    </div>-->
+
+    <!--Take Photo Overlay-->
+    <div class="overlay takePhoto__overlay" id="takePhotoOverlay">
+      <div class="takePhoto__wrapper">
+        <div class="camera">
+          <video id="video">Video stream not available.</video>
+        </div>
+        <button class="button default_button" id="takePhotoButton_">
+          Take Photo
+        </button>
+        <button class="button outlined_button" id="cancelTakePhotoButton">
+          Back to map
+        </button>
       </div>
-      <button class="button" id="button_take_photo">Take photo</button>
-
-      <canvas id="canvas" style="display: none"></canvas>
     </div>
 
+    <!--crop photo Overlay-->
+    <div class="overlay cropImg__overlay" id="cropImgOverlay">
+      <div class="cropImg__wrapper">
+        <input
+          type="file"
+          class="button"
+          id="fileInput"
+          accept="image/*"
+          style="display: none"
+        />
+        <div class="canvas_container" style="display: block">
+          <canvas id="canvas"></canvas>
+        </div>
+        <button id="cropImgButton" class="button cropImgButton">Crop</button>
+        <button
+          id="retakePhotoButton"
+          class="button outlined_button"
+          style="display: none"
+        >
+          Retake Photo
+        </button>
+      </div>
+    </div>
+
+    <!--Add Form Overlay-->
     <div class="overlay adding__overlay" id="addFormOverlay">
       <div class="adding__form" id="addingForm">
         <img
@@ -97,23 +126,18 @@
             placeholder="Tell us more about the plant"
           />
           <div class="adding__button_wrap">
-            <button
-              class="button adding__button_preview"
-              onclick="adding_form_preview()"
-            >
+            <button class="button adding__button_preview" id="previewButton">
               Preview
             </button>
-            <button
-              class="button adding__button_cancel"
-              onclick="adding_form_off()"
-            >
-              Cancel
+            <button class="button adding__button_cancel" id="cancelButton">
+              Recrop Photo
             </button>
           </div>
         </div>
       </div>
     </div>
 
+    <!--Preview Overlay-->
     <div class="overlay preview__overlay" id="previewOverlay">
       <div class="preview__wrapper">
         <img class="preview__image" id="previewImage" />
@@ -126,17 +150,12 @@
           </li>
           <li class="preview__author"><span id="previewAuthor"></span></li>
           <li class="preview__story"><span id="previewStory"></span></li>
-          <li id="previewMap" style="height: 15rem; width: 15rem"></li>
         </ul>
         <div class="preview__button_wrap">
-          <button class="button preview__button_edit" onclick="previewOff()">
+          <button class="button preview__button_edit" id="editButton">
             Edit
           </button>
-          <button
-            class="button preview__button_submit"
-            type="submit"
-            onclick="submit()"
-          >
+          <button class="button preview__button_submit" id="submitButton">
             Submit
           </button>
         </div>
@@ -149,7 +168,10 @@
     <script src="../script/overlay_switch.js"></script>
     <script src="../script/map_contribution_pins.js"></script>
     <script src="../script/contribution_take_photo.js"></script>
+    <script src="../script/contribution_upload_photo.js"></script>
+    <script src="../script/contribution_crop_photo.js"></script>
     <script src="../script/contribution_get_preview.js"></script>
     <script src="../script/submit.js"></script>
+    <script src="../script/contribution_event_listeners.js"></script>
   </body>
 </html>

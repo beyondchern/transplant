@@ -2,13 +2,17 @@ var contributionPins = new L.FeatureGroup();
 map.addLayer(contributionPins);
 
 var drawControl = new L.Control.Draw({
+  position: "bottomright",
   draw: {
     circle: false,
-    marker: true,
     polyline: false,
     polygon: false,
     rectangle: false,
     circlemarker: false,
+  },
+  edit: {
+    featureGroup: contributionPins,
+    edit: false,
   },
 }).addTo(map);
 
@@ -18,19 +22,20 @@ map.addControl(drawControl);
 let coords = {};
 map.on("draw:created", (e) => {
   coords = e.layer._latlng;
-  contributionPins.addLayer(e.layer);
-  fetch("/location", {
-    method: "POST",
-    headers: { "Content-type": "application/json" },
-    body: JSON.stringify(coords),
-  })
-    .then((response) => {
-      return response.json();
-    })
-    .then((location) => {
-      console.log(location);
-    });
+  contributionPins
+    .addLayer(e.layer)
+    .bindPopup(
+      '<p>Start sharing your human-plant encounter!</p><button class="button" id="takePhotoButton">Take a photo</button><button class="button" id="uploadPhotoButton">Upload a photo</button>'
+    )
+    .openPopup();
 
-  adding_image_on();
-  startup();
+  document.getElementById("takePhotoButton").addEventListener("click", () => {
+    takePhotoOverlay_on();
+    startup();
+  });
+
+  document.getElementById("uploadPhotoButton").addEventListener("click", () => {
+    cropImgOverlay_on();
+    uploadPhoto_on();
+  });
 });

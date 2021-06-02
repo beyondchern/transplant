@@ -13,15 +13,6 @@ app.use(express.json({ limit: "1mb" }));
 const database = new Datastore("database.db");
 database.loadDatabase();
 
-app.post("/location", (request, response) => {
-  const location = request.body;
-  response.json({
-    status: "success",
-    latitude: location.lat,
-    longitude: location.lng,
-  });
-});
-
 app.post("/submission", (request, response) => {
   const submission = request.body;
   const timestamp = Date.now();
