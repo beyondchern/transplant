@@ -29,6 +29,14 @@ function retakePhotoButton_off() {
   document.getElementById("retakePhotoButton").style.display = "none";
 }
 
+function cancelUploadPhotoButton_on() {
+  document.getElementById("cancelUploadPhotoButton").style.display = "block";
+}
+
+function cancelUploadPhotoButton_off() {
+  document.getElementById("cancelUploadPhotoButton").style.display = "none";
+}
+
 function cropImgOverlay_on() {
   document.getElementById("cropImgOverlay").style.display = "block";
 }

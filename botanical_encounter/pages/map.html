@@ -55,6 +55,7 @@
     <!--Take Photo Overlay-->
     <div class="overlay takePhoto__overlay" id="takePhotoOverlay">
       <div class="takePhoto__wrapper">
+        <a href="#" class="close"></a>
         <div class="camera">
           <video id="video">Video stream not available.</video>
         </div>
@@ -70,6 +71,7 @@
     <!--crop photo Overlay-->
     <div class="overlay cropImg__overlay" id="cropImgOverlay">
       <div class="cropImg__wrapper">
+        <a href="#" class="close"></a>
         <input
           type="file"
           class="button"
@@ -88,12 +90,20 @@
         >
           Retake Photo
         </button>
+        <button
+          id="cancelUploadPhotoButton"
+          class="button outlined_button"
+          style="display: none"
+        >
+          Back to map
+        </button>
       </div>
     </div>
 
     <!--Add Form Overlay-->
     <div class="overlay adding__overlay" id="addFormOverlay">
       <div class="adding__form" id="addingForm">
+        <a href="#" class="close"></a>
         <img
           id="inputPhoto"
           alt="The screen capture will appear in this box."
@@ -140,6 +150,7 @@
     <!--Preview Overlay-->
     <div class="overlay preview__overlay" id="previewOverlay">
       <div class="preview__wrapper">
+        <a href="#" class="close"></a>
         <img class="preview__image" id="previewImage" />
         <ul class="preview__info">
           <li class="preview__plant_name">
@@ -156,7 +167,7 @@
             Edit
           </button>
           <button class="button preview__button_submit" id="submitButton">
-            Submit
+            Submit your story
           </button>
         </div>
       </div>

@@ -37,5 +37,6 @@ map.on("draw:created", (e) => {
   document.getElementById("uploadPhotoButton").addEventListener("click", () => {
     cropImgOverlay_on();
     uploadPhoto_on();
+    cancelUploadPhotoButton_on();
   });
 });

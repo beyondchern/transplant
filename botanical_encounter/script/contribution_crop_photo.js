@@ -17,17 +17,13 @@ function cropCanvas() {
   cropper = new Cropper(canvas, option);
 
   const inputPhoto = document.getElementById("inputPhoto");
-  document.getElementById("cropImgButton").addEventListener("click", () => {
+  document.getElementById("cropImgButton").onclick = function () {
     // Get a string base 64 data url
-    var cropped = cropper.getCroppedCanvas({ width: 300, height: 400 });
+    let cropped = cropper.getCroppedCanvas({ width: 300, height: 400 });
     photoData = cropped.toDataURL();
     inputPhoto.setAttribute("src", photoData);
 
     cropImgOverlay_off();
     adding_form_on();
-  });
-}
-
-function refreshCanvas() {
-  cropper.destroy();
+  };
 }
