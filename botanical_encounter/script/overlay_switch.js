@@ -21,6 +21,10 @@ function uploadPhoto_on() {
   document.getElementById("fileInput").style.display = "block";
 }
 
+function uploadPhoto_off() {
+  document.getElementById("fileInput").style.display = "none";
+}
+
 function retakePhotoButton_on() {
   document.getElementById("retakePhotoButton").style.display = "block";
 }

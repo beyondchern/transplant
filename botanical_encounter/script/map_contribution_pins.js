@@ -18,6 +18,7 @@ var drawControl = new L.Control.Draw({
 
 // Initialise the draw control and pass it the FeatureGroup of editable layers
 map.addControl(drawControl);
+L.drawLocal.draw.toolbar.buttons.marker = "Draw a sexy polygon!";
 
 let coords = {};
 map.on("draw:created", (e) => {
@@ -29,14 +30,14 @@ map.on("draw:created", (e) => {
     )
     .openPopup();
 
-  document.getElementById("takePhotoButton").addEventListener("click", () => {
+  document.getElementById("takePhotoButton").onclick = function () {
     takePhotoOverlay_on();
     startup();
-  });
+  };
 
-  document.getElementById("uploadPhotoButton").addEventListener("click", () => {
+  document.getElementById("uploadPhotoButton").onclick = function () {
     cropImgOverlay_on();
     uploadPhoto_on();
     cancelUploadPhotoButton_on();
-  });
+  };
 });

@@ -1,7 +1,7 @@
 let context = canvas.getContext("2d");
 
 function startup() {
-  width = 600; // We will scale the photo width to this
+  width = document.getElementById("takePhotoWrapper").clientWidth * 0.8; // We will scale the photo width to this
   height = 0; // This will be computed based on the input stream
   streaming = false;
 

@@ -49,7 +49,7 @@ cancelUploadPhotoButton.onclick = function () {
 document.getElementById("previewButton").onclick = function () {
   preview();
   previewOn();
-  cropImgOverlay_off();
+  adding_form_off();
 };
 
 document.getElementById("cancelButton").onclick = function () {
@@ -66,4 +66,12 @@ document.getElementById("editButton").onclick = function () {
 document.getElementById("submitButton").onclick = function () {
   previewOff();
   submit();
+};
+
+document.getElementById("closeTakePhotoOverlay").onclick = takePhotoOverlay_off;
+document.getElementById("closeTakePhotoOverlay").onclick = takePhotoOverlay_off;
+document.getElementById("closeCropImgOverlay").onclick = cropImgOverlay_off;
+document.getElementById("closeAddingFormOverlay").onclick = adding_form_off;
+document.getElementById("closePreviewOverlay").onclick = function () {
+  previewOff();
 };
