@@ -1,4 +1,5 @@
 let context = canvas.getContext("2d");
+let localstream;
 
 function startup() {
   width = document.getElementById("takePhotoWrapper").clientWidth * 0.8; // We will scale the photo width to this
@@ -16,6 +17,7 @@ function startup() {
     // on success, stream it in video tag
     .then(function (stream) {
       video.srcObject = stream;
+      localstream = stream;
       video.play();
     })
     .catch(function (err) {
@@ -61,4 +63,14 @@ function takepicture() {
   } else {
     clearphoto();
   }
+}
+
+function vidOff() {
+  //clearInterval(theDrawLoop);
+  //ExtensionData.vidStatus = 'off';
+  video = document.getElementById("video");
+  video.pause();
+  video.src = "";
+  localstream.getTracks()[0].stop();
+  console.log("Vid off");
 }

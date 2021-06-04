@@ -4,12 +4,14 @@ h1 {
 }
 
 .plantImage {
-  width: 300px;
+  max-width: 300px;
+  max-height: 481px;
+  padding: 1rem;
 }
 
-.wikiIcon {
-  width: 1rem;
-  opacity: 0.8;
+.wikiEn {
+  font-size: 0.8rem;
+  line-height: 2rem;
 }
 
 .wrapper {

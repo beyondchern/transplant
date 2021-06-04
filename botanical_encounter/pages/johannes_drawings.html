@@ -37,6 +37,7 @@
         const plantImage = document.createElement("img");
         const commonNameEn = document.createElement("h1");
         const commonNameDe = document.createElement("h1");
+        const scientificNameWrap = document.createElement("div");
         const scientificName = document.createElement("i");
         const wikiEn = document.createElement("a");
         const wikiDe = document.createElement("a");
@@ -48,13 +49,11 @@
         commonNameEn.setAttribute("class", "commonName");
         scientificName.textContent = item.scientific_name;
         scientificName.setAttribute("class", "scientificName");
+        wikiEn.textContent = "learn more on wikipedia >>";
         wikiEn.href = item.wiki_en;
-        wikiIcon.src = "../img/icon/wikipedia_icon.png";
-        wikiIcon.setAttribute("class", "wikiIcon");
-
+        wikiEn.setAttribute("class", "wikiEn");
         card.setAttribute("class", "card");
 
-        wikiEn.appendChild(wikiIcon);
         card.append(plantImage, commonNameEn, scientificName, wikiEn);
         document.getElementById("wrapper").append(card);
       }

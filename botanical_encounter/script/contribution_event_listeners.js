@@ -13,6 +13,7 @@ document.getElementById("contributionOverlay").onclick = function () {
 const takePhotoButton_ = document.getElementById("takePhotoButton_");
 takePhotoButton_.onclick = function (ev) {
   takepicture();
+  vidOff();
   ev.preventDefault();
   takePhotoOverlay_off();
   cropImgOverlay_on();
@@ -21,6 +22,7 @@ takePhotoButton_.onclick = function (ev) {
 
 const cancelTakePhotoButton = document.getElementById("cancelTakePhotoButton");
 cancelTakePhotoButton.onclick = function () {
+  vidOff();
   takePhotoOverlay_off();
   retakePhotoButton_off();
 };
@@ -75,7 +77,10 @@ document.getElementById("closeContributionOverlay").onclick = function () {
   contribution_off();
 };
 */
-document.getElementById("closeTakePhotoOverlay").onclick = takePhotoOverlay_off;
+document.getElementById("closeTakePhotoOverlay").onclick = function () {
+  vidOff();
+  takePhotoOverlay_off();
+};
 document.getElementById("closeCropImgOverlay").onclick = cropImgOverlay_off;
 document.getElementById("closeAddingFormOverlay").onclick = adding_form_off;
 document.getElementById("closePreviewOverlay").onclick = previewOff;
