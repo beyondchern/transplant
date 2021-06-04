@@ -5,6 +5,8 @@ async function getData() {
   console.log("data:");
   console.log(contributions);
 
+  let markers = L.markerClusterGroup({ showCoverageOnHover: false });
+
   putMarker();
   function putMarker() {
     for (item of contributions) {
@@ -35,11 +37,13 @@ async function getData() {
       */
 
       /* contributions in overlays*/
-      L.marker([item.location.lat, item.location.lng], {
+      let marker = L.marker([item.location.lat, item.location.lng], {
         icon: plantIcon,
-      })
-        .addTo(map)
-        .on("click", onClick);
+      });
+      //.addTo(map)
+      markers.addLayer(marker);
+      marker.on("click", onClick);
+
       function onClick() {
         const contributionImage = document.createElement("img");
         const contributionInfo = document.createElement("ul");
@@ -79,4 +83,5 @@ async function getData() {
       }
     }
   }
+  map.addLayer(markers);
 }
