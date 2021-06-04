@@ -31,7 +31,14 @@
   align-items: center;
 }
 
-/*
+.contributedContent {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .contribution__image {
   width: 80%;
   padding: 5%;
@@ -50,7 +57,6 @@
 .preview__story {
   text-align: justify;
 }
-*/
 
 /*Take Photo Overlay*/
 .camera {

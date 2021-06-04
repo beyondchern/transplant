@@ -14,6 +14,7 @@ async function getData() {
         iconSize: [90, 120],
       });
 
+      /* contributions in pop-ups
       let popupContent = `<img src=../img_contribution/${item_.filename}>
       <ul class="contribution__info">
       <li class="contribution__plant_name">${item_.plantName}<i class="contribution__scientific_name">${item_.scientificName}</i></li>
@@ -30,10 +31,15 @@ async function getData() {
         icon: plantIcon,
       })
         .addTo(map)
-        .bindPopup(popupContent, popupOptions);
+      .bindPopup(popupContent, popupOptions);
+      */
 
-      /*
-        .on("click", onClick)
+      /* contributions in overlays*/
+      L.marker([item.location.lat, item.location.lng], {
+        icon: plantIcon,
+      })
+        .addTo(map)
+        .on("click", onClick);
       function onClick() {
         const contributionImage = document.createElement("img");
         const contributionInfo = document.createElement("ul");
@@ -41,6 +47,7 @@ async function getData() {
         const contributionScientificName = document.createElement("i");
         const contributionAuthor = document.createElement("li");
         const contributionStory = document.createElement("li");
+        const removeAbove = document.createElement("li");
 
         contributionImage.src = `../img_contribution/${item_.filename}`;
         contributionPlantName.textContent = `${item_.plantName}`;
@@ -65,11 +72,11 @@ async function getData() {
           contributionStory
         );
         document
-          .getElementById("contributionWrapper")
+          .getElementById("contributedContent")
           .append(contributionImage, contributionInfo);
 
         contribution_on();
-      }*/
+      }
     }
   }
 }

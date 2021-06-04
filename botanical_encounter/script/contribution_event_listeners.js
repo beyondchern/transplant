@@ -1,9 +1,10 @@
 //On Map
-/*
-document
-  .getElementById("contributionOverlay")
-  .addEventListener("click", contribution_off);
+document.getElementById("contributionOverlay").onclick = function () {
+  document.getElementById("contributedContent").innerHTML = "";
+  contribution_off();
+};
 
+/*
   Buttons in pup-ups are defined at map_contribution_pins.js
   They are "takePhotoButton" and "uploadPhotoButton"
   */
@@ -68,10 +69,13 @@ document.getElementById("submitButton").onclick = function () {
   submit();
 };
 
-document.getElementById("closeTakePhotoOverlay").onclick = takePhotoOverlay_off;
+/*
+document.getElementById("closeContributionOverlay").onclick = function () {
+  document.getElementById("contributedContent").innerHTML = "";
+  contribution_off();
+};
+*/
 document.getElementById("closeTakePhotoOverlay").onclick = takePhotoOverlay_off;
 document.getElementById("closeCropImgOverlay").onclick = cropImgOverlay_off;
 document.getElementById("closeAddingFormOverlay").onclick = adding_form_off;
-document.getElementById("closePreviewOverlay").onclick = function () {
-  previewOff();
-};
+document.getElementById("closePreviewOverlay").onclick = previewOff;

@@ -10,10 +10,16 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.0/MarkerCluster.Default.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css"
     />
     <script src="../library/leaflet/leaflet-src.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.0/leaflet.markercluster.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
 
     <title>Map of Botanical Encounters</title>
@@ -47,10 +53,13 @@
       style="width: 100%; height: 100%"
     ></div>
 
-    <!--Contribution Overlay-
+    <!--Contribution Overlay-->
     <div class="overlay cotribution__overlay" id="contributionOverlay">
-      <div class="contribution__wrapper" id="contributionWrapper"></div>
-    </div>-->
+      <div class="contribution__wrapper" id="contributionWrapper">
+        <!--<a href="#" class="close" id="closeContributionOverlay"></a>-->
+        <div class="contributedContent" id="contributedContent"></div>
+      </div>
+    </div>
 
     <!--Take Photo Overlay-->
     <div class="overlay takePhoto__overlay" id="takePhotoOverlay">
