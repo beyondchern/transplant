@@ -40,6 +40,7 @@
         const scientificName = document.createElement("i");
         const wikiEn = document.createElement("a");
         const wikiDe = document.createElement("a");
+        const wikiIcon = document.createElement("img");
 
         plantImage.src = `../img/johannes/${item.file_name}.jpg`;
         plantImage.setAttribute("class", "plantImage");
@@ -47,11 +48,13 @@
         commonNameEn.setAttribute("class", "commonName");
         scientificName.textContent = item.scientific_name;
         scientificName.setAttribute("class", "scientificName");
-        wikiEn.textContent = "wikipedia";
         wikiEn.href = item.wiki_en;
+        wikiIcon.src = "../img/icon/wikipedia_icon.png";
+        wikiIcon.setAttribute("class", "wikiIcon");
 
         card.setAttribute("class", "card");
 
+        wikiEn.appendChild(wikiIcon);
         card.append(plantImage, commonNameEn, scientificName, wikiEn);
         document.getElementById("wrapper").append(card);
       }

@@ -50,7 +50,7 @@ map.on("draw:created", (e) => {
 let marker = L.marker([lat, lon], { draggable: true })
   .addTo(map)
   .bindPopup(
-    "<p><h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or, drag this pin to where your plant story happened and start sharing your own :)</p>"
+    "<p><h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or, drop this pin to where your plant story happened and start sharing yours :)</p>"
   )
   .openPopup();
 
