@@ -43,7 +43,7 @@ if (navigator.geolocation) {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
     console.log(lat, lon);
-    map.setView([lat, lon], 3);
+    map.setView([lat, lon], 12);
     userMarker.setLatLng([lat, lon]);
   });
 } else {

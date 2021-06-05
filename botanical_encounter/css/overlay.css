@@ -23,7 +23,7 @@
   width: 80%;
   max-width: 30rem;
   min-width: 20rem;
-  margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+  margin: auto; /* Will not center vertically and won't work in IE6/7. */
   padding: 5%;
   display: flex;
   flex-flow: wrap;
@@ -31,6 +31,7 @@
   align-items: center;
 }
 
+/*contribution Overlay*/
 .contributedContent {
   width: 100%;
   display: flex;
@@ -58,7 +59,7 @@
   text-align: justify;
 }
 
-/*Take Photo Overlay*/
+/*Take Photo Overlay
 .camera {
   width: 85%;
   min-width: 320px;
@@ -67,11 +68,18 @@
   display: block;
   width: 100%;
 }
+*/
 
 /*cropImg Overlay*/
+
+.fileInput {
+  display: block;
+}
+
 .canvas_container {
   width: 85%;
   min-width: 320px;
+  display: flex;
 }
 
 .canvas_container canvas {
@@ -83,7 +91,7 @@
 /*input overlay*/
 .adding__form {
   background-color: #ede5d8;
-  margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+  margin: auto; /* Will not center vertically and won't work in IE6/7. */
   left: 0;
   right: 0;
   max-width: 80%;
@@ -127,4 +135,12 @@
 .adding__form_text_input_story {
   margin: 0.7rem;
   height: 10rem;
+}
+
+/*Preview Overlay*/
+.preview__info,
+.preview__plantName,
+.prview__author,
+.preview__story {
+  display: block;
 }

@@ -77,7 +77,7 @@
     <div class="overlay cropImg__overlay" id="cropImgOverlay">
       <div class="cropImg__wrapper">
         <a href="#" class="close" id="closeCropImgOverlay"></a>
-        <input type="file" class="button" id="fileInput" accept="image/*" />
+        <input type="file" class="fileInput" id="fileInput" accept="image/*" />
         <div class="canvas_container" style="display: block">
           <canvas id="canvas"></canvas>
         </div>
@@ -153,12 +153,12 @@
         <img class="preview__image" id="previewImage" />
         <ul class="preview__info">
           <li class="preview__plant_name">
-            <span id="previewPlantName"></span>
+            <h1><span id="previewPlantName"> </span></h1>
             <i class="preview__scientific_name"
               ><span id="PreviewScientificName"></span
             ></i>
           </li>
-          <li class="preview__author"><span id="previewAuthor"></span></li>
+          <li class="preview__author">By <span id="previewAuthor"></span></li>
           <li class="preview__story"><span id="previewStory"></span></li>
         </ul>
         <div class="preview__button_wrap">

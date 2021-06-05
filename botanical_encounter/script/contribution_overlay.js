@@ -48,15 +48,15 @@ async function getData() {
         const contributionImage = document.createElement("img");
         const contributionInfo = document.createElement("ul");
         const contributionPlantName = document.createElement("li");
-        const contributionScientificName = document.createElement("i");
+        const contributionScientificName = document.createElement("li");
         const contributionAuthor = document.createElement("li");
         const contributionStory = document.createElement("li");
         const removeAbove = document.createElement("li");
 
         contributionImage.src = `../img_contribution/${item_.filename}`;
-        contributionPlantName.textContent = `${item_.plantName}`;
-        contributionScientificName.textContent = `${item_.scientificName}`;
-        contributionAuthor.textContent = `${item_.author}`;
+        contributionPlantName.innerHTML = `<h1>${item_.plantName}</h1>`;
+        contributionScientificName.innerHTML = `<i>${item_.scientificName}</i>`;
+        contributionAuthor.textContent = `By ${item_.author}`;
         contributionStory.textContent = `${item_.story}`;
 
         contributionImage.setAttribute("class", "contribition__image");
