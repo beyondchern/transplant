@@ -7,20 +7,13 @@ function contribution_off() {
   //document.getElementById("body_list_contribution").style.overflow = "scroll";
 }
 
+/*
 function takePhotoOverlay_on() {
   document.getElementById("takePhotoOverlay").style.display = "block";
 }
 
 function takePhotoOverlay_off() {
   document.getElementById("takePhotoOverlay").style.display = "none";
-}
-
-function uploadPhoto_on() {
-  document.getElementById("fileInput").style.display = "block";
-}
-
-function uploadPhoto_off() {
-  document.getElementById("fileInput").style.display = "none";
 }
 
 function retakePhotoButton_on() {
@@ -37,6 +30,15 @@ function cancelUploadPhotoButton_on() {
 
 function cancelUploadPhotoButton_off() {
   document.getElementById("cancelUploadPhotoButton").style.display = "none";
+}
+*/
+
+function uploadPhoto_on() {
+  document.getElementById("fileInput").style.display = "block";
+}
+
+function uploadPhoto_off() {
+  document.getElementById("fileInput").style.display = "none";
 }
 
 function cropImgOverlay_on() {

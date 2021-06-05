@@ -56,6 +56,7 @@
     </div>
 
     <!--Take Photo Overlay-->
+    <!--
     <div class="overlay takePhoto__overlay" id="takePhotoOverlay">
       <div class="takePhoto__wrapper" id="takePhotoWrapper">
         <a href="#" class="close" id="closeTakePhotoOverlay"></a>
@@ -70,36 +71,28 @@
         </button>
       </div>
     </div>
+  -->
 
     <!--crop photo Overlay-->
     <div class="overlay cropImg__overlay" id="cropImgOverlay">
       <div class="cropImg__wrapper">
         <a href="#" class="close" id="closeCropImgOverlay"></a>
-        <input
-          type="file"
-          class="button"
-          id="fileInput"
-          accept="image/*"
-          style="display: none"
-        />
+        <input type="file" class="button" id="fileInput" accept="image/*" />
         <div class="canvas_container" style="display: block">
           <canvas id="canvas"></canvas>
         </div>
         <button id="cropImgButton" class="button cropImgButton">Crop</button>
-        <button
+        <button id="cancelUploadPhotoButton" class="button outlined_button">
+          Back to map
+        </button>
+
+        <!--<button
           id="retakePhotoButton"
           class="button outlined_button"
           style="display: none"
         >
           Retake Photo
-        </button>
-        <button
-          id="cancelUploadPhotoButton"
-          class="button outlined_button"
-          style="display: none"
-        >
-          Back to map
-        </button>
+        </button>-->
       </div>
     </div>
 
@@ -183,8 +176,8 @@
     <script src="../script/map_setup.js"></script>
     <script src="../script/contribution_overlay.js"></script>
     <script src="../script/overlay_switch.js"></script>
-    <script src="../script/map_contribution_pins.js"></script>
-    <script src="../script/contribution_take_photo.js"></script>
+    <!--<script src="../script/map_contribution_pins.js"></script>-->
+    <!--<script src="../script/contribution_take_photo.js"></script>-->
     <script src="../script/contribution_upload_photo.js"></script>
     <script src="../script/contribution_crop_photo.js"></script>
     <script src="../script/contribution_get_preview.js"></script>
