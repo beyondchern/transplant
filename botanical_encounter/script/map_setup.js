@@ -18,7 +18,7 @@ tiles.addTo(map);
 let userMarker = L.marker([lat, lon], { draggable: true })
   .addTo(map)
   .bindPopup(
-    "<p><h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or, drop this pin to where your plant story happened and start sharing yours :)</p>"
+    "<p><h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dropping this pin at where you met your plant :)</p>"
   )
   .openPopup();
 
@@ -26,7 +26,7 @@ let coords = {};
 userMarker.on("dragend", (e) => {
   coords = userMarker.getLatLng();
   userMarker._popup.setContent(
-    '<p>"Start with uploading your art!"</p><button class="button" id="uploadPhotoButton">Upload a photo</button>'
+    '<p>Start with uploading your art!</p><button class="button" id="uploadPhotoButton">Upload a photo</button>'
   );
   userMarker.openPopup();
 
