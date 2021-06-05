@@ -1,17 +1,23 @@
-const shareData = {
-  title: "Botanical Encounter",
-  text: "Botanical Encounter is a collaborative mapping project inspired by a 16th century naturalist book Codex Kentmanus",
-  url: "https://botanical-encounter.herokuapp.com/pages/map.html",
-};
+const shareButton = document.querySelector(".share-button");
+const shareDialog = document.querySelector(".share-dialog");
+const closeButton = document.querySelector(".close-button");
 
-const btn = document.getElementById("shareBtton");
-
-// Must be triggered some kind of "user activation"
-btn.addEventListener("click", async () => {
-  try {
-    await navigator.share(shareData);
-    console.log(shareData);
-  } catch (err) {
-    console.log("Error: " + err);
+shareButton.addEventListener("click", (event) => {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "WebShare API Demo",
+        url: "https://codepen.io/ayoisaiah/pen/YbNazJ",
+      })
+      .then(() => {
+        console.log("Thanks for sharing!");
+      })
+      .catch(console.error);
+  } else {
+    shareDialog.classList.add("is-open");
   }
+});
+
+closeButton.addEventListener("click", (event) => {
+  shareDialog.classList.remove("is-open");
 });
