@@ -51,7 +51,6 @@ async function getData() {
         const contributionScientificName = document.createElement("li");
         const contributionAuthor = document.createElement("li");
         const contributionStory = document.createElement("li");
-        const removeAbove = document.createElement("li");
 
         contributionImage.src = `../img_contribution/${item_.filename}`;
         contributionPlantName.innerHTML = `<h1>${item_.plantName}</h1>`;
@@ -84,4 +83,23 @@ async function getData() {
     }
   }
   map.addLayer(markers);
+
+  const shareData = {
+    title: `A Botanical Encounter - ${item.plantName} by ${item.author}`,
+    files: `../img_contribution/${item.filename}`,
+    text: `${item.story}`,
+    url: "http://localhost:3000/pages/map.html",
+  };
+
+  const shareButton = document.getElementById("shareButton");
+
+  // Must be triggered some kind of "user activation"
+  shareButton.onclick = async () => {
+    try {
+      await navigator.share(shareData);
+      console.log("shareData");
+    } catch (err) {
+      console.log("Error: " + err);
+    }
+  };
 }
