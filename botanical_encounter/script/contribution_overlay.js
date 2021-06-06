@@ -37,7 +37,7 @@ async function getData() {
         contributionPlantName.innerHTML = `<h1>${item_.plantName}</h1>`;
         contributionScientificName.innerHTML = `<i>${item_.scientificName}</i>`;
         contributionAuthor.textContent = `By ${item_.author}`;
-        contributionStory.textContent = `${item_.story}`;
+        contributionStory.textContent = `${item_.story} `;
         contributionUrl.href = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`;
 
         contributionImage.setAttribute("class", "contribition__image");
@@ -70,7 +70,7 @@ async function getData() {
               .share({
                 title: "Botanical Encounter",
                 text: document.getElementById("contributionStory").textContent,
-                url: "https://botanical-encounter.herokuapp.com",
+                url: "https://botanical-encounter.herokuapp.com/pages/map.html?lat=24.138373019941636&lng=120.66393613815309&zoom=12",
               })
               .then(() => {
                 console.log("Thanks for sharing!");
