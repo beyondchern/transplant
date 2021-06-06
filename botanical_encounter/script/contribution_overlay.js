@@ -58,6 +58,8 @@ async function getData() {
           .getElementById("contributedContent")
           .append(contributionImage, contributionInfo);
 
+        const shareUrl = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`;
+
         //share button
         shareButton.onclick = (element) => {
           if (navigator.share) {
@@ -65,7 +67,7 @@ async function getData() {
               .share({
                 title: querySelector("contribution__plant_name").innerText,
                 text: querySelector("contribution__story").innerText,
-                url: `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`,
+                url: shareUrl,
               })
               .then(() => {
                 console.log("Thanks for sharing!");
@@ -73,7 +75,6 @@ async function getData() {
               .catch(console.error);
           } else {
             //Share dialog
-            const shareUrl = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`;
             const shareOnFacebook = document.createElement("a");
             const shareViaEmail = document.createElement("a");
             const shareLink = document.createElement("div");
