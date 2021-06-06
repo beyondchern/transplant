@@ -1,8 +1,11 @@
 //On Map
+
+/*
 document.getElementById("contributionOverlay").onclick = function () {
   document.getElementById("contributedContent").innerHTML = "";
   contribution_off();
 };
+*/
 
 /*
   Buttons in pup-ups are defined at map_contribution_pins.js
@@ -76,13 +79,14 @@ document.getElementById("submitButton").onclick = function () {
   submit();
 };
 
-/*
 document.getElementById("closeContributionOverlay").onclick = function () {
   document.getElementById("contributedContent").innerHTML = "";
+  shareDialog.classList.remove("is-open");
+  shareTargets.innerHTML = "";
+  shareLink.textContent = "";
+
   contribution_off();
 };
-*/
-
 document.getElementById("closeCropImgOverlay").onclick = cropImgOverlay_off;
 document.getElementById("closeAddingFormOverlay").onclick = adding_form_off;
 document.getElementById("closePreviewOverlay").onclick = previewOff;

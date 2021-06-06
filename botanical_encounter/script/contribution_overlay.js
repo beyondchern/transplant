@@ -16,42 +16,21 @@ async function getData() {
         iconSize: [90, 120],
       });
 
-      /* contributions in pop-ups
-      let popupContent = `<img src=../img_contribution/${item_.filename}>
-      <ul class="contribution__info">
-      <li class="contribution__plant_name">${item_.plantName}<i class="contribution__scientific_name">${item_.scientificName}</i></li>
-      <li class="contribution__author">${item_.author}</li>
-      <li class="contribution__story">${item_.story}</li>
-      </ul>`;
-
-      let popupOptions = {
-        className: "contribution__popup",
-        maxWidth: "90%",
-      };
-
-      L.marker([item.location.lat, item.location.lng], {
-        icon: plantIcon,
-      })
-        .addTo(map)
-      .bindPopup(popupContent, popupOptions);
-      */
-
       /* contributions in overlays*/
       let marker = L.marker([item.location.lat, item.location.lng], {
         icon: plantIcon,
       });
       //.addTo(map)
       markers.addLayer(marker);
-      marker.on("click", onClick);
+      marker.on("click", markerClick);
 
-      function onClick() {
+      function markerClick() {
         const contributionImage = document.createElement("img");
         const contributionInfo = document.createElement("ul");
         const contributionPlantName = document.createElement("li");
         const contributionScientificName = document.createElement("li");
         const contributionAuthor = document.createElement("li");
         const contributionStory = document.createElement("li");
-        const removeAbove = document.createElement("li");
 
         contributionImage.src = `../img_contribution/${item_.filename}`;
         contributionPlantName.innerHTML = `<h1>${item_.plantName}</h1>`;
@@ -79,9 +58,68 @@ async function getData() {
           .getElementById("contributedContent")
           .append(contributionImage, contributionInfo);
 
+        //share button
+        shareButton.onclick = (event) => {
+          if (navigator.share) {
+            navigator
+              .share({
+                title: "Botanical Encounter",
+                url: shareUrl,
+              })
+              .then(() => {
+                console.log("Thanks for sharing!");
+              })
+              .catch(console.error);
+          } else {
+            //Share dialog
+            const shareUrl = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`;
+            const shareOnFacebook = document.createElement("a");
+            const shareViaEmail = document.createElement("a");
+            const shareLink = document.createElement("div");
+
+            shareOnFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item.location.lng}&zoom=12`;
+            shareOnFacebook.setAttribute("target", "_blank");
+            shareOnFacebook.textContent = "Facebook";
+            shareLink.textContent = shareUrl;
+            shareLink.setAttribute("class", "pen-url");
+            shareLink.setAttribute("id", "penUrl");
+
+            document.getElementById("shareTargets").prepend(shareOnFacebook);
+            document.getElementById("shareLink").prepend(shareLink);
+
+            shareDialog.classList.add("is-open");
+          }
+        };
+
+        closeShareDialogButton.onclick = (event) => {
+          shareDialog.classList.remove("is-open");
+          shareTargets.innerHTML = "";
+          shareLink.textContent = "";
+        };
+
         contribution_on();
       }
     }
   }
   map.addLayer(markers);
 }
+
+/* contributions in pop-ups
+  let popupContent = `<img src=../img_contribution/${item_.filename}>
+  <ul class="contribution__info">
+  <li class="contribution__plant_name">${item_.plantName}<i class="contribution__scientific_name">${item_.scientificName}</i></li>
+  <li class="contribution__author">${item_.author}</li>
+  <li class="contribution__story">${item_.story}</li>
+  </ul>`;
+
+  let popupOptions = {
+    className: "contribution__popup",
+    maxWidth: "90%",
+  };
+
+  L.marker([item.location.lat, item.location.lng], {
+    icon: plantIcon,
+  })
+    .addTo(map)
+  .bindPopup(popupContent, popupOptions);
+  */

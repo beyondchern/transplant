@@ -6,7 +6,6 @@ function contribution_off() {
   document.getElementById("contributionOverlay").style.display = "none";
   //document.getElementById("body_list_contribution").style.overflow = "scroll";
 }
-
 /*
 function takePhotoOverlay_on() {
   document.getElementById("takePhotoOverlay").style.display = "block";
