@@ -31,12 +31,14 @@ async function getData() {
         const contributionScientificName = document.createElement("li");
         const contributionAuthor = document.createElement("li");
         const contributionStory = document.createElement("li");
+        const contributionUrl = document.createElement("a");
 
         contributionImage.src = `../img_contribution/${item_.filename}`;
         contributionPlantName.innerHTML = `<h1>${item_.plantName}</h1>`;
         contributionScientificName.innerHTML = `<i>${item_.scientificName}</i>`;
         contributionAuthor.textContent = `By ${item_.author}`;
         contributionStory.textContent = `${item_.story}`;
+        contributionUrl.href = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`;
 
         contributionImage.setAttribute("class", "contribition__image");
         contributionInfo.setAttribute("class", "contribution__info");
@@ -47,18 +49,18 @@ async function getData() {
         );
         contributionAuthor.setAttribute("class", "contribution__author");
         contributionStory.setAttribute("class", "contribution__story");
+        contributionUrl.setAttribute("class", "contribution__Url");
 
         contributionInfo.append(
           contributionPlantName,
           contributionScientificName,
           contributionAuthor,
-          contributionStory
+          contributionStory,
+          contributionUrl
         );
         document
           .getElementById("contributedContent")
           .append(contributionImage, contributionInfo);
-
-        const shareUrl = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`;
 
         //share button
         shareButton.onclick = (element) => {
@@ -67,7 +69,7 @@ async function getData() {
               .share({
                 title: querySelector("contribution__plant_name").innerText,
                 text: querySelector("contribution__story").innerText,
-                url: shareUrl,
+                url: querySelector("contribution__url").href,
               })
               .then(() => {
                 console.log("Thanks for sharing!");
@@ -79,10 +81,10 @@ async function getData() {
             const shareViaEmail = document.createElement("a");
             const shareLink = document.createElement("div");
 
-            shareOnFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item.location.lng}&zoom=12`;
+            shareOnFacebook.href = `https://www.facebook.com/sharer.php?u=https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}%26lng=${item_.location.lng}%26zoom=12`;
             shareOnFacebook.setAttribute("target", "_blank");
             shareOnFacebook.textContent = "Facebook";
-            shareLink.textContent = shareUrl;
+            shareLink.textContent = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`;
             shareLink.setAttribute("class", "pen-url");
             shareLink.setAttribute("id", "penUrl");
 
