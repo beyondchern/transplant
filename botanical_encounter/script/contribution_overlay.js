@@ -67,8 +67,7 @@ async function getData() {
           if (navigator.share) {
             navigator
               .share({
-                title: querySelector("contribution__plant_name").innerText,
-                text: querySelector("contribution__story").innerText,
+                title: "Botanical Encounter",
                 url: "https://botanical-encounter.herokuapp.com",
               })
               .then(() => {
