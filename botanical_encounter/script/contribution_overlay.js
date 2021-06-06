@@ -69,7 +69,7 @@ async function getData() {
               .share({
                 title: querySelector("contribution__plant_name").innerText,
                 text: querySelector("contribution__story").innerText,
-                url: querySelector("contribution__url").href,
+                url: "https://botanical-encounter.herokuapp.com",
               })
               .then(() => {
                 console.log("Thanks for sharing!");
