@@ -64,7 +64,7 @@ async function getData() {
             navigator
               .share({
                 title: "Botanical Encounter",
-                url: shareUrl,
+                url: "https://botanical-encounter.herokuapp.com/pages/map.html",
               })
               .then(() => {
                 console.log("Thanks for sharing!");
