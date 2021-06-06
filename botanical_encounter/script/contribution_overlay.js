@@ -49,6 +49,7 @@ async function getData() {
         );
         contributionAuthor.setAttribute("class", "contribution__author");
         contributionStory.setAttribute("class", "contribution__story");
+        contributionStory.setAttribute("id", "contributionStory");
         contributionUrl.setAttribute("class", "contribution__Url");
 
         contributionInfo.append(
@@ -68,6 +69,7 @@ async function getData() {
             navigator
               .share({
                 title: "Botanical Encounter",
+                text: document.getElementById("contributionStory").textContent,
                 url: "https://botanical-encounter.herokuapp.com",
               })
               .then(() => {
