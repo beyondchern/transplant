@@ -39,7 +39,7 @@ async function getData() {
         contributionAuthor.textContent = `By ${item_.author}`;
         contributionStory.textContent = `${item_.story} `;
         contributionUrl.textContent =
-          '"https://botanical-encounter.herokuapp.com/pages/map.html?lat=24.138373019941636&lng=120.66393613815309&zoom=12"';
+          "https://botanical-encounter.herokuapp.com/pages/map.html?lat=24.138373019941636&lng=120.66393613815309&zoom=12";
 
         contributionImage.setAttribute("class", "contribition__image");
         contributionInfo.setAttribute("class", "contribution__info");
