@@ -59,12 +59,13 @@ async function getData() {
           .append(contributionImage, contributionInfo);
 
         //share button
-        shareButton.onclick = (event) => {
+        shareButton.onclick = (element) => {
           if (navigator.share) {
             navigator
               .share({
-                title: "Botanical Encounter",
-                url: "https://botanical-encounter.herokuapp.com/pages/map.html",
+                title: querySelector("contribution__plant_name").innerText,
+                text: querySelector("contribution__story").innerText,
+                url: `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`,
               })
               .then(() => {
                 console.log("Thanks for sharing!");
