@@ -31,15 +31,12 @@ async function getData() {
         const contributionScientificName = document.createElement("li");
         const contributionAuthor = document.createElement("li");
         const contributionStory = document.createElement("li");
-        const contributionUrl = document.createElement("p");
 
         contributionImage.src = `../img_contribution/${item_.filename}`;
         contributionPlantName.innerHTML = `<h1>${item_.plantName}</h1>`;
         contributionScientificName.innerHTML = `<i>${item_.scientificName}</i>`;
         contributionAuthor.textContent = `By ${item_.author}`;
         contributionStory.textContent = `${item_.story} `;
-        contributionUrl.textContent =
-          "https://botanical-encounter.herokuapp.com/pages/map.html?lat=24.138373019941636&lng=120.66393613815309&zoom=12";
 
         contributionImage.setAttribute("class", "contribition__image");
         contributionInfo.setAttribute("class", "contribution__info");
@@ -51,14 +48,12 @@ async function getData() {
         contributionAuthor.setAttribute("class", "contribution__author");
         contributionStory.setAttribute("class", "contribution__story");
         contributionStory.setAttribute("id", "contributionStory");
-        contributionUrl.setAttribute("id", "contribution__Url");
 
         contributionInfo.append(
           contributionPlantName,
           contributionScientificName,
           contributionAuthor,
-          contributionStory,
-          contributionUrl
+          contributionStory
         );
         document
           .getElementById("contributedContent")
@@ -69,9 +64,9 @@ async function getData() {
           if (navigator.share) {
             navigator
               .share({
-                title: "Botanical Encounter",
-                text: document.getElementById("contributionStory").textContent,
-                url: document.getElementById("contributionUrl").textContent,
+                title: "Map of Botanical Encounters",
+                text: "Botanical Encounter is a collaborative mapping project inspired by the 16 century naturalist book 'Codex Kentmanus'",
+                url: "https://botanical-encounter.herokuapp.com/pages/map.html#",
               })
               .then(() => {
                 console.log("Thanks for sharing!");
