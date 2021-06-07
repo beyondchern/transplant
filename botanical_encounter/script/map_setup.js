@@ -15,7 +15,26 @@ let tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 let tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(map);
 
-let userMarker = L.marker([lat, lng], { draggable: true }).addTo(map);
+///////DivIcon!
+let userIcon = L.divIcon({
+  html: '<div class="map-label"><div style="width:300px" class="user-label-content"><p><h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dropping this pin at where you met your plant :)</p></div><div class="map-label-arrow"></div></div>',
+  className: "coordinates",
+});
+
+let userDropIcon = L.divIcon({
+  html: '<div class="drop-label-content"></div>',
+  className: "coordinates",
+});
+
+/////
+
+let userMarker = L.marker([lat, lng], {
+  icon: userIcon,
+  iconSize: [300, 51],
+  iconAnchor: [lat, lng], // point of the icon which will correspond to marker's location
+  popupAnchor: [lat, lng], // point from which the popup should open relative to the iconAnchor
+  draggable: true,
+}).addTo(map);
 
 setView();
 function setView() {
@@ -50,22 +69,19 @@ function setView() {
   }
   console.log(lat, lng, zoom);
   map.setView([lat, lng], zoom);
-  userMarker
-    .setLatLng([lat, lng])
-    .bindPopup(
-      "<p><h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dropping this pin at where you met your plant :)</p>"
-    )
-    .openPopup();
+  userMarker.setLatLng([lat, lng]);
 }
 
 let coords = {};
 userMarker.on("dragend", (e) => {
   coords = userMarker.getLatLng();
   console.log(coords);
-  userMarker._popup.setContent(
-    '<p>Start with uploading your art!</p><button class="button" id="uploadPhotoButton">Upload a photo</button>'
-  );
-  userMarker.openPopup();
+  userMarker.setIcon(userDropIcon);
+  userMarker
+    .bindPopup(
+      '<p>Start with uploading your art!</p><button class="button" id="uploadPhotoButton">Upload a photo</button>'
+    )
+    .openPopup();
 
   document.getElementById("uploadPhotoButton").onclick = function () {
     cropImgOverlay_on();

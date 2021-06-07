@@ -1,0 +1,73 @@
+/* By larry chambers
+https://stackoverflow.com/questions/53969682/not-adding-custom-marker-with-added-css-with-leaflet-map-and-l-routing-control
+*/
+
+/*div icon*/
+.map-label {
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/*Wrap the content of the divicon (text) in this class*/
+.map-label-content {
+  order: 1;
+  position: relative;
+  left: -40px;
+  background-color: #fff;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--clr-dark);
+  padding: 0px;
+  white-space: wrap;
+}
+
+.user-label-content {
+  order: 1;
+  position: relative;
+  left: -50%;
+  background-color: #fff;
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--clr-dark);
+  padding: 1rem;
+  white-space: wrap;
+}
+
+/*https://codepen.io/katia-trifonova/pen/zwZgdx*/
+.drop-label-content {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  border-radius: 50%;
+  border: 8px solid var(--clr-dark);
+  width: 8px;
+  height: 8px;
+}
+
+.drop-label-content::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  bottom: -30px;
+  left: -6px;
+  border: 10px solid transparent;
+  border-top: 17px solid var(--clr-dark);
+}
+
+/*Add this arrow*/
+.map-label-arrow {
+  order: 2;
+  width: 0px;
+  height: 0px;
+  left: 50%;
+  border-style: solid;
+  border-color: var(--clr-dark) transparent transparent transparent;
+  border-width: 6px 6px 0 6px; /*[first number is height, second/fourth are rigth/left width]*/
+}

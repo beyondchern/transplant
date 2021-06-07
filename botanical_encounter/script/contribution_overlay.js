@@ -11,11 +11,17 @@ async function getData() {
   function putMarker() {
     for (item of contributions) {
       let item_ = item;
+      let plantIcon = L.divIcon({
+        html: `<div classname="map-label"><div style="background-image: url(../img_contribution/${item.filename});background-size: 90px 120px;height:120px;width:90px" class="map-label-content"></div><div class="map-label-arrow"></div></div>`,
+        className: "dummy",
+      });
+
+      /*
       let plantIcon = L.icon({
         iconUrl: `../img_contribution/${item.filename}`,
         iconSize: [90, 120],
       });
-
+      */
       /* contributions in overlays*/
       let marker = L.marker([item.location.lat, item.location.lng], {
         icon: plantIcon,
