@@ -38,8 +38,7 @@ async function getData() {
         contributionScientificName.innerHTML = `<i>${item_.scientificName}</i>`;
         contributionAuthor.textContent = `By ${item_.author}`;
         contributionStory.textContent = `${item_.story} `;
-        contributionUrl.href =
-          "https://botanical-encounter.herokuapp.com/pages/map.html?lat=24.138373019941636&lng=120.66393613815309&zoom=12";
+        contributionUrl.href = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`;
 
         contributionImage.setAttribute("class", "contribition__image");
         contributionInfo.setAttribute("class", "contribution__info");
