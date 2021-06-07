@@ -66,7 +66,7 @@ async function getData() {
               .share({
                 title: "Map of Botanical Encounters",
                 text: "Botanical Encounter is a collaborative mapping project inspired by the 16 century naturalist book 'Codex Kentmanus'",
-                url: "https://botanical-encounter.herokuapp.com/pages/map.html#",
+                url: "https://botanical-encounter.herokuapp.com/pages/map.html",
               })
               .then(() => {
                 console.log("Thanks for sharing!");
