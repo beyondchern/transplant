@@ -69,7 +69,8 @@ async function getData() {
           if (navigator.share) {
             navigator
               .share({
-                title: "Map of Botanical Encounters",
+                title: "A botanical encounter",
+                text: "Check out this beautiful story on Map of Botanical Encounter",
                 url: contributionUrl.href,
               })
               .then(() => {
