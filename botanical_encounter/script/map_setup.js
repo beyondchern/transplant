@@ -15,7 +15,7 @@ let tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 let tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(map);
 
-///////DivIcon!
+/////--- Div Icon---/////
 let userIcon = L.divIcon({
   html: '<div class="map-label"><div style="width:300px" class="user-label-content"><p><h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dropping this pin at where you met your plant :)</p></div><div class="map-label-arrow"></div></div>',
   className: "coordinates",
@@ -26,7 +26,7 @@ let userDropIcon = L.divIcon({
   className: "coordinates",
 });
 
-/////
+/////--- Div Icon---/////
 
 let userMarker = L.marker([lat, lng], {
   icon: userIcon,
@@ -79,7 +79,7 @@ userMarker.on("dragend", (e) => {
   userMarker.setIcon(userDropIcon);
   userMarker
     .bindPopup(
-      '<p>Start with uploading your art!</p><button class="button" id="uploadPhotoButton">Upload a photo</button>'
+      '<div class="map__popup_2"><p>Start with uploading your art!</p><button class="button" id="uploadPhotoButton">Upload a photo</button></div>'
     )
     .openPopup();
 

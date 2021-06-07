@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Johannes Kentmann's drawings</title>
   </head>
   <body>
@@ -46,7 +51,8 @@
         commonNameEn.setAttribute("class", "commonName");
         scientificName.textContent = item.scientific_name;
         scientificName.setAttribute("class", "scientificName");
-        wikiEn.textContent = "learn more on wikipedia →";
+        wikiEn.innerHTML =
+          "<p>learn more on wikipedia <span><i style='font-size:0.7rem' class='fas'>&#xf35d;</i></span></div>";
         wikiEn.href = item.wiki_en;
         wikiEn.target = "_blank";
         wikiEn.setAttribute("class", "wikiEn");

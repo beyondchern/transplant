@@ -14,6 +14,10 @@ h1 {
   line-height: 2rem;
 }
 
+.wikiEn p {
+  margin: 0;
+}
+
 .wrapper {
   padding-top: 4rem;
   display: flex;

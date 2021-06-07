@@ -16,9 +16,18 @@
   height: max-content;
 }
 
-.button .intro_title {
+.intro_title {
   margin: 0;
   padding: 1rem;
+}
+
+.intro_first__button,
+.intro_first__button,
+.intro_johannes__button,
+.intro_theophil__button,
+.intro_final__button {
+  background-color: none;
+  cursor: pointer;
 }
 
 .intro_first__text,
