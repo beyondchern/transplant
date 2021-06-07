@@ -1,4 +1,4 @@
-theophilData = [
+theophilPrints = [
   {
     file_name: "Theophil_001",
     scientific_name: "Jasminum",

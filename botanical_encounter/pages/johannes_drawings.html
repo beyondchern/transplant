@@ -29,7 +29,6 @@
 
     <div class="wrapper" id="wrapper"></div>
 
-    <script src="../script/menu.js"></script>
     <script src="../script/plant_data_johannes.js"></script>
     <script>
       for (item of johannesDrawing) {
@@ -37,11 +36,9 @@
         const plantImage = document.createElement("img");
         const commonNameEn = document.createElement("h1");
         const commonNameDe = document.createElement("h1");
-        const scientificNameWrap = document.createElement("div");
         const scientificName = document.createElement("i");
         const wikiEn = document.createElement("a");
         const wikiDe = document.createElement("a");
-        const wikiIcon = document.createElement("img");
 
         plantImage.src = `../img/johannes/${item.file_name}.jpg`;
         plantImage.setAttribute("class", "plantImage");
@@ -49,8 +46,9 @@
         commonNameEn.setAttribute("class", "commonName");
         scientificName.textContent = item.scientific_name;
         scientificName.setAttribute("class", "scientificName");
-        wikiEn.textContent = "learn more on wikipedia >>";
+        wikiEn.textContent = "learn more on wikipedia →";
         wikiEn.href = item.wiki_en;
+        wikiEn.target = "_blank";
         wikiEn.setAttribute("class", "wikiEn");
         card.setAttribute("class", "card");
 
@@ -58,5 +56,6 @@
         document.getElementById("wrapper").append(card);
       }
     </script>
+    <script src="../script/menu.js"></script>
   </body>
 </html>

@@ -31,7 +31,7 @@
 
     <script src="../script/plant_data_theophil.js"></script>
     <script>
-      for (item of theophilData) {
+      for (item of theophilPrints) {
         const card = document.createElement("div");
         const plantImage = document.createElement("img");
         const commonNameEn = document.createElement("h1");
@@ -46,9 +46,10 @@
         commonNameEn.setAttribute("class", "commonName");
         scientificName.textContent = item.scientific_name;
         scientificName.setAttribute("class", "scientificName");
-        wikiEn.textContent = "wikipedia";
+        wikiEn.textContent = "Learn more on Wikipedia →";
         wikiEn.href = item.wiki_en;
-
+        wikiEn.target = "_blank";
+        wikiEn.setAttribute("class", "wikiEn");
         card.setAttribute("class", "card");
 
         card.append(plantImage, commonNameEn, scientificName, wikiEn);
