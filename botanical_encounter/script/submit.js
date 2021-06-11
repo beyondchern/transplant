@@ -1,5 +1,5 @@
 function submit() {
-  fetch("/submission", {
+  fetch("http://beyondchern.eu.pythonanywhere.com/submit", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(submission),
