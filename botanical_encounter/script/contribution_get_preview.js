@@ -18,4 +18,3 @@ function preview() {
 
   submission.location = coords;
 }
-// input location: coords;

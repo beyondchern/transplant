@@ -1,6 +1,8 @@
 getData();
 async function getData() {
-  const response = await fetch("/getdata");
+  const response = await fetch(
+    "http://beyondchern.eu.pythonanywhere.com/database"
+  );
   let contributions = await response.json();
   console.log("data:");
   console.log(contributions);
@@ -9,10 +11,10 @@ async function getData() {
 
   putMarker();
   function putMarker() {
-    for (item of contributions) {
-      let item_ = item;
+    for (key in contributions) {
+      let item = contributions[key];
       let plantIcon = L.divIcon({
-        html: `<div classname="map-label"><div style="background-image: url(../img_contribution/${item.filename});background-size: 90px 120px;height:120px;width:90px" class="map-label-content"></div><div class="map-label-arrow"></div></div>`,
+        html: `<div classname="map-label"><div style="background-image: url(http://beyondchern.eu.pythonanywhere.com/static/images/${item.image});background-size: 90px 120px;height:120px;width:90px" class="map-label-content"></div><div class="map-label-arrow"></div></div>`,
         className: "dummy",
       });
 
@@ -39,12 +41,12 @@ async function getData() {
         const contributionStory = document.createElement("li");
         const contributionUrl = document.createElement("a");
 
-        contributionImage.src = `../img_contribution/${item_.filename}`;
-        contributionPlantName.innerHTML = `<h1>${item_.plantName}</h1>`;
-        contributionScientificName.innerHTML = `<i>${item_.scientificName}</i>`;
-        contributionAuthor.textContent = `By ${item_.author}`;
-        contributionStory.textContent = `${item_.story} `;
-        contributionUrl.href = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`;
+        contributionImage.src = `http://beyondchern.eu.pythonanywhere.com/static/images/${item.image}`;
+        contributionPlantName.innerHTML = `<h1>${item.plantName}</h1>`;
+        contributionScientificName.innerHTML = `<i>${item.scientificName}</i>`;
+        contributionAuthor.textContent = `By ${item.author}`;
+        contributionStory.textContent = `${item.story} `;
+        contributionUrl.href = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item.location.lat}&lng=${item.location.lng}&zoom=12`;
 
         contributionImage.setAttribute("class", "contribition__image");
         contributionInfo.setAttribute("class", "contribution__info");
@@ -89,10 +91,10 @@ async function getData() {
             const shareViaEmail = document.createElement("a");
             const shareLink = document.createElement("div");
 
-            shareOnFacebook.href = `https://www.facebook.com/sharer.php?u=https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}%26lng=${item_.location.lng}%26zoom=12`;
+            shareOnFacebook.href = `https://www.facebook.com/sharer.php?u=https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item.location.lat}%26lng=${item.location.lng}%26zoom=12`;
             shareOnFacebook.setAttribute("target", "_blank");
             shareOnFacebook.textContent = "Facebook";
-            shareLink.textContent = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item_.location.lat}&lng=${item_.location.lng}&zoom=12`;
+            shareLink.textContent = `https://botanical-encounter.herokuapp.com/pages/map.html?lat=${item.location.lat}&lng=${item.location.lng}&zoom=12`;
             shareLink.setAttribute("class", "pen-url");
             shareLink.setAttribute("id", "penUrl");
 
