@@ -1,7 +1,7 @@
 getData();
 async function getData() {
   const response = await fetch(
-    "http://beyondchern.eu.pythonanywhere.com/database"
+    "https://beyondchern.eu.pythonanywhere.com/database"
   );
   let contributions = await response.json();
   console.log("data:");
@@ -14,7 +14,7 @@ async function getData() {
     for (key in contributions) {
       let item = contributions[key];
       let plantIcon = L.divIcon({
-        html: `<div classname="map-label"><div style="background-image: url(http://beyondchern.eu.pythonanywhere.com/static/images/${item.image});background-size: 90px 120px;height:120px;width:90px" class="map-label-content"></div><div class="map-label-arrow"></div></div>`,
+        html: `<div classname="map-label"><div style="background-image: url(https://beyondchern.eu.pythonanywhere.com/static/images/${item.image});background-size: 90px 120px;height:120px;width:90px" class="map-label-content"></div><div class="map-label-arrow"></div></div>`,
         className: "dummy",
       });
 
@@ -41,7 +41,7 @@ async function getData() {
         const contributionStory = document.createElement("li");
         const contributionUrl = document.createElement("a");
 
-        contributionImage.src = `http://beyondchern.eu.pythonanywhere.com/static/images/${item.image}`;
+        contributionImage.src = `https://beyondchern.eu.pythonanywhere.com/static/images/${item.image}`;
         contributionPlantName.innerHTML = `<h1>${item.plantName}</h1>`;
         contributionScientificName.innerHTML = `<i>${item.scientificName}</i>`;
         contributionAuthor.textContent = `By ${item.author}`;
