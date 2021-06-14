@@ -58,40 +58,18 @@
             <h1 class="dialog-title">Share this story</h1>
             <a href="#" class="close" id="closeShareDialogButton"></a>
           </header>
-          <div class="targets" id="shareTargets">
-            <!--
-            <a
-              href="https://www.facebook.com/sharer/sharer.php?u=https://botanical-encounter.herokuapp.com/"
-              target="_blank"
-              >Facebook</a
-            >
-            -->
-            <!--
-            <a
-              href="mailto:?subject=A botanical encounter&amp;body=This is a story of Botanical Encounter. Share your human-plant story on botanical-encounter.herokuapp.com"
-              title="Share by Email"
-              >Email</a
-            >
-            -->
-          </div>
-
-          <div class="link" id="shareLink">
-            <!--<div class="pen-url">https://botanical-encounter.herokuapp.com</div>-->
-            <button class="button copy-link_button">Copy Link</button>
+          <div class="link" id="shareLinkWrap">
+            <button class="button copy-link_button" id="copyLinkButton">
+              Copy Link
+            </button>
           </div>
         </div>
-
-        <button
-          class="button share-button"
-          id="shareButton"
-          title="Share this story"
-        >
+        <button class="button share-button" id="shareButton">
           <svg>
             <use href="#share-icon"></use>
           </svg>
           <span>Share</span>
         </button>
-
         <svg class="hidden">
           <defs>
             <symbol
@@ -113,24 +91,6 @@
       </div>
     </div>
 
-    <!--Take Photo Overlay-->
-    <!--
-    <div class="overlay takePhoto__overlay" id="takePhotoOverlay">
-      <div class="takePhoto__wrapper" id="takePhotoWrapper">
-        <a href="#" class="close" id="closeTakePhotoOverlay"></a>
-        <div class="camera">
-          <video id="video" class="video">Video stream not available.</video>
-        </div>
-        <button class="button default_button" id="takePhotoButton_">
-          Take Photo
-        </button>
-        <button class="button outlined_button" id="cancelTakePhotoButton">
-          Back to map
-        </button>
-      </div>
-    </div>
-  -->
-
     <!--crop photo Overlay-->
     <div class="overlay cropImg__overlay" id="cropImgOverlay">
       <div class="cropImg__wrapper">
@@ -139,18 +99,14 @@
         <div class="canvas_container" style="display: block">
           <canvas id="canvas"></canvas>
         </div>
-        <button id="cropImgButton" class="button cropImgButton">Crop</button>
-        <button id="cancelUploadPhotoButton" class="button outlined_button">
-          Back to map
-        </button>
-
-        <!--<button
-          id="retakePhotoButton"
-          class="button outlined_button"
-          style="display: none"
-        >
-          Retake Photo
-        </button>-->
+        <div class="cropImg__button_wrap">
+          <button id="cancelUploadPhotoButton" class="button outlined_button">
+            ← Back to map
+          </button>
+          <button id="cropImgButton" class="button cropImgButton">
+            Crop →
+          </button>
+        </div>
       </div>
     </div>
 
@@ -160,44 +116,69 @@
         <a href="#" class="close" id="closeAddingFormOverlay"></a>
         <img
           id="inputPhoto"
+          class="inputPhoto"
           alt="The screen capture will appear in this box."
         />
+
         <div class="adding__form_text_input_wrapper" id="addingFormWrapper">
-          <input
-            type="text"
-            class="input adding__form_text_input_plant_name"
-            id="inputPlantName"
-            placeholder="What is the plant called?"
-          />
+          <div class="input">
+            <label class="input_label" for="inputPlantName"
+              >The plant's common name</label
+            >
+            <input
+              type="text"
+              class="input_field adding__form_text_input_plant_name"
+              id="inputPlantName"
+              placeholder="What is the plant called?"
+              required="required"
+            />
+          </div>
 
-          <input
-            type="text"
-            class="input adding__form_text_input_scientific_name"
-            id="inputScientificName"
-            placeholder="Do you know its scientific name?"
-          />
+          <div class="input">
+            <label class="input_label" for="inputScientificName"
+              >The plant's scientific name</label
+            >
+            <input
+              type="text"
+              class="input_field adding__form_text_input_scientific_name"
+              id="inputScientificName"
+              placeholder="(Optional)"
+            />
+          </div>
 
-          <input
-            type="text"
-            class="input adding__form_text_input_author"
-            id="inputAuthor"
-            placeholder="Your name"
-          />
-          <textarea
-            class="input adding__form_text_input_story"
-            id="inputStory"
-            placeholder="Tell us more about the plant"
-            rows="14"
-            cols="10"
-            wrap="soft"
-            style="overflow: scroll; resize: none"
-          ></textarea>
+          <div class="input">
+            <label class="input_label" for="inputAuthor ">Author</label>
+            <input
+              type="text"
+              class="input_field adding__form_text_input_author"
+              id="inputAuthor"
+              placeholder="Your name"
+              required="required"
+            />
+          </div>
+
+          <div class="input">
+            <label class="input_label" for="inputStory"
+              >Story of human-plant encounter</label
+            >
+            <textarea
+              class="input_field adding__form_text_input_story"
+              id="inputStory"
+              placeholder="Tell us more about the plant and the art!"
+              rows="14"
+              cols="10"
+              wrap="soft"
+              style="overflow: scroll; resize: none"
+              required="required"
+            ></textarea>
+          </div>
+
           <div class="adding__button_wrap">
-            <button class="button adding__button_preview" id="previewButton">
-              Preview
-            </button>
             <button class="button adding__button_cancel" id="cancelButton">
-              Recrop Photo
+              ← Recrop Photo
+            </button>
+            <button class="button adding__button_preview" id="previewButton">
+              Preview →
             </button>
           </div>
         </div>
@@ -221,11 +202,32 @@
         </ul>
         <div class="preview__button_wrap">
           <button class="button preview__button_edit" id="editButton">
-            Edit
+            ← Edit
           </button>
           <button class="button preview__button_submit" id="submitButton">
-            Submit your story
+            <span>Submit your story </span>
+            <svg>
+              <use href="#submit-icon"></use>
+            </svg>
           </button>
+          <svg class="hidden">
+            <defs>
+              <symbol
+                id="submit-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-share"
+              >
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                <polyline points="16 6 12 2 8 6"></polyline>
+                <line x1="12" y1="2" x2="12" y2="15"></line>
+              </symbol>
+            </defs>
+          </svg>
         </div>
       </div>
     </div>

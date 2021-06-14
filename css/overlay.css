@@ -19,31 +19,40 @@
 .addImg__wrapper,
 .preview__wrapper {
   position: relative;
-  background-color: #ede5d8;
+  background-color: var(--clr-light);
+  border-radius: 4px;
   width: 80%;
+  min-height: 80%;
   max-width: 30rem;
   min-width: 20rem;
   margin: auto; /* Will not center vertically and won't work in IE6/7. */
   padding: 5%;
   display: flex;
-  flex-flow: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.cropImg__button_wrap,
+.adding__button_wrap,
+.preview__button_wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0.7rem;
 }
 
 /*contribution Overlay*/
 .contributedContent {
   width: 100%;
   display: flex;
-  flex-flow: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.contribution__image {
-  width: 80%;
-  padding: 5%;
-}
 .contribution__info {
   list-style-type: none;
   padding-left: 0;
@@ -59,27 +68,22 @@
   text-align: justify;
 }
 
-/*Take Photo Overlay
-.camera {
-  width: 85%;
-  min-width: 320px;
-}
-.video {
-  display: block;
-  width: 100%;
-}
-*/
-
 /*cropImg Overlay*/
-
 .fileInput {
   display: block;
+  max-width: 80%;
+  overflow: hidden;
+  padding-top: 10%;
 }
 
-.canvas_container {
-  width: 85%;
+.contribution__image,
+.canvas_container,
+.inputPhoto,
+.preview__image {
+  width: 82%;
   min-width: 320px;
-  display: flex;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .canvas_container canvas {
@@ -90,11 +94,13 @@
 
 /*input overlay*/
 .adding__form {
-  background-color: #ede5d8;
+  background-color: var(--clr-light);
   margin: auto; /* Will not center vertically and won't work in IE6/7. */
   left: 0;
   right: 0;
-  max-width: 80%;
+  width: 80%;
+  min-height: 80%;
+  max-width: 30rem;
   min-width: 20rem;
   padding: 5%;
   position: relative;
@@ -108,32 +114,40 @@
   display: flex;
   flex-direction: column;
 }
-.adding__button_wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 0.7rem;
+
+.input_label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
 }
-.input {
+
+.input_field {
   border: 1px solid var(--clr-dark);
+  border-radius: 4px;
   box-sizing: border-box;
+  font-family: Source Sans Pro;
   font-size: 1rem;
-  line-height: 1.25rem;
-  width: 15rem;
+  color: var(--clr-dark);
+  width: 17rem;
 }
+
 .adding__form__img_input {
-  height: 15rem;
   margin: 0.7rem 0.7rem;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin: 0.7rem;
 }
 
 .adding__form_text_input_plant_name,
 .adding__form_text_input_scientific_name,
 .adding__form_text_input_author {
   height: 2.5rem;
-  margin: 0.7rem;
 }
+
 .adding__form_text_input_story {
-  margin: 0.7rem;
   height: 10rem;
 }
 
@@ -142,5 +156,6 @@
 .preview__plantName,
 .prview__author,
 .preview__story {
+  padding: 0px;
   display: block;
 }

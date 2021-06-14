@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 0.5rem;
+  margin: 0.5rem;
   color: var(--clr-dark);
   text-align: center;
   font-size: 14px;
@@ -18,19 +18,6 @@
   cursor: pointer;
 }
 
-/*
-white-space: nowrap;
-.button {
-  border: none;
-  padding: 15px 32px;
-  background-color: var(--clr-light);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 1rem 0.5rem;
-  cursor: pointer;
-}
-*/
 .close {
   position: absolute;
   right: 1rem;

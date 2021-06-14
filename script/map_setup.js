@@ -75,11 +75,10 @@ function setView() {
 let coords = {};
 userMarker.on("dragend", (e) => {
   coords = userMarker.getLatLng();
-  console.log(coords);
   userMarker.setIcon(userDropIcon);
   userMarker
     .bindPopup(
-      '<div class="map__popup_2"><p>Start with uploading your art!</p><button class="button" id="uploadPhotoButton">Upload a photo</button></div>'
+      '<div class="map__popup_2"><button class="button" id="uploadPhotoButton">Upload a photo</button><p>Start your contribution by uploading your art! You can also change the pin\'s location by redropping it.</p></div>'
     )
     .openPopup();
 

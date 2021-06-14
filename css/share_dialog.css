@@ -48,14 +48,6 @@ header {
   margin-bottom: 20px;
 }
 
-.targets {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  margin-bottom: 20px;
-}
-
 .link {
   display: flex;
   justify-content: center;
@@ -67,7 +59,7 @@ header {
 
 .pen-url {
   margin-right: 15px;
-  overflow: scroll;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
