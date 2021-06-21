@@ -17,7 +17,7 @@ tiles.addTo(map);
 
 /////--- Div Icon---/////
 let userIcon = L.divIcon({
-  html: '<div class="map-label"><div style="width:300px" class="user-label-content"><p><h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dropping this pin at where you met your plant :)</p></div><div class="map-label-arrow"></div></div>',
+  html: '<div class="map-label"><div style="width:300px" class="user-label-content" data-key="welcome_pop_up"></div><div class="map-label-arrow"></div></div>',
   className: "coordinates",
 });
 
@@ -36,40 +36,31 @@ let userMarker = L.marker([lat, lng], {
   draggable: true,
 }).addTo(map);
 
-setView();
-function setView() {
-  if (window.location.search) {
-    function getQueryStringValue(key) {
-      return decodeURIComponent(
-        window.location.search.replace(
-          new RegExp(
-            "^(?:.*[&\\?]" +
-              encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") +
-              "(?:\\=([^&]*))?)?.*$",
-            "i"
-          ),
-          "$1"
-        )
-      );
-    }
-    lat = getQueryStringValue("lat");
-    lng = getQueryStringValue("lng");
-    zoom = getQueryStringValue("zoom");
+putView();
+function putView() {
+  lat = getQueryStringValue("lat");
+  lng = getQueryStringValue("lng");
+  zoom = getQueryStringValue("zoom");
+  if (lat && lng && zoom) {
+    map.setView([lat, lng], zoom);
+    userMarker.setLatLng([lat, lng]);
   } else if (navigator.geolocation) {
+    map.locate({ setView: true, zoom: 16 }).on("locationfound", (e) => {
+      userMarker.setLatLng([e.latitude, e.longitude]);
+    });
+
+    /*
     console.log("geolocation available");
     setUserLocation();
     async function setUserLocation() {
       const getUserLocation =
         navigator.geolocation.getCurrentPosition(position);
-      lat = position.coords.latitude;
-      lng = position.coords.longitude;
+      lat = getUserLocation.coords.latitude;
+      lng = getUserLocation.coords.longitude;
       zoom = 12;
       console.log(lat, lng);
-    }
+    */
   }
-  console.log(lat, lng, zoom);
-  map.setView([lat, lng], zoom);
-  userMarker.setLatLng([lat, lng]);
 }
 
 let coords = {};
@@ -78,13 +69,12 @@ userMarker.on("dragend", (e) => {
   userMarker.setIcon(userDropIcon);
   userMarker
     .bindPopup(
-      '<div class="map__popup_2"><button class="button" id="uploadPhotoButton">Upload a photo</button><p>Start your contribution by uploading your art! You can also change the pin\'s location by redropping it.</p></div>'
+      '<div class="map__popup_2">' + languages[lang]["upload_pop_up"] + "</div>"
     )
     .openPopup();
 
   document.getElementById("uploadPhotoButton").onclick = function () {
     cropImgOverlay_on();
     uploadPhoto_on();
-    //cancelUploadPhotoButton_on();
   };
 });
