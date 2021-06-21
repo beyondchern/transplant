@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     element.innerHTML = languages[lang][key];
   });
 
-  const nav = document.getElementById("navMenu").querySelectorAll(".nav__link");
+  const nav = document.body.querySelectorAll(".nav__link");
   for (element of nav) {
     element.href += "?lang=" + lang;
   }
 
-  const lang_text = (document.getElementById(lang).style.fontWeight = 600);
+  document.getElementById(lang).style.fontWeight = 600;
 });
