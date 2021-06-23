@@ -69,20 +69,21 @@ languages = {
     nav_contact: "Kontactieren",
 
     intro_first_innerhtml:
-      "Was ist Ihre einprägsamste Begegnung mit Pflanzen?<br />Wo haben Sie sie kennengelernt?<br />Wurden Sie von ihren atemberaubenden Farben, ihrem unvergesslichen Duft oder ihrer magischen Heilkraft bewegt?<br /><br />Lassen Sie uns eine Karte mit Ihren Künsten und Geschichten der Mensch-Pflanze-Begegnung erstellen!<br />",
-    intro_first_button: "Siehe die Karte >>",
+      "Welche Begegnungen mit Pflanzen haben einen besonderen Eindruck bei dir hinterlassen?<br />Wo bist Du den Pflanzen begegnet?<br />Haben dich ihre intensiven Farben beeindruckt, ihr bemerkenswerter Duft oder ihre wundersame Heilkraft?<br /><br />Mach mit bei der Gestaltung einer Karte mit Zeichnungen und Geschichten von Mensch-Pflanzen-Begegnungen.<br />",
+    intro_first_button: "Siehe Karte >>",
     intro_codex_innerhtml:
-      '<i>Botanical Encounter</i> ist ein gemeinschaftliches Mapping-Projekt, das durch das deutsche Naturforscherbuch Codex Kentmanus aus dem 16. Jahrhundert inspiriert wurde.<br /><br />Das Buch enthält eine der frühesten Sammlungen botanischer Kunst. Es besteht aus Hunderten von Illustrationen des Arztes Johannes Kentmann, Grafiken seines Sohnes Theophil Kentmann und Beiträgen vieler Künstler und Gelehrter durch Austausch und Kooperationen.<br /><br />Es ist ein Buch der Kunst und der Wissenschaft, das die Begegnung zwischen Mensch und Pflanze feiert und den Wissensaustausch repräsentiert.<br /><br /><a href="https://ausstellungen.deutsche-digitale-bibliothek.de/codex-kentmanus/#s0" target="_blank">Besuchen Sie die <b>Website der Anna Amalia Bibliothek</b>, um mehr über den Codex Kentmanus zu erfahren</a>',
+      '<i>Botanical Encounter</i> ist ein gemeinschaftliches Mapping-Projekt, inspiriert durch das deutsche Naturforscherbuch Codex Kentmanus aus dem 16. Jahrhundert.<br /><br />Das Buch enthält eine der frühesten Sammlungen botanischer Kunst. Es besteht aus hunderten von Illustrationen des Arztes Johannes Kentmann, Drucken seines Sohnes Theophil Kentmann und Beiträgen, die aus Zusammenarbeit und Austausch mit vielen Künstler*innen und Wissenschaftler*innen entstanden sind.<br /><br />Es ist ein Buch der Kunst und der Wissenschaft, das die Begegnung zwischen Mensch und Pflanze feiert und beispielhaft für den Austausch von Wissen steht.<br /><br /><a href="https://ausstellungen.deutsche-digitale-bibliothek.de/codex-kentmanus/#s0" target="_blank">Besuchen Sie die <b>Website der Anna Amalia Bibliothek</b>, um mehr über den Codex Kentmanus zu erfahren >></a>',
     intro_johannes:
-      "Die Pflanzenzeichnungen des deutschen Arztes Johannes Kentmann illustrieren die Pflanzen, die er während seines Studienaufenthalts in Italien im Botanischen Garten von Padua vorfand.<br /><br />Dort begegnete Johannes den Pflanzen, die er vorher nicht kannte. Zu seiner Zeit waren sie nördlich der Alpen nur selten anzutreffen. Einige von ihnen stammten nicht einmal aus Europa. Sie kamen über den internationalen Handel nach Italien.<br /><br />In der Begegnung mit diesen neuen Pflanzen begann Johannes, sie zu beobachten und mit seinen Pinseln detailliert zu dokumentieren. Seine Kunst wird zu einer der frühesten Sammlungen botanischer Illustrationen.<br />",
+      "Die Pflanzenzeichnungen des deutschen Arztes Johannes Kentmann zeigen die Pflanzen, denen er während seines Studiums in Italien im Botanischen Garten von Padua begegnete.<br /><br />Dort begegnete Johannes Pflanzen, die er vorher nicht kannte. Zu seiner Zeit waren diese nördlich der Alpen kaum zu finden. Einige von ihnen stammten nicht einmal aus Europa. Sie waren durch den internationalen Handel nach Italien gekommen.<br /><br />Als er diesen ihm unbekannten Pflanzen begegnete, begann Johannes sie zu beobachten und mit seinen Pinseln detailliert zu dokumentieren. Seine Kunst wird zu einer der frühesten Sammlungen botanischer Illustrationen.<br />",
     intro_johannes_button:
-      "Erkunden Sie die Pflanzenzeichnungen von Johannes Kentmann >>",
+      "Entdecke die Pflanzenzeichnungen von Johannes Kentmann >>",
     intro_theophil_innerhtml:
-      "Johannes' Sohn Theophil Kentmann hingegen wählte eine neue Technik, um seine heimischen Pflanzenbekanntschaften in Deutschland zu dokumentieren - den Naturselbstdruck.<br /><br />Pflanzenteile wurden mit schwarzem Ruß oder Kohletinte eingefärbt und dann von Hand auf ein Papier gerieben. Die entstandenen Drucke wurden später mit Grünspanlösung und anderen Pigmenten eingefärbt.<br />",
-    intro_theophil_button: "Entdecken Sie Theophil Kentmanns Pflanzendrucke >>",
+      "Außerdem dokumentierte Johannes' Sohn Theophil Kentmann seine heimischen Pflanzen-Begegnungen in Deutschland mit einer neuen Technik - dem Naturselbstdruck.<br /><br />Teile von Pflanzen wurden mit schwarzer Ruß- oder Kohletinte eingefärbt und dann von Hand auf ein Papier gerieben. Die entstandenen Drucke wurden später mit Grünspanlösung und anderen Pigmenten koloriert.<br />",
+    intro_theophil_button: "Entdecke Theophil Kentmanns Pflanzendrucke >>",
     intro_final:
-      "Und Sie?<br /><br />Wie beflügeln botanische Begegnungen Ihre Kreativität?",
-    intro_final_button: "Teilen Sie sie auf der Karte! >>",
+      "Und Du??<br /><br />Wie regen Begegnungen mit Pflanzen deine Kreativität an?",
+    intro_final_button:
+      "Teile deine Pflanzengeschichten und -Zeichnungen/ -Drucke auf der Karte! >>",
 
     dialog_title: "Teilen Sie diese Geschichte",
     copy_link_button: "Link kopieren",
