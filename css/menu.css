@@ -56,8 +56,9 @@
 .hamburger {
   display: block;
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  padding: 1rem;
+  top: 0rem;
+  right: 0rem;
   cursor: pointer;
 }
 

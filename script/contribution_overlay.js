@@ -16,12 +16,6 @@ async function getData() {
         className: "dummy",
       });
 
-      /*
-      let plantIcon = L.icon({
-        iconUrl: `../img_contribution/${item.filename}`,
-        iconSize: [90, 120],
-      });
-      */
       /* contributions in overlays*/
       let marker = L.marker([item.location.lat, item.location.lng], {
         icon: plantIcon,

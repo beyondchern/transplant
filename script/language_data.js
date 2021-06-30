@@ -4,13 +4,13 @@ languages = {
     page_title_map: "Map of Botanical Encounters",
     page_title_johannes: "Drawings by Johannes Kentmann",
     page_title_theophil: "Prints by Theophil Kentmann",
-    page_title_contact: "Contact",
+    page_title_contact: "Contact us",
 
     nav_index: "Botanical Encounter",
     nav_map: "Map of Botanical Encounters",
     nav_johannes: "Drawings by Johannes Kentmann",
     nav_theophil: "Prints by Theophil Kentmann",
-    nav_contact: "Contact",
+    nav_contact: "Contact us",
 
     intro_first_innerhtml:
       "What is your most memorable encounter with plants?<br />Where did you meet them?<br />Were you moved by their stunning colors, unforgettable fragrance, or magical healing power?<br /><br />Let’s create a map with your arts and stories of human-plant encounter!<br />",
@@ -32,9 +32,9 @@ languages = {
     share_button: "Share",
 
     welcome_pop_up:
-      "<h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dropping this pin at where you met your plant :)",
+      "<h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dragging me to the place you met your plant :)",
     upload_pop_up:
-      '<button class="button" id="uploadPhotoButton">Upload a photo</button><p>Start your contribution by uploading your art! You can also change the pin\'s location by redropping it.</p>',
+      '<button class="button" id="uploadPhotoButton">Upload a photo</button><p>Start your contribution by uploading your art! You can also change the location by dragging the pin to a new place.</p>',
     back_to_map_button: "← Back to map",
     crop_img_button: "Crop →",
 
@@ -53,6 +53,8 @@ languages = {
     preview_author: 'By <span id="previewAuthor"></span>',
     edit_button: "← Edit",
     submit_button: "Submit your story ",
+
+    contact: "contact us: beyondchern[at]gmail.com",
   },
 
   de: {
@@ -60,13 +62,13 @@ languages = {
     page_title_map: "Karte die Botanical Encounters",
     page_title_johannes: "Zeichnungen von Johannes Kentmann",
     page_title_theophil: "Drucke von Theophil Kentmann",
-    page_title_contact: "Kontactieren",
+    page_title_contact: "Kontactieren uns",
 
     nav_index: "Botanical Encounter",
     nav_map: "Karte die Botanical Encounters",
     nav_johannes: "Zeichnungen von Johannes Kentmann",
     nav_theophil: "Drucke von Theophil Kentmann",
-    nav_contact: "Kontactieren",
+    nav_contact: "Kontactieren uns",
 
     intro_first_innerhtml:
       "Welche Begegnungen mit Pflanzen haben einen besonderen Eindruck bei dir hinterlassen?<br />Wo bist Du den Pflanzen begegnet?<br />Haben dich ihre intensiven Farben beeindruckt, ihr bemerkenswerter Duft oder ihre wundersame Heilkraft?<br /><br />Mach mit bei der Gestaltung einer Karte mit Zeichnungen und Geschichten von Mensch-Pflanzen-Begegnungen.<br />",
@@ -110,6 +112,8 @@ languages = {
     preview_author: 'Von <span id="previewAuthor"></span>',
     edit_button: "← Bearbeiten",
     submit_button: "Reichen Sie Ihre Geschichte ein",
+
+    contact: "Kontactieren uns: beyondchern[at]gmail.com",
   },
 
   zh: {
@@ -117,13 +121,13 @@ languages = {
     page_title_map: "遇見植物地圖",
     page_title_johannes: "Johannes Kentmann的植物繪畫",
     page_title_theophil: "Theophil Kentmann的植物版畫",
-    page_title_contact: "與我聯絡",
+    page_title_contact: "聯絡我們",
 
     nav_index: "Botanical Encounter",
     nav_map: "遇見植物地圖",
     nav_johannes: "Johannes Kentmann的植物繪畫",
     nav_theophil: "Theophil Kentmann的植物版畫",
-    nav_contact: "與我聯絡",
+    nav_contact: "聯絡我們",
 
     intro_first_innerhtml:
       "哪些植物讓你印象深刻?<br />你在哪裡遇見他們的?<br />是他們奪目的顏色、令人難忘的氣味、或是他們的神奇的療癒力量讓你難忘?<br /><br />讓我們一起繪製地圖，用藝術創作記錄下這些人與植物相遇的故事吧!<br />",
@@ -164,5 +168,7 @@ languages = {
     preview_author: '<span id="previewAuthor"></span>',
     edit_button: "← 編輯故事",
     submit_button: "完成了，上傳故事!",
+
+    contact: "聯絡我們: beyondchern[at]gmail.com",
   },
 };
