@@ -7,8 +7,8 @@ function preview() {
     "inputScientificName"
   ).value;
   submission.author = document.getElementById("inputAuthor").value;
-  submission.story = document.getElementById("inputStory").value;
-
+  let story_ = document.getElementById("inputStory").value;
+  submission.story = story_.replace("\n", "<br>");
   document.getElementById("previewImage").setAttribute("src", photoData);
   document.getElementById("previewPlantName").innerHTML = submission.plantName;
   document.getElementById("PreviewScientificName").innerHTML =
