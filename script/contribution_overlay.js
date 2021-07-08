@@ -37,7 +37,7 @@ async function getData() {
         contributionPlantName.innerHTML = `<h1>${item.plantName}</h1>`;
         contributionScientificName.innerHTML = `<i>${item.scientificName}</i>`;
         contributionAuthor.textContent = `By ${item.author}`;
-        contributionStory.textContent = `${item.story} `;
+        contributionStory.innerHTML = `${item.story} `;
         contributionUrl.href = `https://botanical-encounter.com/pages/map.html?lat=${item.location.lat}&lng=${item.location.lng}&zoom=12`;
 
         contributionImage.setAttribute("class", "contribution__image");
