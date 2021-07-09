@@ -92,7 +92,7 @@ languages = {
     share_button: "Teilen",
 
     welcome_pop_up:
-      "<h1>Willkommen auf der Karte der botanischen Begegnungen!</h1><br>Klicken Sie auf ein Foto, um seine Geschichte zu sehen.<br>Oder beginnen Sie, Ihre Geschichte zu teilen, indem Sie diese Stecknadel an dem Ort ablegen, an dem Sie Ihre Pflanze getroffen haben :)",
+      "<h1>Willkommen auf der Karte der botanischen Begegnungen!</h1><br>Klicken Sie auf ein Foto, um seine Geschichte zu sehen.<br>Oder beginnen Sie, Ihre Geschichte zu teilen, indem Sie diese Blase an den Ort ziehen, an dem Sie Ihre Pflanze getroffen haben :)",
     upload_pop_up:
       '<button class="button" id="uploadPhotoButton">Ein Foto hochladen</button><p>Beginnen Sie Ihren Beitrag, indem Sie Ihre Kunst hochladen! Sie können auch die Position des Pins ändern, indem Sie ihn erneut hochladen.</p>',
     back_to_map_button: "← Zurück zur Karte",
