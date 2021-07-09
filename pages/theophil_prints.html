@@ -82,7 +82,7 @@
         const scientificName = document.createElement("i");
         const wiki = document.createElement("a");
 
-        if (lang == "en" || "zh") {
+        if (lang == "en" || lang == "zh") {
           plantImage.src = `../img/theophil/${item.file_name}.jpg`;
           plantImage.setAttribute("class", "plantImage");
           commonName.textContent = item.english[0];

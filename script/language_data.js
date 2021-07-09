@@ -16,7 +16,7 @@ languages = {
       "What is your most memorable encounter with plants?<br />Where did you meet them?<br />Were you moved by their stunning colors, unforgettable fragrance, or magical healing power?<br /><br />Let’s create a map with your arts and stories of human-plant encounter!<br />",
     intro_first_button: "See the map >>",
     intro_codex_innerhtml:
-      '<i>Botanical Encounter</i> is a collaborative mapping project inspired by the 16-century naturalist book Codex Kentmanus.<br /><br />The book contains one of the earliest collections of botanical arts. It consists of hundreds of illustrations from the German physician Johannes Kentmann, prints by his son Theophil Kentmann, and contributions by many artists and scholars through exchanges and collaborations.<br /><br />It is a book of art and science, celebrating human-plant encounter and knowledge exchange.<br /><br /><a href="https://ausstellungen.deutsche-digitale-bibliothek.de/codex-kentmanus/#s0" target="_blank">Visit <b>Herzogin Anna Amalia Bibliothek’s website</b> to learn more about Codex Kentmanus</a>',
+      '<i>Botanical Encounter</i> is a collaborative mapping project inspired by the 16-century naturalist book Codex Kentmanus.<br /><br />The book contains one of the earliest collections of botanical arts. It consists of hundreds of illustrations from the German physician Johannes Kentmann, prints by his son Theophil Kentmann, and contributions by many artists and scholars through exchanges and collaborations.<br /><br />It is a book of art and science, celebrating human-plant encounter and knowledge exchange.<br /><br /><a href="https://ausstellungen.deutsche-digitale-bibliothek.de/codex-kentmanus/#s0" target="_blank">Visit <b>Herzogin Anna Amalia Bibliothek’s website</b> to learn more about Codex Kentmanus >></a>',
     intro_johannes:
       "Johannes Kentmann’s plant drawings, illustrate the plants he encountered in Padua Botanical Garden during his study in Italy.<br /><br />There, Johannes met the plants he had not known before. In his time, they were rarely depicted in the north of the Alps. Some of them were not even from Europe. They traveled to Italy through international trade.<br /><br />Meeting these new plants, Johannes started to observe and paint them in detail. His artworks became one of the earliest collections of botanical illustrations.<br />",
     intro_johannes_button: "Explore Johannes Kentmann’s plant drawings >>",
@@ -83,7 +83,7 @@ languages = {
       "Außerdem dokumentierte Johannes' Sohn Theophil Kentmann seine heimischen Pflanzen-Begegnungen in Deutschland mit einer neuen Technik - dem Naturselbstdruck.<br /><br />Teile von Pflanzen wurden mit schwarzer Ruß- oder Kohletinte eingefärbt und dann von Hand auf ein Papier gerieben. Die entstandenen Drucke wurden später mit Grünspanlösung und anderen Pigmenten koloriert.<br />",
     intro_theophil_button: "Entdecke Theophil Kentmanns Pflanzendrucke >>",
     intro_final:
-      "Und Du??<br /><br />Wie regen Begegnungen mit Pflanzen deine Kreativität an?",
+      "Und Du?<br /><br />Wie regen Begegnungen mit Pflanzen deine Kreativität an?",
     intro_final_button:
       "Teile deine Pflanzengeschichten und -Zeichnungen/ -Drucke auf der Karte! >>",
 
@@ -113,7 +113,7 @@ languages = {
     edit_button: "← Bearbeiten",
     submit_button: "Reichen Sie Ihre Geschichte ein",
 
-    contact: "Kontactieren uns: beyondchern[at]gmail.com",
+    contact: "Kontaktieren uns: beyondchern[at]gmail.com",
   },
 
   zh: {
