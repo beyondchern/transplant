@@ -96,7 +96,7 @@ languages = {
     upload_pop_up:
       '<button class="button" id="uploadPhotoButton">Ein Foto hochladen</button><p>Beginnen Sie Ihren Beitrag, indem Sie Ihre Kunst hochladen! Sie können auch die Position des Pins ändern, indem Sie ihn erneut hochladen.</p>',
     back_to_map_button: "← Zurück zur Karte",
-    crop_img_button: "Ernte →",
+    crop_img_button: "Zuschneiden →",
 
     input_plant_name_label:
       '<label class="input_label" for="inputPlantName">Der gebräuchliche Name der Pflanze</label><input type="text" class="input_field adding__form_text_input_plant_name" id="inputPlantName" placeholder="Wie wird die Pflanze genannt?" required="required" />',
@@ -106,7 +106,7 @@ languages = {
       '<label class="input_label" for="inputAuthor" >Autor/in</label><input type="text" class="input_field adding__form_text_input_author" id="inputAuthor" placeholder="Ihr Name" required="required" />',
     input_story_label:
       '<label class="input_label" for="inputStory">Geschichte einer Mensch-Pflanze-Begegnung</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="Erzählen Sie uns mehr über die Pflanze und die Kunst!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
-    recrop_button: "← Recrop Photo",
+    recrop_button: "← Bild neu zuschneiden",
     preview_button: "Vorschau →",
 
     preview_author: 'Von <span id="previewAuthor"></span>',
