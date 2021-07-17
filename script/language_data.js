@@ -4,13 +4,13 @@ languages = {
     page_title_map: "Map of Botanical Encounters",
     page_title_johannes: "Drawings by Johannes Kentmann",
     page_title_theophil: "Prints by Theophil Kentmann",
-    page_title_contact: "Contact us",
+    page_title_contact: "About us",
 
     nav_index: "Botanical Encounter",
     nav_map: "Map of Botanical Encounters",
     nav_johannes: "Drawings by Johannes Kentmann",
     nav_theophil: "Prints by Theophil Kentmann",
-    nav_contact: "Contact us",
+    nav_contact: "About us",
 
     intro_first_innerhtml:
       "What is your most memorable encounter with plants?<br />Where did you meet them?<br />Were you moved by their stunning colors, unforgettable fragrance, or magical healing power?<br /><br />Let’s create a map with your arts and stories of human-plant encounter!<br />",
@@ -54,7 +54,8 @@ languages = {
     edit_button: "← Edit",
     submit_button: "Submit your story ",
 
-    contact: "contact us: beyondchern[at]gmail.com",
+    contact:
+      "<h1 class='contact_h1'>Maintainer</h1>The Botanical Encounter website is designed, built and maintained by artist and designer <b>I-Chen Lai</b>.<br>If you have any question or request, please contact her at <b>beyondchern [at] gmail.com</b><br><br><h1 class='contact_h1'>Credit</h1>All the images used in this website, except those ones uploaded by participants and the map tiles, are taken from the <b>Codex Kentmanus:</b> (Klassik Stiftung Weimar, Herzogin Anna Amalia Bibliothek, Fol 323.)<br>The contributed images belong to their contributors. Please do not upload an image without its author’s permission.<br>The map tiles of the Map of Botanical Encounter are provided by the <b>OpenStreetMap</b> community.<br><br>The Botanical Encounter website is designed and built by <b>I-Chen Lai</b>, with help from:<br><h1 class='contact_h1'>Supervisors</h1><b>Jason M. Reizner</b> Vertretung der Professur of Interface Design Group, Fakultät Kunst und Gestaltung, Bauhaus Universität Weimar<br><b>Dr. Eva Hornecker</b> Professor of Human Computer Interaction group, Media Fakultät, Bauhaus Universität Weimar<br><b>Katja Lorenz</b> Referatsleiterin Sondersammlungen, Herzogin Anna Amalia Bibliothek, Klassik Stiftung Weimar<br><br><h1 class='contact_h1'>Technical advisors</h1><b>Brian Larson Clark</b> Interface Design Group, Fakultät Kunst und Gestaltung, Bauhaus Universität Weimar<br><b>Dr. Mirko Kunze</b><br>And much additional help from the video tutorials of <b>Coding Train</b> as well as contributors on <b>Stackoverflow.</b><br><br><h1 class='contact_h1'>Translation</h1>English and Traditional Mandarin Chinese by <b>I-Chen Lai</b><br>German by <b>Martin Leibinger</b> and <b>Dr. Mirko Kunze</b><br>If you want to help translating the website into any other language, please contact I-Chen.",
   },
 
   de: {
@@ -62,13 +63,13 @@ languages = {
     page_title_map: "Karte die Botanical Encounters",
     page_title_johannes: "Zeichnungen von Johannes Kentmann",
     page_title_theophil: "Drucke von Theophil Kentmann",
-    page_title_contact: "Kontactieren uns",
+    page_title_contact: "Impressum",
 
     nav_index: "Botanical Encounter",
     nav_map: "Karte die Botanical Encounters",
     nav_johannes: "Zeichnungen von Johannes Kentmann",
     nav_theophil: "Drucke von Theophil Kentmann",
-    nav_contact: "Kontactieren uns",
+    nav_contact: "Impressum",
 
     intro_first_innerhtml:
       "Welche Begegnungen mit Pflanzen haben einen besonderen Eindruck bei dir hinterlassen?<br />Wo bist Du den Pflanzen begegnet?<br />Haben dich ihre intensiven Farben beeindruckt, ihr bemerkenswerter Duft oder ihre wundersame Heilkraft?<br /><br />Mach mit bei der Gestaltung einer Karte mit Zeichnungen und Geschichten von Mensch-Pflanzen-Begegnungen.<br />",
@@ -113,7 +114,8 @@ languages = {
     edit_button: "← Bearbeiten",
     submit_button: "Reiche deine Geschichte ein",
 
-    contact: "Kontaktieren uns: beyondchern[at]gmail.com",
+    contact:
+      "<h1 class='contact_h1'>Administratorin</h1>Die Botanical Encounter Website wird von der Künstlerin und Designerin <b>I-Chen Lai</b> entworfen, gebaut und gepflegt.<br>Wenn du Fragen oder Wünsche hast, schicke eine Mail an <b>beyondchern [at] gmail. com</b><br><br><h1 class='contact_h1'>Credit</h1>Alle auf dieser Website verwendeten Bilder, mit Ausnahme der von Teilnehmern hochgeladenen Bildern und der Kartenkacheln, stammen aus dem <b>Codex Kentmanus:</b> (Klassik Stiftung Weimar, Herzogin Anna Amalia Bibliothek, Fol 323.)<br>Die beigesteuerten Bilder gehören den jeweiligen Urhebern. Bitte lade kein Bild ohne die Erlaubnis des Urhebers hoch.<br>Die Kartenkacheln der Botanischen Begegnungskarte werden von der <b>OpenStreetMap</b>-Community zur Verfügung gestellt. <br><br>Die Botanical Encounter Website wurde entworfen und erstellt von <b>I-Chen Lai</b>, mit Hilfe von:<br><h1 class='contact_h1'>Betreuern</h1><b>Jason M. Reizner</b> Vertretung der Professur der Interface Design Group, Fakultät Kunst und Gestaltung, Bauhaus Universität Weimar<br><b>Dr. Eva Hornecker</b> Professorin der Gruppe Human Computer Interaction, Fakultät Medien, Bauhaus Universität Weimar<br><b>Katja Lorenz</b> Referatsleiterin Sondersammlungen, Herzogin Anna Amalia Bibliothek, Klassik Stiftung Weimar<br><br><h1 class='contact_h1'>Fachliche Berater</h1><b>Brian Larson Clark</b> Gruppe Interface Design, Fakultät Kunst und Gestaltung, Bauhaus Universität Weimar<br><b>Dr. Mirko Kunze</b><br>Und viel zusätzliche Hilfe aus den Video-Tutorials von <b>Coding Train</b> sowie von Mitwirkenden auf <b>Stackoverflow. </b><br><br><h1 class='contact_h1'>Übersetzung</h1>Englisch und traditionelles Mandarin-Chinesisch von <b>I-Chen Lai</b><br>Deutsch von <b>Martin Leibinger</b> und <b>Dr. Mirko Kunze</b><br>Wenn du helfen willst, die Website in eine andere Sprache zu übersetzen, kontaktiere bitte I-Chen.",
   },
 
   zh: {
@@ -121,13 +123,13 @@ languages = {
     page_title_map: "遇見植物地圖",
     page_title_johannes: "Johannes Kentmann的植物繪畫",
     page_title_theophil: "Theophil Kentmann的植物版畫",
-    page_title_contact: "聯絡我們",
+    page_title_contact: "關於我們",
 
     nav_index: "Botanical Encounter",
     nav_map: "遇見植物地圖",
     nav_johannes: "Johannes Kentmann的植物繪畫",
     nav_theophil: "Theophil Kentmann的植物版畫",
-    nav_contact: "聯絡我們",
+    nav_contact: "關於我們",
 
     intro_first_innerhtml:
       "哪些植物讓你印象深刻?<br />你在哪裡遇見他們的?<br />是他們奪目的顏色、令人難忘的氣味、或是他們的神奇的療癒力量讓你難忘?<br /><br />讓我們一起繪製地圖，用藝術創作記錄下這些人與植物相遇的故事吧!<br />",
@@ -169,6 +171,7 @@ languages = {
     edit_button: "← 編輯故事",
     submit_button: "完成了，上傳故事!",
 
-    contact: "聯絡我們: beyondchern[at]gmail.com",
+    contact:
+      "<h1 class='contact_h1'>維護人</h1>《Botanical Encounter遇見植物》由<b>賴怡辰</b>維護。如有對網站任何疑問或需求，請寄信至: beyondchern[at]gmail.com</b><br><br><h1 class='contact_h1'>著作權聲明</h1>本網站除參與者上傳之作品，及遇見植物地圖的地圖之外的所有圖像，皆來自<b>Codex Kentmanus:</b> (Klassik Stiftung Weimar, Herzogin Anna Amalia Bibliothek, Fol 323.)<br>所有參與者上傳本網站之圖像，為該圖之上傳者所有，請勿任意轉貼。上傳圖片前亦麻煩確認你有散播該圖像之權力。<br>遇見植物地圖之地圖來自<b>OpenStreetMap</b>社群。<br><br>《Botanical Encounter遇見植物》網站由創作者<b>賴怡辰</b>設計及開發，並受下列人士協助：<br><br><h1 class='contact_h1'>主要指導人</h1><b>Jason M. Reizner</b> 威瑪包浩斯大學藝術與設計部介面設計組代理教授 <br><b>Eva Hornecker 博士</b>威瑪包浩斯大學媒體學系人機介面組教授<br><b>Katja Lorenz</b> 威瑪古典基金會安娜．阿瑪麗亞女爵圖書館特殊收藏負責人<br><br><h1 class='contact_h1'>技術指導</h1><b>Brian Larson Clark</b>威瑪包浩斯大學藝術與設計部介面設計組講師<br><b>Mirko Kunze博士</b><br>Youtube頻道<b>Coding Train</b>的教學影片以及<b>Stackoverflow</b>上的許多解說亦助益良多。<br><br><h1 class='contact_h1'>翻譯</h1>英語及繁體中文：<b>賴怡辰</b><br>德語：<b>Martin Leibinger</b> 和 <b>Mirko Kunze 博士</b><br>如果你願意幫忙翻譯成其他種語言，麻煩與怡辰聯絡。",
   },
 };
