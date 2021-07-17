@@ -32,7 +32,7 @@ languages = {
     share_button: "Share",
 
     welcome_pop_up:
-      "<h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dragging me to the place you met your plant :)",
+      "<h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dropping a pin to the place you met your plant :)",
     upload_pop_up:
       '<button class="button" id="uploadPhotoButton">Upload a photo</button><p>Start your contribution by uploading your art! You can also change the location by dragging the pin to a new place.</p>',
     back_to_map_button: "← Back to map",
@@ -85,16 +85,16 @@ languages = {
     intro_final:
       "Und Du?<br /><br />Wie regen Begegnungen mit Pflanzen deine Kreativität an?",
     intro_final_button:
-      "Teile deine Pflanzengeschichten und -Zeichnungen/ -Drucke auf der Karte! >>",
+      "Teile deine Pflanzengeschichten, -zeichnungen oder -drucke auf der Karte! >>",
 
-    dialog_title: "Teilen Sie diese Geschichte",
+    dialog_title: "Teile diese Geschichte",
     copy_link_button: "Link kopieren",
     share_button: "Teilen",
 
     welcome_pop_up:
-      "<h1>Willkommen auf der Karte der botanischen Begegnungen!</h1><br>Klicken Sie auf ein Foto, um seine Geschichte zu sehen.<br>Oder beginnen Sie, Ihre Geschichte zu teilen, indem Sie diese Blase an den Ort ziehen, an dem Sie Ihre Pflanze getroffen haben :)",
+      "<h1>Willkommen auf der Karte der botanischen Begegnungen!</h1><br>Klicke auf ein Foto, um seine Geschichte zu sehen.<br>Oder beginne, deine Geschichte zu teilen, indem du an den Ort klickst, an dem du deine Pflanze getroffen hast :)",
     upload_pop_up:
-      '<button class="button" id="uploadPhotoButton">Ein Foto hochladen</button><p>Beginnen Sie Ihren Beitrag, indem Sie Ihre Kunst hochladen! Sie können auch die Position des Pins ändern, indem Sie ihn erneut hochladen.</p>',
+      '<button class="button" id="uploadPhotoButton">Ein Foto hochladen</button><p>Beginne deinen Beitrag, indem du deine Kunst hochlädst! Du kannst auch die Position des Pins ändern, indem du ihn erneut hochladen.</p>',
     back_to_map_button: "← Zurück zur Karte",
     crop_img_button: "Zuschneiden →",
 
@@ -103,15 +103,15 @@ languages = {
     input_scientific_name_label:
       '<label class="input_label" for="inputScientificName" >Der wissenschaftliche Name der Pflanze</label><input type="text" class="input_field adding__form_text_input_scientific_name" id="inputScientificName" placeholder="(optional)"/>',
     input_author_label:
-      '<label class="input_label" for="inputAuthor" >Autor/in</label><input type="text" class="input_field adding__form_text_input_author" id="inputAuthor" placeholder="Ihr Name" required="required" />',
+      '<label class="input_label" for="inputAuthor" >Autor/in</label><input type="text" class="input_field adding__form_text_input_author" id="inputAuthor" placeholder="Dein Name" required="required" />',
     input_story_label:
-      '<label class="input_label" for="inputStory">Geschichte einer Mensch-Pflanze-Begegnung</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="Erzählen Sie uns mehr über die Pflanze und die Kunst!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
+      '<label class="input_label" for="inputStory">Geschichte einer Mensch-Pflanze-Begegnung</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="Erzähle uns mehr über die Pflanze und die Kunst!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
     recrop_button: "← Bild neu zuschneiden",
     preview_button: "Vorschau →",
 
     preview_author: 'Von <span id="previewAuthor"></span>',
     edit_button: "← Bearbeiten",
-    submit_button: "Reichen Sie Ihre Geschichte ein",
+    submit_button: "Reiche deine Geschichte ein",
 
     contact: "Kontaktieren uns: beyondchern[at]gmail.com",
   },
@@ -148,7 +148,7 @@ languages = {
     share_button: "分享",
 
     welcome_pop_up:
-      "<h1>歡迎來到植物故事地圖！</h1><br>請點選任意照片來閱讀人與植物的故事，<br>或將這個對話框(對，就是我)移到你與植物相遇的地方，開始編寫你們的故事 :)",
+      "<h1>歡迎來到植物故事地圖！</h1><br>請點選任意照片來閱讀人與植物的故事，<br>或在地圖上點擊你與植物相遇的地方，開始編寫你們的故事 :)",
     upload_pop_up:
       '<button class="button" id="uploadPhotoButton">上傳作品照片</button><p>上傳作品，開始分享你的故事! <br>你也可以再次移動這個標籤到你與植物相遇的地方。</p>',
     back_to_map_button: "← 返回地圖",

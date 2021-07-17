@@ -64,6 +64,22 @@ function putView() {
 }
 
 let coords = {};
+map.on("click", (e) => {
+  coords = e.latlng;
+  userMarker.setLatLng(coords);
+  userMarker.setIcon(userDropIcon);
+  userMarker
+    .bindPopup(
+      '<div class="map__popup_2">' + languages[lang]["upload_pop_up"] + "</div>"
+    )
+    .openPopup();
+
+  document.getElementById("uploadPhotoButton").onclick = function () {
+    cropImgOverlay_on();
+    uploadPhoto_on();
+  };
+});
+
 userMarker.on("dragend", (e) => {
   coords = userMarker.getLatLng();
   userMarker.setIcon(userDropIcon);
