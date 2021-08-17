@@ -4,12 +4,14 @@ languages = {
     page_title_map: "Map of Botanical Encounters",
     page_title_johannes: "Drawings by Johannes Kentmann",
     page_title_theophil: "Prints by Theophil Kentmann",
+    page_title_journals: "Traveling Journals",
     page_title_contact: "About us",
 
     nav_index: "Botanical Encounter",
     nav_map: "Map of Botanical Encounters",
     nav_johannes: "Drawings by Johannes Kentmann",
     nav_theophil: "Prints by Theophil Kentmann",
+    nav_journals: "Traveling Journals",
     nav_contact: "About us",
 
     intro_first_innerhtml:
@@ -34,7 +36,7 @@ languages = {
     welcome_pop_up:
       "<h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dropping a pin to the place you met your plant :)",
     upload_pop_up:
-      '<button class="button" id="uploadPhotoButton">Upload a photo</button><p>Start your contribution by uploading your art! You can also change the location by dragging the pin to a new place.</p>',
+      '<button class="button" id="uploadPhotoButton">Upload a photo of your artwork</button><p>Start your contribution by uploading your art! You can also change the location by dragging the pin to a new place.</p>',
     back_to_map_button: "← Back to map",
     crop_img_button: "Crop →",
 
@@ -47,6 +49,8 @@ languages = {
     input_story_label:
       '<label class="input_label" for="inputStory">Story of human-plant encounter</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="Tell us more about the plant and the art!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
     input_story_placeholder: "Tell us more about the plant and the art!",
+    input_journal_number_label:
+      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number</label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="1">1</option><option value="2">2</option></select>',
     recrop_button: "← Recrop Photo",
     preview_button: "Preview →",
 
@@ -95,7 +99,7 @@ languages = {
     welcome_pop_up:
       "<h1>Willkommen auf der Karte der botanischen Begegnungen!</h1><br>Klicke auf ein Foto, um seine Geschichte zu sehen.<br>Oder beginne, deine Geschichte zu teilen, indem du an den Ort klickst, an dem du deine Pflanze getroffen hast :)",
     upload_pop_up:
-      '<button class="button" id="uploadPhotoButton">Ein Foto hochladen</button><p>Beginne deinen Beitrag, indem du deine Kunst hochlädst! Du kannst auch die Position des Pins ändern, indem du ihn erneut hochladen.</p>',
+      '<button class="button" id="uploadPhotoButton">Ein Foto deiner Kunst hochladen</button><p>Beginne deinen Beitrag, indem du deine Kunst hochlädst! Du kannst auch die Position des Pins ändern, indem du ihn erneut hochladen.</p>',
     back_to_map_button: "← Zurück zur Karte",
     crop_img_button: "Zuschneiden →",
 
