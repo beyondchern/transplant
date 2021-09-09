@@ -17,10 +17,9 @@
 
     <meta property="og:url" content="botanical-encounter.com/pages/map.html" />
     <meta property="og:site_name" content="Map of Botanical Encounters" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="img/social_media.png" />
 
     <link type="text/css" rel="stylesheet" href="../css/main.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.0/MarkerCluster.Default.min.css"
@@ -63,6 +62,12 @@
           data-key="nav_theophil"
           >Prints by Theophil Kentmann</a
         >
+        <a
+          href="./traveling_journals.html"
+          class="nav__link"
+          data-key="nav_journals"
+          >Traveling Journals
+        </a>
         <a href="./contact.html" class="nav__link" data-key="nav_contact"
           >Contact</a
         >
@@ -107,7 +112,7 @@
           </div>
         </div>
         <button class="button share-button" id="shareButton">
-          <svg>
+          <svg class="share-svg">
             <use href="#share-icon"></use>
           </svg>
           <span data-key="share_button">Share</span>
@@ -175,6 +180,7 @@
           <div class="input" data-key="input_scientific_name_label"></div>
           <div class="input" data-key="input_author_label"></div>
           <div class="input" data-key="input_story_label"></div>
+          <div class="input" data-key="input_journal_number_label"></div>
 
           <div class="adding__button_wrap">
             <button
@@ -194,6 +200,21 @@
           </div>
         </div>
       </div>
+      <!--Traveling Nature Journal Explain Dialog-->
+      <div class="tnj_expln_dialog" id="tnjExplnDialog">
+        <a
+          href="#"
+          class="close closeTnjExplnDialog"
+          id="closeTnjExplnDialogButton"
+          onclick="tnj_expln_off()"
+        ></a>
+        <p data-key="tnj_expln_dialog">
+          Please find the number on the Traveling Nature Journal's
+          <b>cover</b>.<br />
+        </p>
+
+        <p class="tnj_expln_span"></p>
+      </div>
     </div>
 
     <!--Preview Overlay-->
@@ -208,8 +229,16 @@
               ><span id="PreviewScientificName"></span
             ></i>
           </li>
-          <li class="preview__author" data-key="preview_author"></li>
+          <li class="preview__author" data-key="preview_author">
+            <span id="previewAuthor"></span>
+          </li>
           <li class="preview__story"><span id="previewStory"></span></li>
+          <li class="preview_journalNumber">
+            <i
+              >This entry is on Traveling Journal
+              <span id="previewJournalNumber"></span
+            ></i>
+          </li>
         </ul>
         <div class="preview__button_wrap">
           <button
@@ -232,10 +261,12 @@
 
     <script src="../script/menu.js"></script>
     <script src="../script/contribution_overlay.js"></script>
+    <script src="../script/highlightRoute.js"></script>
     <script src="../script/language_data.js"></script>
     <script src="../script/get_lang_value.js"></script>
     <script src="../script/set_language.js"></script>
     <script src="../script/map_setup.js"></script>
+    <script src="../script/journal_routes.js"></script>
     <script src="../script/sharedata.js"></script>
     <script src="../script/overlay_switch.js"></script>
     <script src="../script/contribution_upload_photo.js"></script>

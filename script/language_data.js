@@ -2,16 +2,16 @@ languages = {
   en: {
     page_title_index: "Botanical Encounter",
     page_title_map: "Map of Botanical Encounters",
+    page_title_journals: "Traveling Nature Journals",
     page_title_johannes: "Drawings by Johannes Kentmann",
     page_title_theophil: "Prints by Theophil Kentmann",
-    page_title_journals: "Traveling Journals",
     page_title_contact: "About us",
 
     nav_index: "Botanical Encounter",
     nav_map: "Map of Botanical Encounters",
+    nav_journals: "Traveling Nature Journals",
     nav_johannes: "Drawings by Johannes Kentmann",
     nav_theophil: "Prints by Theophil Kentmann",
-    nav_journals: "Traveling Journals",
     nav_contact: "About us",
 
     intro_first_innerhtml:
@@ -36,7 +36,7 @@ languages = {
     welcome_pop_up:
       "<h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by dropping a pin to the place you met your plant :)",
     upload_pop_up:
-      '<button class="button" id="uploadPhotoButton">Upload a photo of your artwork</button><p>Start your contribution by uploading your art! You can also change the location by dragging the pin to a new place.</p>',
+      '<button class="button" id="uploadPhotoButton">Upload a photo of your artwork</button><p>Start your contribution by uploading your artwork! You can also change the location by dragging or re-dropping the pin to a new place.</p>',
     back_to_map_button: "← Back to map",
     crop_img_button: "Crop →",
 
@@ -50,13 +50,18 @@ languages = {
       '<label class="input_label" for="inputStory">Story of human-plant encounter</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="Tell us more about the plant and the art!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
     input_story_placeholder: "Tell us more about the plant and the art!",
     input_journal_number_label:
-      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number</label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="1">1</option><option value="2">2</option></select>',
+      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option></select>',
+    tnj_expln_dialog:
+      'Please find the number on the Traveling Nature Journal\'s <b>cover</b>.<br /><p class="tnj_expln_span"><i>Traveling Nature Journals</i> are the physical part of the Botanical Encounter project. Each of them has a unique number so that we can track their traveling routes.<br /><a href= "traveling_journals.html" target="_blank">Learn more about the Traveling Nature Journal →</a>',
     recrop_button: "← Recrop Photo",
     preview_button: "Preview →",
 
     preview_author: 'By <span id="previewAuthor"></span>',
     edit_button: "← Edit",
     submit_button: "Submit your story ",
+
+    tnj_intro:
+      'Traveling Nature Journals are the physical part of the Botanical Encounter project. They started their journeys from different places in the world and, with people\'s help, travel to the Duchess-Anna-Amalia-Library in Weimar, Germany.<br />Continuing the collaborative spirit of “Codex Kentmanus”, they are on a mission to collect diverse stories of plant-human encounters. They travel like plants. They move on by being passed from one person to another or tagging along with travelers.<br />Please click a Traveling Nature Journal\'s image to see its travel route on the Map of Botanical Encounter. And if you would like to initiate a Traveling Nature Journal, please <a href="./contact.html" target="blank"><b>get in touch with us</b></a>!',
 
     contact:
       "<h1 class='contact_h1'>Maintainer</h1>The Botanical Encounter website is designed, built and maintained by artist and designer <b>I-Chen Lai</b>.<br>If you have any question or request, please contact her at <b>beyondchern [at] gmail.com</b><br><br><h1 class='contact_h1'>Credit</h1>All the images used in this website, except those ones uploaded by participants and the map tiles, are taken from the <b>Codex Kentmanus:</b> (Klassik Stiftung Weimar, Herzogin Anna Amalia Bibliothek, Fol 323.)<br>The contributed images belong to their contributors. Please do not upload an image without its author’s permission.<br>The map tiles of the Map of Botanical Encounter are provided by the <b>OpenStreetMap</b> community.<br><br>The Botanical Encounter website is designed and built by <b>I-Chen Lai</b>, with help from:<br><h1 class='contact_h1'>Supervisors</h1><b>Jason M. Reizner</b> Vertretung der Professur of Interface Design Group, Fakultät Kunst und Gestaltung, Bauhaus Universität Weimar<br><b>Dr. Eva Hornecker</b> Professor of Human Computer Interaction group, Media Fakultät, Bauhaus Universität Weimar<br><b>Katja Lorenz</b> Referatsleiterin Sondersammlungen, Herzogin Anna Amalia Bibliothek, Klassik Stiftung Weimar<br><br><h1 class='contact_h1'>Technical advisors</h1><b>Brian Larson Clark</b> Interface Design Group, Fakultät Kunst und Gestaltung, Bauhaus Universität Weimar<br><b>Dr. Mirko Kunze</b><br>And much additional help from the video tutorials of <b>Coding Train</b> as well as contributors on <b>Stackoverflow.</b><br><br><h1 class='contact_h1'>Translation</h1>English and Traditional Mandarin Chinese by <b>I-Chen Lai</b><br>German by <b>Martin Leibinger</b> and <b>Dr. Mirko Kunze</b><br>If you want to help translating the website into any other language, please contact I-Chen.",
@@ -65,12 +70,14 @@ languages = {
   de: {
     page_title_index: "Botanical Encounter",
     page_title_map: "Karte die Botanical Encounters",
+    page_title_journals: "Traveling Nature Journale",
     page_title_johannes: "Zeichnungen von Johannes Kentmann",
     page_title_theophil: "Drucke von Theophil Kentmann",
     page_title_contact: "Impressum",
 
     nav_index: "Botanical Encounter",
     nav_map: "Karte die Botanical Encounters",
+    nav_journals: "Traveling Nature Journale",
     nav_johannes: "Zeichnungen von Johannes Kentmann",
     nav_theophil: "Drucke von Theophil Kentmann",
     nav_contact: "Impressum",
@@ -111,12 +118,19 @@ languages = {
       '<label class="input_label" for="inputAuthor" >Autor/in</label><input type="text" class="input_field adding__form_text_input_author" id="inputAuthor" placeholder="Dein Name" required="required" />',
     input_story_label:
       '<label class="input_label" for="inputStory">Geschichte einer Mensch-Pflanze-Begegnung</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="Erzähle uns mehr über die Pflanze und die Kunst!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
+    input_journal_number_label:
+      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option></select>',
+    tnj_expln_dialog:
+      'Die Nummer findest du <b>auf dem Umschlag</b> des Traveling Nature Journals.<br /><p class="tnj_expln_span"><i>Traveling Nature Journals</i> sind der physische Teil des Projekts Botanical Encounter. Jedes von ihnen hat eine eindeutige Nummer, damit wir ihre Reiseroute verfolgen können.<br /><a href= "traveling_journals.html?lang=de" target="_blank">Erfahre mehr über die Traveling Nature Journals →</a>',
     recrop_button: "← Bild neu zuschneiden",
     preview_button: "Vorschau →",
 
     preview_author: 'Von <span id="previewAuthor"></span>',
     edit_button: "← Bearbeiten",
     submit_button: "Reiche deine Geschichte ein",
+
+    tnj_intro:
+      'Die Traveling Nature Journals sind der physische Teil des Projekts Botanical Encounter. Sie haben ihre Reise von verschiedenen Orten der Welt aus angetreten mit der Herzogin Anna Amalia Bibliothek in Weimar, Deutschland als Ziel.<br />In Fortführung der kollaborativen Idee des „Codex Kentmanus“ ist ihre Aufgabe, verschiedene Geschichten von Begegnungen zwischen Pflanzen und Menschen zu sammeln. Sie reisen auf ähnliche Weise wie Pflanzen. Sie werden von einem Menschen zum anderen weitergegeben werden hängen sich an Reisende. <br />Bitte klicke auf das Bild eines Traveling Nature Journals, um seine Reiseroute auf der Karte des Projekts Botanical Encounters zu sehen.  Und wenn du ein Traveling Nature Journal starten möchtest, nimm bitte <a href="./contact.html?lang=de" target="blank"><b>Kontakt mit uns</b> auf</a>!',
 
     contact:
       "<h1 class='contact_h1'>Administratorin</h1>Die Botanical Encounter Website wird von der Künstlerin und Designerin <b>I-Chen Lai</b> entworfen, gebaut und gepflegt.<br>Wenn du Fragen oder Wünsche hast, schicke eine Mail an <b>beyondchern [at] gmail. com</b><br><br><h1 class='contact_h1'>Credit</h1>Alle auf dieser Website verwendeten Bilder, mit Ausnahme der von Teilnehmern hochgeladenen Bildern und der Kartenkacheln, stammen aus dem <b>Codex Kentmanus:</b> (Klassik Stiftung Weimar, Herzogin Anna Amalia Bibliothek, Fol 323.)<br>Die beigesteuerten Bilder gehören den jeweiligen Urhebern. Bitte lade kein Bild ohne die Erlaubnis des Urhebers hoch.<br>Die Kartenkacheln der Botanischen Begegnungskarte werden von der <b>OpenStreetMap</b>-Community zur Verfügung gestellt. <br><br>Die Botanical Encounter Website wurde entworfen und erstellt von <b>I-Chen Lai</b>, mit Hilfe von:<br><h1 class='contact_h1'>Betreuer/innen</h1><b>Jason M. Reizner</b> Vertretung der Professur der Interface Design Group, Fakultät Kunst und Gestaltung, Bauhaus Universität Weimar<br><b>Dr. Eva Hornecker</b> Professorin der Gruppe Human Computer Interaction, Fakultät Medien, Bauhaus Universität Weimar<br><b>Katja Lorenz</b> Referatsleiterin Sondersammlungen, Herzogin Anna Amalia Bibliothek, Klassik Stiftung Weimar<br><br><h1 class='contact_h1'>Fachliche Berater</h1><b>Brian Larson Clark</b> Gruppe Interface Design, Fakultät Kunst und Gestaltung, Bauhaus Universität Weimar<br><b>Dr. Mirko Kunze</b><br>Und viel zusätzliche Hilfe aus den Video-Tutorials von <b>Coding Train</b> sowie von Mitwirkenden auf <b>Stackoverflow. </b><br><br><h1 class='contact_h1'>Übersetzung</h1>Englisch und traditionelles Mandarin-Chinesisch von <b>I-Chen Lai</b><br>Deutsch von <b>Martin Leibinger</b> und <b>Dr. Mirko Kunze</b><br>Wenn du helfen willst, die Website in eine andere Sprache zu übersetzen, kontaktiere bitte I-Chen.",
@@ -125,12 +139,14 @@ languages = {
   zh: {
     page_title_index: "Botanical Encounter",
     page_title_map: "遇見植物地圖",
+    page_title_journals: "Traveling Journals",
     page_title_johannes: "Johannes Kentmann的植物繪畫",
     page_title_theophil: "Theophil Kentmann的植物版畫",
     page_title_contact: "關於我們",
 
     nav_index: "Botanical Encounter",
     nav_map: "遇見植物地圖",
+    nav_journals: "旅途上的自然筆記們",
     nav_johannes: "Johannes Kentmann的植物繪畫",
     nav_theophil: "Theophil Kentmann的植物版畫",
     nav_contact: "關於我們",
@@ -168,12 +184,19 @@ languages = {
       '<label class="input_label" for="inputAuthor" >作者</label><input type="text" class="input_field adding__form_text_input_author" id="inputAuthor" placeholder="你的名字" required="required" />',
     input_story_label:
       '<label class="input_label" for="inputStory">植物與人的故事</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="告訴我們你的創作，以及作品背後，你與植物的相遇!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
+    input_journal_number_label:
+      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option></select>',
+    tnj_expln_dialog:
+      'Please find the number on the Traveling Nature Journal\'s <b>cover</b>.<br /><p class="tnj_expln_span"><i>Traveling Nature Journals</i> are the physical part of the Botanical Encounter project. Each of them has a unique number so that we can track their traveling routes.<br /><a href= "traveling_journals.html" target="_blank">Learn more about the Traveling Nature Journal →</a>',
     recrop_button: "← 重新裁切照片",
     preview_button: "預覽 →",
 
     preview_author: '<span id="previewAuthor"></span>',
     edit_button: "← 編輯故事",
     submit_button: "完成了，上傳故事!",
+
+    tnj_intro:
+      'Traveling Nature Journals are the physical part of the Botanical Encounter project. They start their journeys from different places in the world and, with people\'s help, travel to the Herzogin Anna Amalia Bibliothek in Weimar, Germany.<br />Continuing the collaborative spirit of Codex Kentmanus, they are on a mission to collect diverse stories of plant-human encounters. They travel like plants, move on by being passed from one person to another, or tagging along with travelers. <br />Click a Traveling Nature Journal\'s image to see its travel route on the Map of Botanical Encounter. And if you would like to initiate a Traveling Nature Journal, please <a href="./contact.html" target="blank"><b>get in touch with us</b></a>!',
 
     contact:
       "<h1 class='contact_h1'>維護人</h1>《Botanical Encounter遇見植物》由<b>賴怡辰</b>維護。如有對網站任何疑問或需求，請寄信至: beyondchern[at]gmail.com</b><br><br><h1 class='contact_h1'>著作權聲明</h1>本網站除參與者上傳之作品，及遇見植物地圖的地圖之外的所有圖像，皆來自<b>Codex Kentmanus:</b> (Klassik Stiftung Weimar, Herzogin Anna Amalia Bibliothek, Fol 323.)<br>所有參與者上傳本網站之圖像，為該圖之上傳者所有，請勿任意轉貼。上傳圖片前亦麻煩確認你有散播該圖像之權力。<br>遇見植物地圖之地圖來自<b>OpenStreetMap</b>社群。<br><br>《Botanical Encounter遇見植物》網站由創作者<b>賴怡辰</b>設計及開發，並受下列人士協助：<br><br><h1 class='contact_h1'>主要指導人</h1><b>Jason M. Reizner</b> 威瑪包浩斯大學藝術與設計部介面設計組代理教授 <br><b>Eva Hornecker 博士</b>威瑪包浩斯大學媒體學系人機介面組教授<br><b>Katja Lorenz</b> 威瑪古典基金會安娜．阿瑪麗亞女爵圖書館特殊收藏負責人<br><br><h1 class='contact_h1'>技術指導</h1><b>Brian Larson Clark</b>威瑪包浩斯大學藝術與設計部介面設計組講師<br><b>Mirko Kunze博士</b><br>Youtube頻道<b>Coding Train</b>的教學影片以及<b>Stackoverflow</b>上的許多解說亦助益良多。<br><br><h1 class='contact_h1'>翻譯</h1>英語及繁體中文：<b>賴怡辰</b><br>德語：<b>Martin Leibinger</b> 和 <b>Mirko Kunze 博士</b><br>如果你願意幫忙翻譯成其他種語言，麻煩與怡辰聯絡。",

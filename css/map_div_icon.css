@@ -5,6 +5,7 @@ https://stackoverflow.com/questions/53969682/not-adding-custom-marker-with-added
 /*div icon*/
 .map-label {
   position: absolute;
+  left: -40px;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -15,7 +16,6 @@ https://stackoverflow.com/questions/53969682/not-adding-custom-marker-with-added
 .map-label-content {
   order: 1;
   position: relative;
-  left: -40px;
   background-color: #fff;
   border-radius: 5px;
   border-width: 1px;
@@ -25,6 +25,7 @@ https://stackoverflow.com/questions/53969682/not-adding-custom-marker-with-added
   white-space: wrap;
 }
 
+/*
 .user-label-content {
   order: 1;
   position: relative;
@@ -37,6 +38,7 @@ https://stackoverflow.com/questions/53969682/not-adding-custom-marker-with-added
   padding: 1rem;
   white-space: wrap;
 }
+*/
 
 /*https://codepen.io/katia-trifonova/pen/zwZgdx*/
 .drop-label-content {
@@ -62,10 +64,11 @@ https://stackoverflow.com/questions/53969682/not-adding-custom-marker-with-added
 
 /*Add this arrow*/
 .map-label-arrow {
+  position: relative;
   order: 2;
   width: 0px;
   height: 0px;
-  left: 50%;
+  left: 45%;
   border-style: solid;
   border-color: var(--clr-dark) transparent transparent transparent;
   border-width: 6px 6px 0 6px; /*[first number is height, second/fourth are rigth/left width]*/
@@ -77,3 +80,5 @@ https://stackoverflow.com/questions/53969682/not-adding-custom-marker-with-added
   align-items: center;
   justify-content: space-around;
 }
+
+/*I set the pop-up's tip "leaflet-popup-tip-container"'s display to none*/

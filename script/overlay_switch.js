@@ -1,10 +1,8 @@
 function contribution_on() {
   document.getElementById("contributionOverlay").style.display = "block";
-  //document.getElementById("body_list_contribution").style.overflow = "hidden";
 }
 function contribution_off() {
   document.getElementById("contributionOverlay").style.display = "none";
-  //document.getElementById("body_list_contribution").style.overflow = "scroll";
 }
 
 function uploadPhoto_on() {
@@ -25,15 +23,24 @@ function cropImgOverlay_off() {
 
 function adding_form_on() {
   document.getElementById("addFormOverlay").style.display = "block";
-  //document.getElementById("body_list_contribution").style.overflow = "hidden";
 }
 function adding_form_off() {
   document.getElementById("addFormOverlay").style.display = "none";
-  //document.getElementById("body_list_contribution").style.overflow = "hidden";
+  tnj_expln_off();
 }
+
+function tnj_expln_on() {
+  document.getElementById("tnjExplnDialog").style.display = "block";
+  document.getElementById("tnjExplnDialog").style.zIndex = "2";
+}
+
+function tnj_expln_off() {
+  document.getElementById("tnjExplnDialog").style.display = "none";
+}
+
 function previewOn() {
   document.getElementById("previewOverlay").style.display = "flex";
-  //document.getElementById("body_list_contribution").style.overflow = "hidden";
+  tnj_expln_off();
 }
 function previewOff() {
   document.getElementById("previewOverlay").style.display = "none";

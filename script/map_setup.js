@@ -17,7 +17,7 @@ tiles.addTo(map);
 
 /////--- Div Icon---/////
 let userIcon = L.divIcon({
-  html: '<div class="map-label"><div style="width:300px" class="user-label-content" data-key="welcome_pop_up"></div><div class="map-label-arrow"></div></div>',
+  html: '<div class="map-label"><div class="map-label-round"></div></div>',
   className: "coordinates",
 });
 
@@ -29,37 +29,40 @@ let userDropIcon = L.divIcon({
 /////--- Div Icon---/////
 
 let userMarker = L.marker([lat, lng], {
-  icon: userIcon,
-  iconSize: [300, 51],
+  icon: userDropIcon,
+  //iconSize: [300, 51],
   iconAnchor: [lat, lng], // point of the icon which will correspond to marker's location
   popupAnchor: [lat, lng], // point from which the popup should open relative to the iconAnchor
   draggable: true,
 }).addTo(map);
 
+let welcomePopUp = L.popup()
+  .setLatLng([lat, lng])
+  .setContent(
+    '<div data-key="welcome_pop_up" style="width:300px"></div>'
+    // class="user-label-content"
+  )
+  .openOn(map);
+
 putView();
 function putView() {
-  lat = getQueryStringValue("lat");
-  lng = getQueryStringValue("lng");
-  zoom = getQueryStringValue("zoom");
-  if (lat && lng && zoom) {
-    map.setView([lat, lng], zoom);
-    userMarker.setLatLng([lat, lng]);
+  putViewLat = getQueryStringValue("lat");
+  putViewLng = getQueryStringValue("lng");
+  putViewZoom = getQueryStringValue("zoom");
+  if (putViewLat && putViewLng && putViewZoom) {
+    map.setView([putViewLat, putViewLng], putViewZoom);
+    welcomePopUp.setLatLng([putViewLat, putViewLng]);
+
+    if (navigator.geolocation) {
+      map.locate().on("locationfound", (e) => {
+        userMarker.setLatLng([e.latitude, e.longitude]).addTo(map);
+      });
+    }
   } else if (navigator.geolocation) {
     map.locate({ setView: true, zoom: 16 }).on("locationfound", (e) => {
-      userMarker.setLatLng([e.latitude, e.longitude]);
+      userMarker.setLatLng([e.latitude, e.longitude]).addTo(map);
+      welcomePopUp.setLatLng([e.latitude, e.longitude]);
     });
-
-    /*
-    console.log("geolocation available");
-    setUserLocation();
-    async function setUserLocation() {
-      const getUserLocation =
-        navigator.geolocation.getCurrentPosition(position);
-      lat = getUserLocation.coords.latitude;
-      lng = getUserLocation.coords.longitude;
-      zoom = 12;
-      console.log(lat, lng);
-    */
   }
 }
 

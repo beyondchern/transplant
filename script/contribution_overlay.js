@@ -1,30 +1,47 @@
 getData();
+let contributions;
+let routePoints = [];
 async function getData() {
   const response = await fetch(
     "https://beyondchern.eu.pythonanywhere.com/database"
   );
-  let contributions = await response.json();
+  contributions = await response.json();
 
   let markers = L.markerClusterGroup({ showCoverageOnHover: false });
 
-  putMarker();
-  function putMarker() {
+  putMarkers();
+  function putMarkers() {
     for (key in contributions) {
       let item = contributions[key];
+      let jn = item.journalNumber ? item.journalNumber : "none";
       let plantIcon = L.divIcon({
-        html: `<div class="map-label"><div style="background-image: url(https://beyondchern.eu.pythonanywhere.com/static/images/${item.image});background-size: 90px 120px;height:120px;width:90px" class="map-label-content"></div><div class="map-label-arrow"></div></div>`,
+        html: `
+        <div class="map-label">
+          <div style="
+            background-image: url(https://beyondchern.eu.pythonanywhere.com/static/images/${item.image});
+            background-size: 90px 120px;
+            height:120px;
+            width:90px"
+            class="map-label-content journal-number-${jn}"
+          ></div>
+          <div class="map-label-arrow"></div>
+        </div>`,
         className: "dummy",
       });
 
-      /* contributions in overlays*/
+      /*contributions' markers and contribution overlay*/
       let marker = L.marker([item.location.lat, item.location.lng], {
         icon: plantIcon,
       });
-      //.addTo(map)
+
       markers.addLayer(marker);
       marker.on("click", markerClick);
 
       function markerClick() {
+        if (jn != "none") {
+          highlightJournal(jn);
+        }
+
         const contributionImage = document.createElement("img");
         const contributionInfo = document.createElement("ul");
         const contributionPlantName = document.createElement("li");
@@ -96,7 +113,25 @@ async function getData() {
 
         contribution_on();
       }
+      appendToRoutes(item);
     }
+    console.log(routePoints);
+    routePoints.forEach((line) => {
+      let polyLine = L.polyline(line, {
+        dashArray: "6",
+        color: "#7b3016",
+        opacity: 0.5,
+        weight: 3,
+        className: `journal-number-${line.journalNumber}`,
+      });
+
+      polyLine
+        .on("click", function () {
+          highlightJournal(line.journalNumber);
+        })
+        .addTo(map);
+      highlightRoute();
+    });
   }
   map.addLayer(markers);
 }
