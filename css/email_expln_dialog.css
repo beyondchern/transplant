@@ -1,0 +1,18 @@
+.email_expln_dialog {
+  display: none;
+  width: 95%;
+  max-width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+
+  position: sticky;
+  bottom: 30%;
+  margin: auto;
+}
+
+.closeEmailExplnDialog {
+  right: 0.5rem;
+}

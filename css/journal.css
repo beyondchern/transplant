@@ -26,3 +26,8 @@
 .journal_figure figcaption {
   width: 90%;
 }
+
+.journal_figure h1 {
+  text-align: center;
+  padding-top: 0.5rem;
+}

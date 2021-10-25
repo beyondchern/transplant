@@ -27,15 +27,25 @@ function adding_form_on() {
 function adding_form_off() {
   document.getElementById("addFormOverlay").style.display = "none";
   tnj_expln_off();
+  email_expln_off();
 }
 
 function tnj_expln_on() {
   document.getElementById("tnjExplnDialog").style.display = "block";
-  document.getElementById("tnjExplnDialog").style.zIndex = "2";
+  document.getElementById("tnjExplnDialog").style.zIndex = "3";
 }
 
 function tnj_expln_off() {
   document.getElementById("tnjExplnDialog").style.display = "none";
+}
+
+function email_expln_on() {
+  document.getElementById("emailExplnDialog").style.display = "block";
+  document.getElementById("emailExplnDialog").style.zIndex = "2";
+}
+
+function email_expln_off() {
+  document.getElementById("emailExplnDialog").style.display = "none";
 }
 
 function previewOn() {

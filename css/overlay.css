@@ -144,12 +144,17 @@
 .adding__form_text_input_plant_name,
 .adding__form_text_input_scientific_name,
 .adding__form_text_input_author,
+.adding__form_text_input_email,
 .adding__form_text_input_journal_number {
   height: 2.5rem;
 }
 
 .adding__form_text_input_story {
   height: 10rem;
+}
+
+.adding__form_text_input_journal_number {
+  background-color: white;
 }
 
 /*Preview Overlay*/

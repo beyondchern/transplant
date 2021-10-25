@@ -41,22 +41,28 @@ languages = {
     crop_img_button: "Crop →",
 
     input_plant_name_label:
-      '<label class="input_label" for="inputPlantName">The plant\'s common name</label><input type="text" class="input_field adding__form_text_input_plant_name" id="inputPlantName" placeholder="What is the plant called?" required="required" />',
+      '<label class="input_label" for="inputPlantName">The plant\'s name</label><input type="text" class="input_field adding__form_text_input_plant_name" id="inputPlantName" placeholder="How do YOU call the plant?" required="required" />',
     input_scientific_name_label:
       '<label class="input_label" for="inputScientificName" >The plant\'s scientific name</label><input type="text" class="input_field adding__form_text_input_scientific_name" id="inputScientificName" placeholder="(Optional)"/>',
     input_author_label:
       '<label class="input_label" for="inputAuthor" >Author</label><input type="text" class="input_field adding__form_text_input_author" id="inputAuthor" placeholder="Your name" required="required" />',
     input_story_label:
-      '<label class="input_label" for="inputStory">Story of human-plant encounter</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="Tell us more about the plant and the art!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
-    input_story_placeholder: "Tell us more about the plant and the art!",
+      '<label class="input_label" for="inputStory">Your story of human-plant encounter</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="Tell us more about your plant story!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
+    input_email_label:
+      '<label class="input_label" for="inputEmail">Your E-mail address <a href="#" onclick="email_expln_on()" style="text-decoration: underline">(What for?)</a></label><input type="text" class="input_field adding__form_text_input_email" id="inputEmail" placeholder="myplant@botanical-encounter.com"/></div>',
     input_journal_number_label:
-      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option></select>',
+      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>',
+    email_expln_dialog:
+      "We use your email address to <b>contact you regarding your contribution</b> and <b>survey about your experience</b> of participating in the Botanical Encounter project.",
     tnj_expln_dialog:
       'Please find the number on the Traveling Nature Journal\'s <b>cover</b>.<br /><p class="tnj_expln_span"><i>Traveling Nature Journals</i> are the physical part of the Botanical Encounter project. Each of them has a unique number so that we can track their traveling routes.<br /><a href= "traveling_journals.html" target="_blank">Learn more about the Traveling Nature Journal →</a>',
     recrop_button: "← Recrop Photo",
     preview_button: "Preview →",
 
     preview_author: 'By <span id="previewAuthor"></span>',
+    preview_journalNumber:
+      'This entry is on Traveling Journal No.<span id="previewJournalNumber"></span>',
+    preview_email: 'Your Email: <span id="previewEmail"></span>',
     edit_button: "← Edit",
     submit_button: "Submit your story ",
 
@@ -118,14 +124,21 @@ languages = {
       '<label class="input_label" for="inputAuthor" >Autor/in</label><input type="text" class="input_field adding__form_text_input_author" id="inputAuthor" placeholder="Dein Name" required="required" />',
     input_story_label:
       '<label class="input_label" for="inputStory">Geschichte einer Mensch-Pflanze-Begegnung</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="Erzähle uns mehr über die Pflanze und die Kunst!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
+    input_email_label:
+      '<label class="input_label" for="inputEmail">Deine E-Mail Adresse<a href="#" onclick="email_expln_on()" style="text-decoration: underline">(Wofür?)</a></label><input type="text" class="input_field adding__form_text_input_email" id="inputEmail" placeholder="myplant@botanical-encounter.com"/></div>',
     input_journal_number_label:
-      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option></select>',
+      '<label class="input_label" for="inputJournalNumber">Die Nummer des Traveling Nature Journals <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">Ich habe kein Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>',
+    email_expln_dialog:
+      "Wir verwenden deine E-Mail-Adresse, <b>um dich bezüglich deines Beitrags zu kontaktieren</b> und dich <b>über deine Erlebnisse</b> mit der Teilnahme am Projekt Botanical Encounter zu befragen.",
     tnj_expln_dialog:
       'Die Nummer findest du <b>auf dem Umschlag</b> des Traveling Nature Journals.<br /><p class="tnj_expln_span"><i>Traveling Nature Journals</i> sind der physische Teil des Projekts Botanical Encounter. Jedes von ihnen hat eine eindeutige Nummer, damit wir ihre Reiseroute verfolgen können.<br /><a href= "traveling_journals.html?lang=de" target="_blank">Erfahre mehr über die Traveling Nature Journals →</a>',
     recrop_button: "← Bild neu zuschneiden",
     preview_button: "Vorschau →",
 
     preview_author: 'Von <span id="previewAuthor"></span>',
+    preview_email: 'Deine E-Mail: <span id="previewEmail"></span>',
+    preview_journalNumber:
+      'Dieser Eintrag ist bei Traveling Journal No.<span id="previewJournalNumber"></span>',
     edit_button: "← Bearbeiten",
     submit_button: "Reiche deine Geschichte ein",
 
@@ -177,21 +190,28 @@ languages = {
     crop_img_button: "裁切照片 →",
 
     input_plant_name_label:
-      '<label class="input_label" for="inputPlantName">植物俗名</label><input type="text" class="input_field adding__form_text_input_plant_name" id="inputPlantName" placeholder="你怎麼稱呼這株植物的?" required="required" />',
+      '<label class="input_label" for="inputPlantName">植物的名字</label><input type="text" class="input_field adding__form_text_input_plant_name" id="inputPlantName" placeholder="你怎麼稱呼這株植物的?" required="required" />',
     input_scientific_name_label:
       '<label class="input_label" for="inputScientificName" >植物學名</label><input type="text" class="input_field adding__form_text_input_scientific_name" id="inputScientificName" placeholder="(非必填)"/>',
     input_author_label:
       '<label class="input_label" for="inputAuthor" >作者</label><input type="text" class="input_field adding__form_text_input_author" id="inputAuthor" placeholder="你的名字" required="required" />',
     input_story_label:
-      '<label class="input_label" for="inputStory">植物與人的故事</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="告訴我們你的創作，以及作品背後，你與植物的相遇!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
+      '<label class="input_label" for="inputStory">植物與你的故事</label><textarea class="input_field adding__form_text_input_story" id="inputStory" placeholder="告訴我們你與植物相遇的故事!" rows="14" cols="10" wrap="soft" style="overflow: scroll; resize: none" required="required"></textarea>',
+    input_email_label:
+      '<label class="input_label" for="inputEmail">你的E-mail <a href="#" onclick="email_expln_on()" style="text-decoration: underline">(用途)</a></label><input type="text" class="input_field adding__form_text_input_email" id="inputEmail" placeholder="myplant@botanical-encounter.com"/></div>',
     input_journal_number_label:
-      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option></select>',
+      '<label class="input_label" for="inputJournalNumber">Traveling Nature Journal 的編號 <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">我沒有 Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option></select>',
+    email_expln_dialog:
+      "我們用email跟你聯絡作品後續的發展，以及詢問你參與「遇見植物」計畫的經驗",
     tnj_expln_dialog:
-      'Please find the number on the Traveling Nature Journal\'s <b>cover</b>.<br /><p class="tnj_expln_span"><i>Traveling Nature Journals</i> are the physical part of the Botanical Encounter project. Each of them has a unique number so that we can track their traveling routes.<br /><a href= "traveling_journals.html" target="_blank">Learn more about the Traveling Nature Journal →</a>',
+      '請見Traveling Nature Journal的<b>封面。</b><br /><p class="tnj_expln_span"><i>Traveling Nature Journals</i> 是「遇見植物」計畫的實體部分。每一本筆記書都有一個編號，讓我們可以追蹤他們的旅途。<br /><a href= "traveling_journals.html" target="_blank">更多關於 Traveling Nature Journal →</a>',
     recrop_button: "← 重新裁切照片",
     preview_button: "預覽 →",
 
     preview_author: '<span id="previewAuthor"></span>',
+    preview_journalNumber:
+      '這個故事在Traveling Journal No.<span id="previewJournalNumber"></span>上',
+    preview_email: '你的Email: <span id="previewEmail"></span>',
     edit_button: "← 編輯故事",
     submit_button: "完成了，上傳故事!",
 

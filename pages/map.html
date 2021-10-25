@@ -180,6 +180,7 @@
           <div class="input" data-key="input_scientific_name_label"></div>
           <div class="input" data-key="input_author_label"></div>
           <div class="input" data-key="input_story_label"></div>
+          <div class="input" data-key="input_email_label"></div>
           <div class="input" data-key="input_journal_number_label"></div>
 
           <div class="adding__button_wrap">
@@ -200,6 +201,16 @@
           </div>
         </div>
       </div>
+      <!--Email Explain Dialog-->
+      <div class="email_expln_dialog" id="emailExplnDialog">
+        <a
+          href="#"
+          class="close closeEmailExplnDialog"
+          id="closeTnjEmailDialogButton"
+          onclick="email_expln_off()"
+        ></a>
+        <p data-key="email_expln_dialog"></p>
+      </div>
       <!--Traveling Nature Journal Explain Dialog-->
       <div class="tnj_expln_dialog" id="tnjExplnDialog">
         <a
@@ -208,11 +219,7 @@
           id="closeTnjExplnDialogButton"
           onclick="tnj_expln_off()"
         ></a>
-        <p data-key="tnj_expln_dialog">
-          Please find the number on the Traveling Nature Journal's
-          <b>cover</b>.<br />
-        </p>
-
+        <p data-key="tnj_expln_dialog"></p>
         <p class="tnj_expln_span"></p>
       </div>
     </div>
@@ -233,11 +240,11 @@
             <span id="previewAuthor"></span>
           </li>
           <li class="preview__story"><span id="previewStory"></span></li>
+          <li class="preview_email">
+            <small data-key="preview_email"></small>
+          </li>
           <li class="preview_journalNumber">
-            <i
-              >This entry is on Traveling Journal
-              <span id="previewJournalNumber"></span
-            ></i>
+            <small data-key="preview_journalNumber"></small>
           </li>
         </ul>
         <div class="preview__button_wrap">
@@ -245,9 +252,7 @@
             class="button preview__button_edit"
             id="editButton"
             data-key="edit_button"
-          >
-            ← Edit
-          </button>
+          ></button>
           <button
             class="button preview__button_submit"
             id="submitButton"
