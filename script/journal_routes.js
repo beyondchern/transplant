@@ -15,7 +15,7 @@ function highlightJournal(journalNumber) {
     previous.remove();
   }
   var style = document.createElement("style");
-  style.innerHTML = `.journal-number-${journalNumber} {border: solid 4px #032fd9; stroke: #032fd9;}`;
+  style.innerHTML = `.journal-number-${journalNumber} {border: solid 4px #002F0C; stroke: #002F0C;}`;
   style.id = "highlight";
   document.head.appendChild(style);
 }

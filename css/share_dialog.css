@@ -8,10 +8,6 @@
   margin-right: 7px;
 }
 
-.button:hover {
-  border-color: #cdd;
-}
-
 .share-button,
 .copy-link__button {
   padding-left: 30px;

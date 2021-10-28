@@ -7,7 +7,10 @@ async function getData() {
   );
   contributions = await response.json();
 
-  let markers = L.markerClusterGroup({ showCoverageOnHover: false });
+  let markers = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    disableClusteringAtZoom: 10,
+  });
 
   putMarkers();
   function putMarkers() {
