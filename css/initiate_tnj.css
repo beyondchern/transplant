@@ -7,6 +7,7 @@
 
 .wrapper_initiate p {
   max-width: 70ch;
+  line-height: 1.5rem;
   padding-left: 5rem;
   padding-right: 5rem;
 }

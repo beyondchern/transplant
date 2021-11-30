@@ -34,6 +34,7 @@
   align-items: center;
 }
 
+.contribution__button_wrap,
 .cropImg__button_wrap,
 .adding__button_wrap,
 .preview__button_wrap {
@@ -164,4 +165,16 @@
 .preview__story {
   padding: 0px;
   display: block;
+}
+
+@media print {
+  .noPrint {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #printButton {
+    display: none;
+  }
 }

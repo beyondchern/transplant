@@ -27,6 +27,10 @@
   width: 90%;
 }
 
+.journal_figure img {
+  cursor: pointer;
+}
+
 .journal_figure h1 {
   text-align: center;
   padding-top: 0.5rem;

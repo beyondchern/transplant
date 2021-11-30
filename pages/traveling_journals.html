@@ -22,6 +22,7 @@
     <meta property="og:site_name" content="Botanical Encounter" />
 
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../library/simpleLightbox.css" />
     <script src="../script/geturlvalue.js"></script>
     <title data-key="page_title_journals">Traveling Nature Journals</title>
   </head>
@@ -90,12 +91,17 @@
       </p>
       <div class="journal_tiles">
         <figure class="journal_figure">
-          <a href="./map.html?lat=50.9702&lng=11.3394&zoom=14&journal=0">
-            <img src="../img/journal_covers/tnj_00.jpg" alt="journal_0" />
-          </a>
+          <img
+            src="../img/journal_covers/tnj_00.jpg"
+            alt="journal_0"
+            onclick="getTnjImg(0)"
+          />
           <figcaption>
             <h1>Plants at home</h1>
-            Started from Weimar, Germany<br />by I-Chen
+            Started by I-Chen<br />from Weimar, Germany<br />
+            <a href="./map.html?lat=50.97&lng=11.33&zoom=14&journal=0"
+              ><small>See its route on the map →</small></a
+            >
           </figcaption>
         </figure>
         <figure class="journal_figure">
@@ -115,11 +121,19 @@
           <figcaption><h1>Journal No.4</h1></figcaption>
         </figure>
         <figure class="journal_figure">
-          <img src="../img/journal_covers/tnj_05.JPG" alt="journal_5" />
+          <img
+            src="../img/journal_covers/tnj_05.JPG"
+            alt="journal_5"
+            onclick="getTnjImg(5)"
+          />
           <figcaption>
             <h1>Plants that make you feel home</h1>
-            Started from Missoula, MT, USA<br />
-            by Martin
+            Started by Martin<br />from Missoula, MT, USA<br />
+            <a
+              href="./map.html?lat=46.85983521007983&lng=-113.99107217788696&zoom=14&journal=5"
+            >
+              <small>See its route on the map →</small></a
+            >
           </figcaption>
         </figure>
         <figure class="journal_figure">
@@ -147,6 +161,12 @@
           <figcaption><h1>Journal No.11</h1></figcaption>
         </figure>
       </div>
+      <!--Journal Content Overlay-->
+      <div class="overlay journalContent__overlay" id="journalContentOverlay">
+        <div class="journalContent__wrapper" id="journalContentWrapper">
+          <div id="journalContent"></div>
+        </div>
+      </div>
     </div>
 
     <script src="../script/menu.js"></script>
@@ -154,5 +174,9 @@
     <script src="../script/get_lang_value.js"></script>
     <script src="../script/set_language.js"></script>
     <script src="../script/language_data.js"></script>
+    <script src="../script/tnj_lightbox.js"></script>
+    <script src="../library/simpleLightbox.js"></script>
+    <script src="../script/overlay_switch.js"></script>
+    <script src="../script/tnj_event_listeners.js"></script>
   </body>
 </html>
