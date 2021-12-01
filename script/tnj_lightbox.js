@@ -15,14 +15,19 @@ async function getTnjImg(journalNr) {
         if (imgLink[j] === undefined) {
           imgLink[j] = [];
         }
+
         imgLink[j].push(
           `https://beyondchern.eu.pythonanywhere.com/static/images/${item.image}`
         );
       }
     }
     console.log(imgLink);
+
     SimpleLightbox.open({
-      items: imgLink[journalNr],
+      items: [
+        `../img/journal_covers/tnj_${journalNr}.jpg`,
+        ...imgLink[journalNr],
+      ],
     });
   }
 }
