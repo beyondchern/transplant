@@ -25,7 +25,7 @@ async function getTnjImg(journalNr) {
 
     SimpleLightbox.open({
       items: [
-        `../img/journal_covers/tnj_${journalNr}.jpg`,
+        `../img/journal_covers/tnj_${journalNr}.JPG`,
         ...imgLink[journalNr],
       ],
     });
