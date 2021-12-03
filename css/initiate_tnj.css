@@ -16,6 +16,10 @@
   max-width: 300px;
 }
 
+.initiate_fig img {
+  max-width: 100%;
+}
+
 .initiate_figcap {
   font-size: 0.8rem;
 }
