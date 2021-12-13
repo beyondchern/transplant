@@ -52,7 +52,7 @@ languages = {
     input_email_label:
       '<label class="input_label" for="inputEmail">Your E-mail address <a href="#" onclick="email_expln_on()" style="text-decoration: underline">(What for?)</a></label><input type="text" class="input_field adding__form_text_input_email" id="inputEmail" placeholder="myplant@botanical-encounter.com"/></div>',
     input_journal_number_label:
-      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>',
+      '<label class="input_label" for="inputJournalNumber">The Traveling Journal\'s tracking number <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">I don\'t have any Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select>',
     email_expln_dialog:
       "We use your email address to <b>contact you regarding your contribution</b> and <b>survey about your experience</b> of participating in the Botanical Encounter project.",
     tnj_expln_dialog:
@@ -127,7 +127,7 @@ languages = {
     input_email_label:
       '<label class="input_label" for="inputEmail">Deine E-Mail Adresse<a href="#" onclick="email_expln_on()" style="text-decoration: underline">(Wofür?)</a></label><input type="text" class="input_field adding__form_text_input_email" id="inputEmail" placeholder="myplant@botanical-encounter.com"/></div>',
     input_journal_number_label:
-      '<label class="input_label" for="inputJournalNumber">Die Nummer des Traveling Nature Journals <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">Ich habe kein Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>',
+      '<label class="input_label" for="inputJournalNumber">Die Nummer des Traveling Nature Journals <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">Ich habe kein Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select>',
     email_expln_dialog:
       "Wir verwenden deine E-Mail-Adresse, <b>um dich bezüglich deines Beitrags zu kontaktieren</b> und dich <b>über deine Erlebnisse</b> mit der Teilnahme am Projekt Botanical Encounter zu befragen.",
     tnj_expln_dialog:
@@ -200,7 +200,7 @@ languages = {
     input_email_label:
       '<label class="input_label" for="inputEmail">你的E-mail <a href="#" onclick="email_expln_on()" style="text-decoration: underline">(用途)</a></label><input type="text" class="input_field adding__form_text_input_email" id="inputEmail" placeholder="myplant@botanical-encounter.com"/></div>',
     input_journal_number_label:
-      '<label class="input_label" for="inputJournalNumber">Traveling Nature Journal 的編號 <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">我沒有 Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option></select>',
+      '<label class="input_label" for="inputJournalNumber">Traveling Nature Journal 的編號 <a href="#" onclick="tnj_expln_on()" style="text-decoration:underline;">(?)<a></label><select class="input_field adding__form_text_input_journal_number" id="inputJournalNumber"/><option value="">我沒有 Traveling Journal</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select>',
     email_expln_dialog:
       "我們用email跟你聯絡作品後續的發展，以及詢問你參與「遇見植物」計畫的經驗",
     tnj_expln_dialog:
