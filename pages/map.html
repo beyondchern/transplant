@@ -91,7 +91,7 @@
     <div
       class="contribution__popup"
       id="map"
-      style="width: 100%; height: 100%"
+      style="width: 100%; height: 90%"
     ></div>
 
     <!--Contribution Overlay-->
@@ -143,13 +143,22 @@
             </defs>
           </svg>
           <button
-            class="button print-button noPrint noPhone"
+            class="button print-button noPrint"
             id="printButton"
             onclick="window.print()"
+            style="display: none"
           >
             Print
           </button>
         </div>
+      </div>
+    </div>
+
+    <!--Exhibition Overlay-->
+    <div class="overlay exhibition__overlay" id="exhibitionOverlay">
+      <div class="exhibition__wrapper" id="exhibitionWrapper">
+        <a href="#" class="close" id="closeExhibitionOverlay"></a>
+        <div class="exhibitionContent" id="exhibitionContent"></div>
       </div>
     </div>
 
@@ -197,6 +206,24 @@
           <div class="input" data-key="input_story_label"></div>
           <div class="input" data-key="input_email_label"></div>
           <div class="input" data-key="input_journal_number_label"></div>
+          <div class="input" style="flex-direction: row; width: 17rem">
+            <input
+              type="checkbox"
+              name="inputReproductionPermission"
+              id="inputReproductionPermission"
+              checked
+            />
+            <label class="input_label" for="inputReproductionPermission"
+              >I allow my story and artwork to be reproduced in future Botanical
+              Encounter events and exhibitions.
+              <a
+                href="create_an_exhibition.html"
+                target="_blank"
+                style="text-decoration: underline"
+                >(Learn more →)</a
+              ></label
+            >
+          </div>
 
           <div class="adding__button_wrap">
             <button
@@ -261,6 +288,9 @@
           <li class="preview_journalNumber">
             <small data-key="preview_journalNumber"></small>
           </li>
+          <li class="preview_reproductionPermission">
+            <small> <span id="previewReproductionPermission"></span></small>
+          </li>
         </ul>
         <div class="preview__button_wrap">
           <button
@@ -279,20 +309,58 @@
       </div>
     </div>
 
+    <!--legend buttons-->
+    <div class="wrap__legends">
+      <a href="" class="legend legend_contribution">
+        <div class="wrap_legend">
+          <img src="../img/legend_contribution.png" style="height: 2em" />
+          <h1>Botanical Encounters</h1>
+        </div>
+        <p>How to share my plant stories? (Coming Soon!)</p>
+      </a>
+
+      <a
+        href="traveling_journals.html"
+        target="_blank"
+        class="legend legend_tnj"
+      >
+        <div class="wrap_legend">
+          <h1>Traveling Nature Journals</h1>
+        </div>
+        <p>What are Traveling Nature Journals?</p>
+      </a>
+
+      <a
+        href="create_an_exhibition.html"
+        target="_blank"
+        class="legend legend_past_exhibitions"
+      >
+        <div class="wrap_legend">
+          <img src="../img/legend_past_exhibitions.png" style="height: 2em" />
+          <h1>Exhibitions</h1>
+        </div>
+        <p>How to create a Botanical Encounter exhibition?</p>
+      </a>
+    </div>
+
     <script src="../script/menu.js"></script>
     <script src="../script/contribution_overlay.js"></script>
     <script src="../script/highlightRoute.js"></script>
     <script src="../script/language_data.js"></script>
+    <script src="../script/exhibition_data.js"></script>
     <script src="../script/get_lang_value.js"></script>
     <script src="../script/set_language.js"></script>
     <script src="../script/map_setup.js"></script>
+    <script src="../script/overlay_switch.js"></script>
+    <script src="../script/exhibition_overlay.js"></script>
+    <script src="../script/map_exhibitions.js"></script>
     <script src="../script/journal_routes.js"></script>
     <script src="../script/sharedata.js"></script>
-    <script src="../script/overlay_switch.js"></script>
     <script src="../script/contribution_upload_photo.js"></script>
     <script src="../script/contribution_crop_photo.js"></script>
     <script src="../script/contribution_get_preview.js"></script>
     <script src="../script/submit.js"></script>
     <script src="../script/contribution_event_listeners.js"></script>
+    <script src="../script/exhibition_event_listeners.js"></script>
   </body>
 </html>

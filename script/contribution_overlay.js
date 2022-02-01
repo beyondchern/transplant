@@ -7,7 +7,7 @@ async function getData() {
   );
   contributions = await response.json();
 
-  let markers = L.markerClusterGroup({
+  markers = L.markerClusterGroup({
     showCoverageOnHover: false,
     disableClusteringAtZoom: 10,
   });
@@ -114,11 +114,17 @@ async function getData() {
           }
         };
 
+        //print button
+        if (item.reproductionPermission == true) {
+          document.getElementById("printButton").style.display = "block";
+        } else {
+          document.getElementById("printButton").style.display = "none";
+        }
+
         contribution_on();
       }
       appendToRoutes(item);
     }
-    console.log(routePoints);
     routePoints.forEach((line) => {
       let polyLine = L.polyline(line, {
         dashArray: "6",
@@ -136,5 +142,6 @@ async function getData() {
       highlightRoute();
     });
   }
+  makeExhibitionMarkers();
   map.addLayer(markers);
 }

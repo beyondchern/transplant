@@ -12,6 +12,9 @@ function preview() {
   submission.email = document.getElementById("inputEmail").value;
   submission.journalNumber =
     document.getElementById("inputJournalNumber").value;
+  submission.reproductionPermission = document.getElementById(
+    "inputReproductionPermission"
+  ).checked;
 
   document.getElementById("previewImage").setAttribute("src", photoData);
   document.getElementById("previewPlantName").innerHTML = submission.plantName;
@@ -22,6 +25,14 @@ function preview() {
   document.getElementById("previewEmail").innerHTML = submission.email;
   document.getElementById("previewJournalNumber").innerHTML =
     submission.journalNumber;
+
+  if (submission.reproductionPermission == true) {
+    document.getElementById("previewReproductionPermission").innerHTML =
+      "The content may be reproduced in future Botanical Encounter events and exhibitions.";
+  } else {
+    document.getElementById("previewReproductionPermission").innerHTML =
+      "Do Not reproduce this content in other Botanical Encounter events and exhibitions.";
+  }
 
   submission.location = coords;
 }

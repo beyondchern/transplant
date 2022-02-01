@@ -55,3 +55,11 @@ function previewOn() {
 function previewOff() {
   document.getElementById("previewOverlay").style.display = "none";
 }
+
+//On Exhibition Page
+function exhibOn() {
+  document.getElementById("exhibitionOverlay").style.display = "block";
+}
+function exhibOff() {
+  document.getElementById("exhibitionOverlay").style.display = "none";
+}

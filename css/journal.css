@@ -28,10 +28,17 @@
 }
 
 .journal_figure img {
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .journal_figure h1 {
   text-align: center;
   padding-top: 0.5rem;
+}
+
+.journal_initiate {
+  border-style: solid;
+  border-color: #002f0c;
+  border-width: 5px;
 }
