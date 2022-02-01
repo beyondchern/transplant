@@ -35,9 +35,9 @@ languages = {
     share_button: "Share",
 
     welcome_pop_up:
-      "<h1>Welcome to the map of botanical encounters!</h1><br>Click a photo to see its story.<br>Or start sharing your story by clicking the location you met your plant :)",
+      "<h1>Welcome to the map of botanical encounters!</h1><br>Start sharing your plant story by clicking the location you met your plant.<br>Or click a photo to see its story.",
     upload_pop_up:
-      '<button class="button" id="uploadPhotoButton">Upload a photo of your artwork</button><p>Start your contribution by uploading your plant artwork!<br>Or click a new location to re-locate the pin.</small></p>',
+      '<button class="button" id="uploadPhotoButton">Upload a photo of your artwork</button><p>Start your contribution by uploading your plant artwork!<br>You can also re-locate the pin by clicking a new location.</small></p>',
     back_to_map_button: "← Back to map",
     crop_img_button: "Crop →",
 
@@ -110,7 +110,7 @@ languages = {
     share_button: "Teilen",
 
     welcome_pop_up:
-      "<h1>Willkommen auf der Karte der botanischen Begegnungen!</h1><br>Klicke auf ein Foto, um seine Geschichte zu sehen.<br>Oder beginne, deine Geschichte zu teilen, indem du an den Ort klickst, an dem du deine Pflanze getroffen hast :)",
+      "<h1>Willkommen auf der Karte der botanischen Begegnungen!</h1><br>Beginne, deine Geschichte zu teilen, indem du an den Ort klickst, an dem du deine Pflanze getroffen hast.<br>Oder klicke auf ein Foto, um seine Geschichte zu sehen.",
     upload_pop_up:
       '<button class="button" id="uploadPhotoButton">Ein Foto deiner Kunst hochladen</button><p>Beginne deinen Beitrag, indem du deine Kunst hochlädst! Du kannst auch die Position des Pins ändern, indem du ihn erneut hochladen.</p>',
     back_to_map_button: "← Zurück zur Karte",

@@ -25,21 +25,6 @@ https://stackoverflow.com/questions/53969682/not-adding-custom-marker-with-added
   white-space: wrap;
 }
 
-/*
-.user-label-content {
-  order: 1;
-  position: relative;
-  left: -50%;
-  background-color: #fff;
-  border-radius: 20px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--clr-dark);
-  padding: 1rem;
-  white-space: wrap;
-}
-*/
-
 /*https://codepen.io/katia-trifonova/pen/zwZgdx*/
 .drop-label-content {
   position: absolute;
@@ -82,3 +67,28 @@ https://stackoverflow.com/questions/53969682/not-adding-custom-marker-with-added
 }
 
 /*I set the pop-up's tip "leaflet-popup-tip-container"'s display to none*/
+
+.exhibitionIcon {
+  background-size: 120px 120px;
+  height: 120px;
+  width: 120px;
+
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--clr-exhibition-dark);
+  padding: 0px;
+}
+
+.exhib-label-arrow {
+  position: relative;
+  order: 2;
+  width: 0px;
+  height: 0px;
+  left: 45%;
+  border-style: solid;
+  border-color: var(--clr-exhibition-dark) transparent transparent transparent;
+  border-width: 6px 6px 0 6px; /*[first number is height, second/fourth are rigth/left width]*/
+}

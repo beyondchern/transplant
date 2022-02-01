@@ -15,7 +15,7 @@ let tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 let tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(map);
 
-/////--- Div Icon---/////
+///--- Div Icon---///
 let userIcon = L.divIcon({
   html: '<div class="map-label"><div class="map-label-round"></div></div>',
   className: "coordinates",
@@ -26,11 +26,9 @@ let userDropIcon = L.divIcon({
   className: "coordinates",
 });
 
-/////--- Div Icon---/////
-
+///--- User Location Marker---///
 let userMarker = L.marker([lat, lng], {
   icon: userDropIcon,
-  //iconSize: [300, 51],
   iconAnchor: [lat, lng], // point of the icon which will correspond to marker's location
   popupAnchor: [lat, lng], // point from which the popup should open relative to the iconAnchor
   draggable: true,
@@ -38,12 +36,10 @@ let userMarker = L.marker([lat, lng], {
 
 let welcomePopUp = L.popup()
   .setLatLng([lat, lng])
-  .setContent(
-    '<div data-key="welcome_pop_up" style="width:300px"></div>'
-    // class="user-label-content"
-  )
+  .setContent('<div data-key="welcome_pop_up" style="width:300px"></div>')
   .openOn(map);
 
+///---set to initial view---///
 putView();
 function putView() {
   putViewLat = getQueryStringValue("lat");
@@ -66,6 +62,7 @@ function putView() {
   }
 }
 
+///---User drop pins---///
 let coords = {};
 map.on("click", (e) => {
   coords = e.latlng;

@@ -1,0 +1,95 @@
+.wrapper_exhibition {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exhibition_intro {
+  max-width: 70ch;
+  line-height: 2em;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.worksheets_wrapper {
+  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.worksheet_intro_wrapper,
+.worksheet_canvas_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.worksheet_intro_wrapper p,
+.worksheet_canvas_wrapper p {
+  flex-grow: 2;
+}
+
+.button_download_worksheet {
+  width: 2em;
+  height: 2em;
+  background-color: var(--clr-primary);
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5em;
+}
+
+.section_past_exhibitions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section_past_exhibitions figure {
+  max-width: 250px;
+  cursor: pointer;
+}
+.section_past_exhibitions img,
+.section_past_exhibitions figcaption,
+.section_past_exhibitions h1 {
+  width: 90%;
+  margin-left: auto;
+}
+
+/*Exhibition Overlay*/
+
+.exhibitionContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.exhibInfo {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.exhibInfo li,
+.exhibInfo a {
+  line-height: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.exhibDescription {
+  text-align: justify;
+}
+
+.exhibitionContent img {
+  width: 82%;
+  min-width: 320px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}

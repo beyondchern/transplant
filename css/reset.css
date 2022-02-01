@@ -15,8 +15,14 @@ body {
 
 :root {
   --clr-primary: #dcd0c0;
-  --clr-light: #eeebdb;
+  --clr-light: #fff7f2;
   --clr-dark: #7b3016;
+
+  --clr-journal-light: #f3fbf3;
+  --clr-journal-dark: #002f0c;
+
+  --clr-exhibition-light: #eff3f6;
+  --clr-exhibition-dark: #000080;
 
   --fw-normal: 400;
   --fw-bold: 700;

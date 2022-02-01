@@ -12,11 +12,6 @@ h1 {
   font-size: 1.2rem;
 }
 
-a,
-a:visited {
-  color: var(--clr-dark);
-}
-
 .button {
   font-family: "Source Sans Pro";
   color: var(--clr-dark);

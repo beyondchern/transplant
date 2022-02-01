@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Botanical Encounter is a collaborative plant mapping project inspired by the 16-century naturalist book Codex Kentmanus. 
+      Visit us to see the botanical artworks in Codex Kentmanus as well as from all over the world."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Botanical Encounter" />
+    <meta
+      property="og:description"
+      content="Botanical Encounter is a collaborative plant mapping project inspired by the 16-century naturalist book Codex Kentmanus. 
+      Visit us to see the botanical artworks from all over the world."
+    />
+    <meta property="og:image" content="img/social_media.png" />
+    <meta property="og:url" content="https://botanical-encounter.com" />
+    <meta property="og:site_name" content="Botanical Encounter" />
+
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <script src="../script/geturlvalue.js"></script>
+    <title>Create a Botanical Encounter exhibition</title>
+  </head>
+
+  <body class="intro__body">
+    <nav class="navbar" id="navbar">
+      <a href="#" class="nav__main"
+        ><h1 data-key="nav_initiate">
+          Create a Botanical Encounter exhibition
+        </h1></a
+      >
+      <div class="nav__menu" id="navMenu">
+        <a href="../index.html" class="nav__link" data-key="nav_index"
+          >Botanical Encounter</a
+        >
+        <a
+          href="../pages/map.html"
+          class="nav__link"
+          data-key="nav_map"
+          id="nav_map"
+          >Map of botanical encounters</a
+        >
+        <a
+          href="../pages/johannes_drawings.html"
+          class="nav__link"
+          data-key="nav_johannes"
+          >Drawings by Johannes Kentmann</a
+        >
+        <a
+          href="../pages/theophil_prints.html"
+          class="nav__link"
+          data-key="nav_theophil"
+          >Prints by Theophil Kentmann</a
+        >
+        <a
+          href="./traveling_journals.html"
+          class="nav__link"
+          data-key="nav_journals"
+          >Traveling Nature Journals
+        </a>
+        <a href="./contact.html" class="nav__link" data-key="nav_contact"
+          >Contact</a
+        >
+        <p>
+          <a href="?lang=en" id="en">EN</a>/<a href="?lang=de" id="de">DE</a>/<a
+            href="?lang=zh"
+            id="zh"
+            >繁</a
+          >
+        </p>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    <div class="wrapper wrapper_exhibition">
+      <p class="exhibition_intro">
+        Many plant stories on the Map of Botanical Encounters are allowed for
+        non-commercial purposes re-produced. If a story’s author agreed to share
+        their works for other people to create exhibitions or other events, you
+        would see the <b>Print</b> button at the bottom of the stories.<br />Simply
+        click <b>Print</b>, the printing dialogue would pop-up. Select
+        <b>print without background</b> for the best results!
+      </p>
+      <figure>
+        <img
+          src="../img/demonstrations/the_print_button.png"
+          alt="the print button"
+          style="width: 90%; max-width: 300px"
+        />
+        <figcaption><small>The Print button is here!</small></figcaption>
+      </figure>
+
+      <p>Feel free to use the pre-designed worksheets!</p>
+
+      <!--Working sheets-->
+      <div class="worksheets_wrapper">
+        <figure>
+          <img
+            src="../img/worksheet.jpg"
+            alt="intro"
+            style="max-width: 200px"
+          />
+          <figcaption class="worksheet_intro_wrapper">
+            <p>Introduction(PDF)</p>
+            <a
+              href="../files_for_download/worksheet_intro_en.pdf"
+              download="worksheet_intro_en.pdf"
+              target="_blank"
+              ><div class="button_download_worksheet">EN</div></a
+            >
+            <a
+              href="../files_for_download/Arbeitsblatt_intro_de.pdf"
+              download="Arbeitsblatt_intro"
+              target="_blank"
+              ><div class="button_download_worksheet">DE</div></a
+            >
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="../img/canvas.jpg" alt="canvas" style="max-width: 200px" />
+          <figcaption class="worksheet_canvas_wrapper">
+            <p>Canvas(PDF)</p>
+            <a
+              href="../files_for_download/worksheet_canvas_en.pdf"
+              download="worksheet_canvas_en.pdf"
+              target="_blank"
+              ><div class="button_download_worksheet">EN</div></a
+            >
+            <a
+              href="../files_for_download/Arbeitsblatt_canvas_de.pdf"
+              download="Arbeitsblatt_canvas.pdf"
+              target="_blank"
+              ><div class="button_download_worksheet">DE</div></a
+            >
+          </figcaption>
+        </figure>
+      </div>
+
+      <h1>Get inspired by past Botanical Encounter exhibitions!</h1>
+      <!--Get Inspired-->
+      <section class="section_past_exhibitions">
+        <figure onclick="displayExhib('garage_exhibition')">
+          <img
+            src="../img/past_exhibitions//thumbnails/garage_exhibition_thumbnail.png"
+            alt="garage_exhibition"
+          />
+          <figcaption><h1>Garage Exhibition</h1></figcaption>
+        </figure>
+
+        <figure onclick="displayExhib('garage_workshop')">
+          <img
+            src="../img/past_exhibitions/thumbnails/garage_workshop_thumbnail.png"
+            alt="garage_workshop"
+          />
+          <figcaption><h1>Garage Botanical Encounter Workshop</h1></figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../img/past_exhibitions/thumbnails/your_event_thumbnail.png"
+            alt="share_your_event"
+          />
+        </figure>
+      </section>
+
+      <!--Exhibition Overlay-->
+      <div class="overlay exhibition__overlay" id="exhibitionOverlay">
+        <div class="exhibition__wrapper" id="exhibitionWrapper">
+          <a href="#" class="close" id="closeExhibitionOverlay"></a>
+          <div class="exhibitionContent" id="exhibitionContent"></div>
+        </div>
+      </div>
+    </div>
+    <script src="../script/menu.js"></script>
+    <script src="../script/exhibition_data.js"></script>
+    <script src="../script/exhibition_overlay.js"></script>
+    <script src="../script/overlay_switch.js"></script>
+    <script src="../script/exhibition_event_listeners.js"></script>
+  </body>
+</html>
