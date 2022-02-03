@@ -9,17 +9,17 @@ languages = {
 
     nav_index: "Botanical Encounter",
     nav_map: "Map of Botanical Encounters",
-    nav_journals: "Traveling Nature Journals",
-    nav_initiate: "Initiating a Traveling Nature Journal",
+    nav_journals: "Browse Traveling Nature Journals",
+    nav_initiate: "Initiate a Traveling Nature Journal",
     nav_johannes: "Drawings by Johannes Kentmann",
     nav_theophil: "Prints by Theophil Kentmann",
     nav_contact: "About us",
 
     intro_first_innerhtml:
       "What is your most memorable encounter with plants?<br />Where did you meet them?<br />Were you moved by their stunning colors, unforgettable fragrance, or magical healing power?<br /><br />Let’s create a map with your arts and stories of human-plant encounter!<br />",
-    intro_first_button: "See the map >>",
+    intro_first_button: "Visit the Map of Botanical Encounters >>",
     intro_codex_innerhtml:
-      '<i>Botanical Encounter</i> is a collaborative mapping project inspired by the 16-century naturalist book Codex Kentmanus.<br /><br />The book contains one of the earliest collections of botanical arts. It consists of hundreds of illustrations from the German physician Johannes Kentmann, prints by his son Theophil Kentmann, and contributions by many artists and scholars through exchanges and collaborations.<br /><br />It is a book of art and science, celebrating human-plant encounter and knowledge exchange.<br /><br /><a href="https://ausstellungen.deutsche-digitale-bibliothek.de/codex-kentmanus/#s0" target="_blank">Visit <b>Herzogin Anna Amalia Bibliothek’s website</b> to learn more about Codex Kentmanus >></a>',
+      '<i>Botanical Encounter</i> is inspired by the 16-century naturalist book Codex Kentmanus.<br /><br />The book contains one of the earliest collections of botanical arts. It consists of hundreds of illustrations from the German physician Johannes Kentmann, prints by his son Theophil Kentmann, and contributions by many artists and scholars through exchanges and collaborations.<br /><br />It is a book of art and science, celebrating human-plant encounter and knowledge exchange.<br /><br /><a href="https://ausstellungen.deutsche-digitale-bibliothek.de/codex-kentmanus/#s0" target="_blank">Visit <b>Herzogin Anna Amalia Bibliothek’s website</b> to learn more about Codex Kentmanus >></a>',
     intro_johannes:
       "Johannes Kentmann’s plant drawings, illustrate the plants he encountered in Padua Botanical Garden during his study in Italy.<br /><br />There, Johannes met the plants he had not known before. In his time, they were rarely depicted in the north of the Alps. Some of them were not even from Europe. They traveled to Italy through international trade.<br /><br />Meeting these new plants, Johannes started to observe and paint them in detail. His artworks became one of the earliest collections of botanical illustrations.<br />",
     intro_johannes_button: "Explore Johannes Kentmann’s plant drawings >>",
@@ -28,14 +28,14 @@ languages = {
     intro_theophil_button: "Explore Theophil Kentmann’s plant prints >>",
     intro_final:
       "And you?<br /><br />How do botanical encounters spark your creativity?</br>Draw, print the plants and write down your story.",
-    intro_final_button: "Share them on the map! >>",
+    intro_final_button: "Share them on the Map of Botanical Encounters >>",
 
     dialog_title: "Share this story",
     copy_link_button: "Copy Link",
     share_button: "Share",
 
     welcome_pop_up:
-      "<h1>Welcome to the map of botanical encounters!</h1><br>Start sharing your plant story by clicking the location you met your plant.<br>Or click a photo to see its story.",
+      "<h1>Welcome to the map of botanical encounters!</h1>Draw or print a plant you met and start sharing your plant story by clicking the location you met the plant.",
     upload_pop_up:
       '<button class="button" id="uploadPhotoButton">Upload a photo of your artwork</button><p>Start your contribution by uploading your plant artwork!<br>You can also re-locate the pin by clicking a new location.</small></p>',
     back_to_map_button: "← Back to map",

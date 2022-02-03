@@ -1,4 +1,8 @@
 .contact,
 .traveling-journal {
-  padding: 5rem;
+  padding: 2rem;
+}
+
+.contact {
+  max-width: 70ch;
 }

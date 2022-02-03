@@ -37,7 +37,15 @@ let userMarker = L.marker([lat, lng], {
 let welcomePopUp = L.popup()
   .setLatLng([lat, lng])
   .setContent('<div data-key="welcome_pop_up" style="width:300px"></div>')
-  .openOn(map);
+  .openOn(map)
+  .on("remove", function () {
+    L.popup()
+      .setLatLng([lat, lng])
+      .setContent(
+        "<div><h1>Need some inspiration?</h1><p>You can also click any photo on the map to see its story!</p></div>"
+      )
+      .openOn(map);
+  });
 
 ///---set to initial view---///
 putView();
@@ -48,6 +56,8 @@ function putView() {
   if (putViewLat && putViewLng && putViewZoom) {
     map.setView([putViewLat, putViewLng], putViewZoom);
     welcomePopUp.setLatLng([putViewLat, putViewLng]);
+    lat = putViewLat;
+    lng = putViewLng;
 
     if (navigator.geolocation) {
       map.locate().on("locationfound", (e) => {
@@ -58,6 +68,8 @@ function putView() {
     map.locate({ setView: true, zoom: 16 }).on("locationfound", (e) => {
       userMarker.setLatLng([e.latitude, e.longitude]).addTo(map);
       welcomePopUp.setLatLng([e.latitude, e.longitude]);
+      lat = e.latitude;
+      lng = e.longitude;
     });
   }
 }

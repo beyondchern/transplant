@@ -1,5 +1,8 @@
+.intro__body {
+  display: flex;
+}
+
 /*section_intro*/
-.intro_first,
 .intro_codex,
 .intro_johannes,
 .intro_theophil,
@@ -22,9 +25,16 @@
 }
 
 .intro_first {
+  flex: 1;
   background-image: url("../img/background/background1.png");
   background-repeat: no-repeat;
   background-size: cover;
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .intro_codex {

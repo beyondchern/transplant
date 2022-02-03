@@ -27,52 +27,101 @@
   </head>
   <body>
     <nav class="navbar" id="navbar">
-      <a href="#" class="nav__main"
-        ><h1 data-key="nav_contact">Contact us</h1></a
+      <a href="../index.html" class="nav__main"
+        ><h1 data-key="nav_index">Botanical Encounter</h1></a
       >
-      <div class="nav__menu" id="navMenu">
-        <a href="../index.html" class="nav__link" data-key="nav_index"
-          >Botanical Encounter</a
-        >
-
-        <a
-          href="../pages/map.html"
-          class="nav__link"
-          data-key="nav_map"
-          id="nav_map"
-          >Map of botanical encounters</a
-        >
-        <a
-          href="../pages/johannes_drawings.html"
-          class="nav__link"
-          data-key="nav_johannes"
-          >Drawings by Johannes Kentmann</a
-        >
-        <a
-          href="../pages/theophil_prints.html"
-          class="nav__link"
-          data-key="nav_theophil"
-          >Prints by Theophil Kentmann</a
-        >
-        <a
-          href="./traveling_journals.html"
-          class="nav__link"
-          data-key="nav_journals"
-          >Traveling Journals
-        </a>
-        <p>
+      <details>
+        <summary>
+          <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </summary>
+      </details>
+      <ul class="menu-list nav__menu" id="navMenu">
+        <li>
+          <a href="map.html" class="nav__link" data-key="nav_map" id="nav_map"
+            >Map of botanical encounters
+          </a>
+        </li>
+        <li>
+          <details>
+            <summary class="nav__link">
+              Traveling Nature Journals <small>▼</small>
+            </summary>
+            <div class="dropdown-wrapper">
+              <ul>
+                <li>
+                  <a
+                    href="traveling_nature_journals.html"
+                    class="nav__link"
+                    data-key="nav_journals"
+                    >Browse Traveling Nature Journals
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="initiate_a_traveling_nature_journal.html"
+                    target="_blank"
+                    class="nav__link"
+                    >Initiate a Traveling Nature Journal
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </details>
+        </li>
+        <li>
+          <a href="create_an_exhibition.html" class="nav__link"
+            >Botanical Encounter exhibitions</a
+          >
+        </li>
+        <li>
+          <details>
+            <summary class="nav__link">
+              Codex Kentmanus <small>▼</small>
+            </summary>
+            <div>
+              <ul class="dropdown-wrapper">
+                <li>
+                  <a href="about_codex_kentmanus.html" class="nav__link"
+                    >Get inspired by Codex Kentmanus</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="johannes_drawings.html"
+                    class="nav__link"
+                    data-key="nav_johannes"
+                    >Drawings by Johannes Kentmann</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="theophil_prints.html"
+                    class="nav__link"
+                    data-key="nav_theophil"
+                    >Prints by Theophil Kentmann</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </details>
+        </li>
+        <li>
+          <a href="contact.html" class="nav__link" data-key="nav_contact"
+            >Contact</a
+          >
+        </li>
+        <p class="nav__link">
           <a href="?lang=en" id="en">EN</a>/<a href="?lang=de" id="de">DE</a>/<a
             href="?lang=zh"
             id="zh"
             >繁</a
           >
         </p>
-      </div>
-      <div class="hamburger" id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+      </ul>
     </nav>
 
     <div class="wrapper">

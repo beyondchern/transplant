@@ -1,8 +1,13 @@
+.body_map_page {
+  display: flex;
+  flex-direction: column;
+}
+
 .wrap__legends {
   position: sticky;
-  top: 90%;
   width: 100%;
   z-index: 1000;
+  flex: 1;
   display: flex;
   flex-direction: row;
 }
@@ -10,95 +15,53 @@
 .legend {
   flex: 1;
   display: flex;
-  /*flex-direction: column;*/
-}
-
-.legend:hover .wrap_legend {
-  display: none;
-}
-
-.legend_contribution {
-  /*background-image: url(../img/legend_contribution.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;*/
-  background-color: #fff7f2;
-  position: relative;
-}
-
-.legend_contribution:hover {
-  background-color: rgb(123, 48, 22);
-}
-
-.legend_contribution {
-  color: rgb(123, 48, 22);
-}
-
-.legend_contribution:hover p,
-.legend_tnj:hover p,
-.legend_past_exhibitions:hover p {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.legend_contribution p,
-.legend_tnj p,
-.legend_past_exhibitions p {
-  color: white;
-  margin: 0px;
-}
-
-.legend_tnj {
-  background-image: url(../img/legend_tnj.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--clr-journal-light);
-  position: relative;
-}
-
-.legend_tnj {
-  color: var(--clr-journal-dark);
-}
-.legend_tnj:hover {
-  background-color: var(--clr-journal-dark);
-}
-
-.legend p {
-  display: none;
-}
-
-.legend_past_exhibitions {
-  /*background-image: url(../img/legend_past_exhibitions.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;*/
-  background-color: var(--clr-exhibition-light);
-  position: relative;
-}
-
-.legend_past_exhibitions {
-  color: var(--clr-exhibition-dark);
-}
-.legend_past_exhibitions:hover {
-  background-color: var(--clr-exhibition-dark);
-}
-
-.legend_contribution h1,
-.legend_tnj h1 {
-  margin: 20px auto 20px auto;
-}
-
-.wrap_legend {
-  display: flex;
   flex-direction: row;
   align-items: center;
-  margin: auto auto;
+  justify-content: center;
 }
 
-.wrap__legends img {
+.legend_contribution {
+  background-color: #fff7f2;
+  color: var(--clr-dark);
+}
+
+.legend_tnj {
+  background-color: var(--clr-journal-light);
+  color: var(--clr-journal-dark);
+}
+
+.legend_past_exhibitions {
+  background-color: var(--clr-exhibition-light);
+  color: var(--clr-exhibition-dark);
+}
+
+@media screen and (mid-width: 800px) {
+  .legend a {
+    display: block;
+    margin: 20px auto 20px auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .legend a {
+    display: none;
+  }
+}
+
+.legend img {
+  height: 2em;
   margin-right: 1em;
+}
+
+.wrap__legends.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap__legends.active .legend {
+  padding: 1em auto;
+}
+
+.wrap__legends.active a {
+  display: block;
 }

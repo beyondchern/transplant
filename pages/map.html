@@ -43,55 +43,109 @@
     </title>
   </head>
 
-  <body>
+  <body class="body_map_page">
     <nav class="navbar" id="navbar">
-      <a href="#" class="nav__main"><h1>Map of Botanical Encounters</h1></a>
-      <div class="hamburger" id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-
-      <div class="nav__menu" id="navMenu">
-        <a href="../index.html" class="nav__link" data-key="nav_index"
-          >Botanical Encounter</a
-        >
-        <a
-          href="./johannes_drawings.html"
-          class="nav__link"
-          data-key="nav_johannes"
-          >Drawings by Johannes Kentmann</a
-        >
-        <a
-          href="./theophil_prints.html"
-          class="nav__link"
-          data-key="nav_theophil"
-          >Prints by Theophil Kentmann</a
-        >
-        <a
-          href="./traveling_journals.html"
-          class="nav__link"
-          data-key="nav_journals"
-          >Traveling Journals
-        </a>
-        <a href="./contact.html" class="nav__link" data-key="nav_contact"
-          >Contact</a
-        >
-        <p>
+      <details>
+        <summary>
+          <a href="../index.html" class="nav__main"
+            ><h1 data-key="nav_index">Botanical Encounter</h1></a
+          >
+          <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </summary>
+      </details>
+      <ul class="menu-list nav__menu" id="navMenu">
+        <li>
+          <a href="map.html" class="nav__link" data-key="nav_map" id="nav_map"
+            >Map of botanical encounters
+          </a>
+        </li>
+        <li>
+          <details>
+            <summary class="nav__link">
+              Traveling Nature Journals <small>▼</small>
+            </summary>
+            <div class="dropdown-wrapper">
+              <ul>
+                <li>
+                  <a
+                    href="traveling_nature_journals.html"
+                    class="nav__link"
+                    data-key="nav_journals"
+                    >Browse Traveling Nature Journals
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="initiate_a_traveling_nature_journal.html"
+                    class="nav__link"
+                    >Initiate a Traveling Nature Journal
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </details>
+        </li>
+        <li>
+          <a href="create_an_exhibition.html" class="nav__link"
+            >Botanical Encounter exhibitions</a
+          >
+        </li>
+        <li>
+          <details>
+            <summary class="nav__link">
+              Codex Kentmanus <small>▼</small>
+            </summary>
+            <div>
+              <ul class="dropdown-wrapper">
+                <li>
+                  <a href="about_codex_kentmanus.html" class="nav__link"
+                    >Get inspired by Codex Kentmanus</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="johannes_drawings.html"
+                    class="nav__link"
+                    data-key="nav_johannes"
+                    >Drawings by Johannes Kentmann</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="theophil_prints.html"
+                    class="nav__link"
+                    data-key="nav_theophil"
+                    >Prints by Theophil Kentmann</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </details>
+        </li>
+        <li>
+          <a href="contact.html" class="nav__link" data-key="nav_contact"
+            >Contact</a
+          >
+        </li>
+        <p class="nav__link">
           <a href="?lang=en" id="en">EN</a>/<a href="?lang=de" id="de">DE</a>/<a
             href="?lang=zh"
             id="zh"
             >繁</a
           >
         </p>
-      </div>
+      </ul>
     </nav>
 
     <!--Contribution PopUps on the Map-->
     <div
       class="contribution__popup"
       id="map"
-      style="width: 100%; height: 90%"
+      style="width: 100%; height: 100%"
     ></div>
 
     <!--Contribution Overlay-->
@@ -309,39 +363,27 @@
       </div>
     </div>
 
-    <!--legend buttons-->
-    <div class="wrap__legends">
-      <a href="" class="legend legend_contribution">
-        <div class="wrap_legend">
-          <img src="../img/legend_contribution.png" style="height: 2em" />
-          <h1>Botanical Encounters</h1>
-        </div>
-        <p>How to share my plant stories? (Coming Soon!)</p>
-      </a>
+    <!--legend 
+    <div class="wrap__legends" id="legends">
+      <div class="legend legend_contribution" id="legendContribution">
+        <img src="../img/legend_contribution.png" />
+        <p>How to share my plant stories?</p>
+      </div>
 
-      <a
-        href="traveling_journals.html"
-        target="_blank"
-        class="legend legend_tnj"
-      >
-        <div class="wrap_legend">
-          <h1>Traveling Nature Journals</h1>
-        </div>
-        <p>What are Traveling Nature Journals?</p>
-      </a>
+      <div class="legend legend_tnj" id="legendTnj">
+        <img src="../img/legend_tnj.png" />
+        <a href="traveling_journals.html" target="_blank"
+          >Check out Traveling Nature Journals</a
+        >
+      </div>
 
-      <a
-        href="create_an_exhibition.html"
-        target="_blank"
-        class="legend legend_past_exhibitions"
-      >
-        <div class="wrap_legend">
-          <img src="../img/legend_past_exhibitions.png" style="height: 2em" />
-          <h1>Exhibitions</h1>
-        </div>
-        <p>How to create a Botanical Encounter exhibition?</p>
-      </a>
-    </div>
+      <div class="legend legend_past_exhibitions" id="legendPastExhibition">
+        <img src="../img/legend_past_exhibitions.png" />
+        <a href="create_an_exhibition.html" target="_blank"
+          >Create a Botanical Encounter exhibition</a
+        >
+      </div>
+    --></div>
 
     <script src="../script/menu.js"></script>
     <script src="../script/contribution_overlay.js"></script>
@@ -362,5 +404,6 @@
     <script src="../script/submit.js"></script>
     <script src="../script/contribution_event_listeners.js"></script>
     <script src="../script/exhibition_event_listeners.js"></script>
+    <script src="../script/legend_media_queries.js"></script>
   </body>
 </html>
