@@ -60,6 +60,10 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
+details {
+  cursor: pointer;
+}
+
 .nav__link {
   margin: 0.7rem;
   display: flex;
