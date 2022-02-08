@@ -72,7 +72,7 @@
         </li>
         <li>
           <a href="create_an_exhibition.html" class="nav__link"
-            >Botanical Encounter exhibitions</a
+            >Create events and exhibitions with Botanical Encounter</a
           >
         </li>
         <li>
@@ -155,12 +155,12 @@
         as the outcomes are not for commercial purposes and the content’s
         original authors are acknowledged.<br /><br />Since
         <i>Botanical Encounter</i> is collectively made, every story would
-        enrich the resource. We encourage you to share the works created during
-        your events onto the <i>Map of Botanical Encounters</i>. Except for
-        photography, any plant-inspired creation: plant-dye, collage, food, is
-        welcome. Feel free to use the <i>Botanical Encounter worksheets</i> if
-        you are looking for pre-designed material for a plant drawing/ printing
-        event.
+        enrich the resource. Therefore, we encourage you to share the works
+        created during your events onto the <i>Map of Botanical Encounters</i>.
+        Except for photography, any plant-inspired creation: plant-dye, collage,
+        food, is welcome. Feel free to use the
+        <i>Botanical Encounter worksheets</i> if you are looking for
+        pre-designed material for a plant drawing/ printing event.
       </p>
 
       <!--Working sheets-->
@@ -208,37 +208,52 @@
         </figure>
       </div>
 
-      <b>Get inspired by other plant events!</b>
       <!--Get Inspired-->
       <section class="section_past_exhibitions">
-        <figure onclick="displayExhib('garage_exhibition')">
-          <img
-            src="../img/past_exhibitions//thumbnails/garage_exhibition_thumbnail.png"
-            alt="garage_exhibition"
-          />
-          <figcaption><h1>Garage Exhibition</h1></figcaption>
-        </figure>
+        <div class="section_past_exhibition_intro">
+          <h1>
+            Check out these event and exhibition documentations for more
+            inspiration!
+          </h1>
+          <p>
+            The documentation showcased are provided by their generous
+            organizers to inspire more creative minds. Although they did not
+            necessarily use the Botanical Encounter’s collective resource, they
+            are all inspired by plants.
+          </p>
+        </div>
+        <div class="documentation_wrapper">
+          <figure onclick="displayExhib('garage_exhibition')">
+            <img
+              src="../img/past_exhibitions//thumbnails/garage_exhibition_thumbnail.png"
+              alt="garage_exhibition"
+            />
+            <figcaption><h1>Garage Exhibition</h1></figcaption>
+          </figure>
 
-        <figure onclick="displayExhib('garage_workshop')">
-          <img
-            src="../img/past_exhibitions/thumbnails/garage_workshop_thumbnail.png"
-            alt="garage_workshop"
-          />
-          <figcaption><h1>Garage Botanical Encounter Workshop</h1></figcaption>
-        </figure>
+          <figure onclick="displayExhib('garage_workshop')">
+            <img
+              src="../img/past_exhibitions/thumbnails/garage_workshop_thumbnail.png"
+              alt="garage_workshop"
+            />
+            <figcaption>
+              <h1>Garage Botanical Encounter Workshop</h1>
+            </figcaption>
+          </figure>
 
-        <figure>
-          <img
-            src="../img/past_exhibitions/thumbnails/your_event_thumbnail.png"
-            alt="share_your_event"
-          />
-        </figure>
+          <figure>
+            <img
+              src="../img/past_exhibitions/thumbnails/your_event_thumbnail.png"
+              alt="share_your_event"
+            />
+          </figure>
+        </div>
       </section>
 
       <!--Exhibition Overlay-->
       <div class="overlay exhibition__overlay" id="exhibitionOverlay">
         <div class="exhibition__wrapper" id="exhibitionWrapper">
-          <a href="#" class="close" id="closeExhibitionOverlay"></a>
+          <a href="#!" class="close" id="closeExhibitionOverlay"></a>
           <div class="exhibitionContent" id="exhibitionContent"></div>
         </div>
       </div>

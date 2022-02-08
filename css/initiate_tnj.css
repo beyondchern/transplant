@@ -1,8 +1,13 @@
 .wrapper_initiate {
   width: 100%;
+  padding-top: 7rem;
   padding-bottom: 5rem;
   flex-direction: column;
   align-items: center;
+}
+
+.wrapper_initiate h1 {
+  text-align: center;
 }
 
 .wrapper_initiate p {
@@ -22,4 +27,11 @@
 
 .initiate_figcap {
   font-size: 0.8rem;
+}
+
+.button_wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }

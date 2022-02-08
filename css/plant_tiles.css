@@ -3,6 +3,18 @@ h1 {
   text-transform: capitalize;
 }
 
+.plant_tile_wrapper {
+  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plant_tile_title {
+  max-width: 90%;
+  text-align: center;
+}
+
 .plantImage {
   max-width: 300px;
   max-height: 481px;
@@ -19,7 +31,6 @@ h1 {
 }
 
 .wrapper {
-  padding-top: 4rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

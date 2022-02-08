@@ -2,20 +2,27 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
+  padding-top: 7rem;
 }
 
-.exhibition_intro {
+.wrapper_exhibition h1 {
+  max-width: 90%;
+  text-align: center;
+}
+
+.exhibition_intro,
+.section_past_exhibitions p {
   max-width: 70ch;
   line-height: 2em;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
-.worksheets_wrapper {
-  max-width: 90%;
+.worksheets_wrapper,
+.documentation_wrapper {
+  max-width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -45,18 +52,26 @@
 }
 
 .section_past_exhibitions {
+  margin-top: 3rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
+
+.section_past_exhibition_intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .section_past_exhibitions figure {
   max-width: 250px;
   cursor: pointer;
 }
 .section_past_exhibitions img,
-.section_past_exhibitions figcaption,
-.section_past_exhibitions h1 {
+.section_past_exhibitions figcaption {
   width: 90%;
   margin-left: auto;
 }

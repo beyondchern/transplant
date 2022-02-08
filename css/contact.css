@@ -1,6 +1,17 @@
-.contact,
-.traveling-journal {
-  padding: 2rem;
+.contact {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.contact_wrapper {
+  width: 100%;
+  padding-top: 7rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_wrapper h1 {
+  text-align: center;
 }
 
 .contact {
