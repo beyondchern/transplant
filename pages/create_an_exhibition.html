@@ -120,16 +120,16 @@
       </ul>
     </nav>
     <div class="wrapper wrapper_exhibition">
-      <h1>Create events and exhibitions with Botanical Encounter</h1>
+      <h1 class="exhibition_titles">
+        Create events and exhibitions with Botanical Encounter
+      </h1>
       <p class="exhibition_intro">
         If you are considering creating exhibitions or events in your community,
         classroom, garden or kitchen with the stories on
-        <i>Botanical Encounter</i>. You are more than welcome!<i
-          >Botanical Encounter</i
-        >
-        is a collectively created resource of the stories of human-plant
-        encounters. Everyone can share their knowledge and stories, at the same
-        time, use the collection.<br /><br />
+        <i>Botanical Encounter</i>. You are more than welcome!
+        <i>Botanical Encounter</i> is a collectively created resource of the
+        stories of human-plant encounters. Everyone can share their knowledge
+        and stories, at the same time, use the collection.<br /><br />
         On
         <a href="map.html" target="_blank"
           ><b>the Map of Botanical Encounters</b></a
@@ -211,7 +211,7 @@
       <!--Get Inspired-->
       <section class="section_past_exhibitions">
         <div class="section_past_exhibition_intro">
-          <h1>
+          <h1 class="exhibition_titles">
             Check out these event and exhibition documentations for more
             inspiration!
           </h1>
@@ -223,12 +223,36 @@
           </p>
         </div>
         <div class="documentation_wrapper">
-          <figure onclick="displayExhib('garage_exhibition')">
+          <figure>
             <img
-              src="../img/past_exhibitions//thumbnails/garage_exhibition_thumbnail.png"
-              alt="garage_exhibition"
+              src="../img/past_exhibitions/thumbnails/dongju_workshop__thumbnail.png"
+              alt="donju_workshop"
+              onclick="displayExhib('dongju_workshop')"
             />
-            <figcaption><h1>Garage Exhibition</h1></figcaption>
+            <figcaption>
+              <h1
+                class="exhibition_titles"
+                onclick="displayExhib('dongju_workshop')"
+              >
+                Wild garden workshop
+              </h1>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="../img/past_exhibitions/thumbnails/garage_exhibition_thumbnail.png"
+              alt="garage_exhibition"
+              onclick="displayExhib('garage_exhibition')"
+            />
+            <figcaption>
+              <h1
+                class="exhibition_titles"
+                onclick="displayExhib('garage_exhibition')"
+              >
+                Garage Exhibition
+              </h1>
+            </figcaption>
           </figure>
 
           <figure onclick="displayExhib('garage_workshop')">
@@ -237,7 +261,19 @@
               alt="garage_workshop"
             />
             <figcaption>
-              <h1>Garage Botanical Encounter Workshop</h1>
+              <h1 class="exhibition_titles">
+                Garage Botanical Encounter Workshop
+              </h1>
+            </figcaption>
+          </figure>
+
+          <figure onclick="displayExhib('tatakizome_screen_workshop')">
+            <img
+              src="../img/past_exhibitions/thumbnails/tatakizome_screen__thumbnail.png"
+              alt="garage_workshop"
+            />
+            <figcaption>
+              <h1 class="exhibition_titles">Tatakizome Screen Workshop</h1>
             </figcaption>
           </figure>
 
